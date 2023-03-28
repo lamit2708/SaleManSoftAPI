@@ -11,10 +11,10 @@ public abstract class TestDto
         return e;
     }
 
-    public virtual ProductCategoryDto GetCreateDto(string fullName)
+    public virtual ProductCategoryDto GetCreateDto(string name)
     {
         var e = Dto;
-        e.FullName = fullName;
+        e.Name = name;
         return e;
     }
 
@@ -30,17 +30,24 @@ public abstract class TestDto
         var e = Dto;
         var arr = data.Split(" / ");
         e.Id = Convert.ToInt32(arr[0]);
-        e.FullName = arr[1];
+        e.Name = arr[1];
         return e;
     }
 
-    public virtual ProductCategoryDto GetUpdateDto(int id, string fullName, string description)
+    public virtual ProductCategoryDto GetUpdateDto(int id, string name, string description)
     {
         var e = Dto;
         e.Id = id;
-        e.FullName = fullName;
+        e.Name = name;
         return e;
     }
+    public virtual ProductCategoryDto GetUpdateDto(int id, string name)
+    {
+        var e = Dto;
+        e.Id = id;
+        e.Name = name;
 
+        return e;
+    }
     protected abstract ProductCategoryDto Dto { get; }
 }

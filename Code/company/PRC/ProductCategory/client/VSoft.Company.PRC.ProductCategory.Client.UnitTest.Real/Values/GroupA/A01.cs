@@ -10,7 +10,6 @@ namespace VSoft.Company.PRC.ProductCategory.Client.UnitTest.Test.Values.GroupA
 
             Name = "Đặng Thế Nhân",
 
-          
 
         };
     }
