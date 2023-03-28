@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext 'Data Source=.;Initial Catalog=SalemanSoft;USER ID=root;Password=123456;TrustServerCertificate=True' MySql.EntityFrameworkCor -Tables Main

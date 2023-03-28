@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0.1</Version>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ANW\Anwser</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)\bus</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\VSoft.Company.ANW.Anwser.Business.Dto\VSoft.Company.ANW.Anwser.Business.Dto.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="VegunSoft.Framework.Business.Dto">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Business\VegunSoft.Framework.Business.Dto.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.ANW.Anwser.Data.Entity">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ANW\Anwser\data\VSoft.Company.ANW.Anwser.Data.Entity.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>

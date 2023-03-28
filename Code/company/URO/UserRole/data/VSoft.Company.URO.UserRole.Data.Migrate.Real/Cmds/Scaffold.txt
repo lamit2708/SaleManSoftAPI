@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext 'Data Source=localhost;Initial Catalog=crmdb;USER ID=root;Password=123456' MySql.EntityFrameworkCore -Tables UserRole

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0.1</Version>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRO\Product</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)\data</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Reference Include="VegunSoft.Framework.Entity.Key">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Entity\VegunSoft.Framework.Entity.Key.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>

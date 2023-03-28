@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutputType>Library</OutputType>
+		<Version>1.0.0.1</Version>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DQU\DealQuotation</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)\client</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="VegunSoft.Framework.Business.Dto">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Business\VegunSoft.Framework.Business.Dto.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Api.DtoClient">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\ApiDtoClient\VegunSoft.Framework.Api.DtoClient.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Api.DtoClient.Cfg">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\ApiDtoClient\VegunSoft.Framework.Api.DtoClient.Cfg.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.DQU.OrderItemHistory.Business.Dto">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DQU\DealQuotation\bus\VSoft.Company.DQU.DealQuotation.Business.Dto.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0.1</Version>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ROL\Role</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)\bus</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\VSoft.Company.ROL.Role.Business.Dto\VSoft.Company.ROL.Role.Business.Dto.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="VegunSoft.Framework.Business.Dto">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Business\VegunSoft.Framework.Business.Dto.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.ROL.Role.Data.Entity">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ROL\Role\data\VSoft.Company.ROL.Role.Data.Entity.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>

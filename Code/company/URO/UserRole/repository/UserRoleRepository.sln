@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSoft.Company.URO.UserRole.Repository", "VSoft.Company.URO.UserRole.Repository\VSoft.Company.URO.UserRole.Repository.csproj", "{A40638F1-C6E2-496A-9973-B6760709078F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSoft.Company.URO.UserRole.Repository.App", "VSoft.Company.URO.UserRole.Repository.App\VSoft.Company.URO.UserRole.Repository.App.csproj", "{CB67C297-20F2-40CC-8B3F-60E5BFFD032A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{3833D01F-2D13-4993-906F-CC10B05AE407}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{98988050-AAE8-47B6-9B2C-AFEAF8BFDB82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{FF52F557-742E-4739-BFE9-99FCE7451C93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSoft.Company.URO.UserRole.Repository.Efc", "VSoft.Company.URO.UserRole.Repository.Efc\VSoft.Company.URO.UserRole.Repository.Efc.csproj", "{17916A43-77E1-4057-A119-36D99F929045}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSoft.Company.URO.UserRole.Repository.Efc.Provider", "VSoft.Company.URO.UserRole.Repository.Efc.Provider\VSoft.Company.URO.UserRole.Repository.Efc.Provider.csproj", "{4FE3A9EE-E2A8-4A14-BC26-FE067A7E98B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSoft.Company.URO.UserRole.Repository.UnitTest", "VSoft.Company.URO.UserRole.Repository.UnitTest\VSoft.Company.URO.UserRole.Repository.UnitTest.csproj", "{E2C9D2E4-2618-48B5-A14B-51D9431CE3EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSoft.Company.URO.UserRole.Repository.UnitTest.Real", "VSoft.Company.URO.UserRole.Repository.UnitTest.Real\VSoft.Company.URO.UserRole.Repository.UnitTest.Real.csproj", "{682BE41B-C630-4DC6-A245-8387CE992830}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSoft.Company.URO.UserRole.Repository.UnitTest.Test", "VSoft.Company.URO.UserRole.Repository.UnitTest.Test\VSoft.Company.URO.UserRole.Repository.UnitTest.Test.csproj", "{8F73FAD7-4086-427F-9897-DFDE119CB6EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A40638F1-C6E2-496A-9973-B6760709078F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40638F1-C6E2-496A-9973-B6760709078F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40638F1-C6E2-496A-9973-B6760709078F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40638F1-C6E2-496A-9973-B6760709078F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB67C297-20F2-40CC-8B3F-60E5BFFD032A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB67C297-20F2-40CC-8B3F-60E5BFFD032A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB67C297-20F2-40CC-8B3F-60E5BFFD032A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB67C297-20F2-40CC-8B3F-60E5BFFD032A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17916A43-77E1-4057-A119-36D99F929045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17916A43-77E1-4057-A119-36D99F929045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17916A43-77E1-4057-A119-36D99F929045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17916A43-77E1-4057-A119-36D99F929045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE3A9EE-E2A8-4A14-BC26-FE067A7E98B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE3A9EE-E2A8-4A14-BC26-FE067A7E98B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE3A9EE-E2A8-4A14-BC26-FE067A7E98B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE3A9EE-E2A8-4A14-BC26-FE067A7E98B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C9D2E4-2618-48B5-A14B-51D9431CE3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C9D2E4-2618-48B5-A14B-51D9431CE3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C9D2E4-2618-48B5-A14B-51D9431CE3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C9D2E4-2618-48B5-A14B-51D9431CE3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682BE41B-C630-4DC6-A245-8387CE992830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682BE41B-C630-4DC6-A245-8387CE992830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682BE41B-C630-4DC6-A245-8387CE992830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682BE41B-C630-4DC6-A245-8387CE992830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F73FAD7-4086-427F-9897-DFDE119CB6EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F73FAD7-4086-427F-9897-DFDE119CB6EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F73FAD7-4086-427F-9897-DFDE119CB6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F73FAD7-4086-427F-9897-DFDE119CB6EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A40638F1-C6E2-496A-9973-B6760709078F} = {98988050-AAE8-47B6-9B2C-AFEAF8BFDB82}
+		{CB67C297-20F2-40CC-8B3F-60E5BFFD032A} = {3833D01F-2D13-4993-906F-CC10B05AE407}
+		{17916A43-77E1-4057-A119-36D99F929045} = {98988050-AAE8-47B6-9B2C-AFEAF8BFDB82}
+		{4FE3A9EE-E2A8-4A14-BC26-FE067A7E98B6} = {98988050-AAE8-47B6-9B2C-AFEAF8BFDB82}
+		{E2C9D2E4-2618-48B5-A14B-51D9431CE3EE} = {FF52F557-742E-4739-BFE9-99FCE7451C93}
+		{682BE41B-C630-4DC6-A245-8387CE992830} = {FF52F557-742E-4739-BFE9-99FCE7451C93}
+		{8F73FAD7-4086-427F-9897-DFDE119CB6EC} = {FF52F557-742E-4739-BFE9-99FCE7451C93}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08B687DF-FC35-4BD6-AF92-9EEEE7462374}
+	EndGlobalSection
+EndGlobal

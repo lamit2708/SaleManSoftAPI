@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0.1</Version>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DQU\DealQuotation</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)\bus</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\VSoft.Company.DQU.DealQuotation.Business.Dto.Extension\VSoft.Company.DQU.DealQuotation.Business.Dto.Extension.csproj" />
+		<ProjectReference Include="..\VSoft.Company.DQU.DealQuotation.Business\VSoft.Company.DQU.DealQuotation.Business.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="VegunSoft.Framework.Business">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Business\VegunSoft.Framework.Business.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Business.Dto">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Business\VegunSoft.Framework.Business.Dto.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Business.Provider">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Business\VegunSoft.Framework.Business.Provider.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Business.Provider.Repository">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Business\VegunSoft.Framework.Business.Provider.Repository.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Identity">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Identity\VegunSoft.Framework.Identity.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Repository">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Repository.Id.Efc">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Repository.Model">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Model.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.DQU.DealQuotation.Data.Db">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DQU\DealQuotation\data\VSoft.Company.DQU.DealQuotation.Data.Db.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.DQU.DealQuotation.Data.Entity">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DQU\DealQuotation\data\VSoft.Company.DQU.DealQuotation.Data.Entity.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.DQU.DealQuotation.Repository">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DQU\DealQuotation\repository\VSoft.Company.DQU.DealQuotation.Repository.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\VSoft.Company.CIN.CustomerInfo.Api.Base\VSoft.Company.CIN.CustomerInfo.Api.Base.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="VegunSoft.Framework.Api.Service.UnitTest">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-api\ApiService\VegunSoft.Framework.Api.Service.UnitTest.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Efc">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Efc.Cfg">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Cfg.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Efc.Provider.SqlServer">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Provider.SqlServer.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Repository">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Repository.Efc.Provider">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Efc.Provider.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.CIN.CustomerInfo.Business">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CIN\CustomerInfo\bus\VSoft.Company.CIN.CustomerInfo.Business.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.CIN.CustomerInfo.Business.Cfg">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CIN\CustomerInfo\bus\VSoft.Company.CIN.CustomerInfo.Business.Cfg.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.CIN.CustomerInfo.Business.Provider">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CIN\CustomerInfo\bus\VSoft.Company.CIN.CustomerInfo.Business.Provider.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.CIN.CustomerInfo.Data.Db">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CIN\CustomerInfo\data\VSoft.Company.CIN.CustomerInfo.Data.Db.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.CIN.CustomerInfo.Repository">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CIN\CustomerInfo\repository\VSoft.Company.CIN.CustomerInfo.Repository.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.CIN.CustomerInfo.Repository.Efc">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CIN\CustomerInfo\repository\VSoft.Company.CIN.CustomerInfo.Repository.Efc.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.CIN.CustomerInfo.Repository.Efc.Provider">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CIN\CustomerInfo\repository\VSoft.Company.CIN.CustomerInfo.Repository.Efc.Provider.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>

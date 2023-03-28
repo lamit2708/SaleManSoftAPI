@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VSoft.Company.DST.DealStep.Repository.Efc.Provider\VSoft.Company.DST.DealStep.Repository.Efc.Provider.csproj" />
+    <ProjectReference Include="..\VSoft.Company.DST.DealStep.Repository.Efc\VSoft.Company.DST.DealStep.Repository.Efc.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VegunSoft.Framework.Efc">
+      <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Efc.Cfg">
+      <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Cfg.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Efc.Provider.SqlServer">
+      <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Provider.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Repository">
+      <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Repository.Efc.Provider">
+      <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Efc.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Repository.Id.Efc">
+      <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Repository.Id.Efc.Provider">
+      <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VSoft.Company.DST.DealStep.Data.Db">
+      <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DST\DealStep\data\VSoft.Company.DST.DealStep.Data.Db.dll</HintPath>
+    </Reference>
+    <Reference Include="VSoft.Company.DST.DealStep.Data.Entity">
+      <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DST\DealStep\data\VSoft.Company.DST.DealStep.Data.Entity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

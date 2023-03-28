@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext 'Data Source=.;Initial Catalog=SalemanSoft;DEA ID=root;Password=123456;TrustServerCertificate=True' MySql.EntityFrameworkCor -Tables Deal

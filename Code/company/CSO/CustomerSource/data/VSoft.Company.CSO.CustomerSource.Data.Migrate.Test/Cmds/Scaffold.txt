@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext 'Data Source=Data\\crmdb.db;' Microsoft.EntityFrameworkCore.Sqlite -Tables CustomerSource

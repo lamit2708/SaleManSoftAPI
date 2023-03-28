@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutputType>Library</OutputType>
+		<Version>1.0.0.1</Version>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ORD\Order</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)\api</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Reference Include="VegunSoft.Framework.Api.Route">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Api\VegunSoft.Framework.Api.Route.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>

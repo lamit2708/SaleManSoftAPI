@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "VSoft.Company.CSO.CustomerSource.Api.Controller": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58978;http://localhost:58980"
+    }
+  }
+}

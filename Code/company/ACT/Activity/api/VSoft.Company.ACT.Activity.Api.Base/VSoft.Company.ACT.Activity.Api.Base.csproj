@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<OutputType>Library</OutputType>
+		<Version>1.0.0.1</Version>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)\api</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
+		
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.2" />
+		
+		<PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\VSoft.Company.ACT.Activity.Api.Controller\VSoft.Company.ACT.Activity.Api.Controller.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="VegunSoft.Framework.Business">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Business\VegunSoft.Framework.Business.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Business.Provider">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Business\VegunSoft.Framework.Business.Provider.dll</HintPath>
+	  </Reference>
+		<Reference Include="VegunSoft.Framework.Business.Provider.Repository">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Business\VegunSoft.Framework.Business.Provider.Repository.dll</HintPath>
+		</Reference>
+	  <Reference Include="VegunSoft.Framework.Efc">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Efc.Cfg">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Cfg.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Efc.Provider.MySQL">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Provider.MySQL.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Repository">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Repository.Efc.Provider">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Efc.Provider.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Repository.Id.Efc">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Repository.Id.Efc.Provider">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.Provider.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.ACT.Activity.Business">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\bus\VSoft.Company.ACT.Activity.Business.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.ACT.Activity.Business.Cfg">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\bus\VSoft.Company.ACT.Activity.Business.Cfg.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.ACT.Activity.Business.Provider">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\bus\VSoft.Company.ACT.Activity.Business.Provider.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.ACT.Activity.Data.Db">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\data\VSoft.Company.ACT.Activity.Data.Db.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.ACT.Activity.Repository">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\repository\VSoft.Company.ACT.Activity.Repository.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.ACT.Activity.Repository.Efc">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\repository\VSoft.Company.ACT.Activity.Repository.Efc.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.ACT.Activity.Repository.Efc.Provider">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\repository\VSoft.Company.ACT.Activity.Repository.Efc.Provider.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
