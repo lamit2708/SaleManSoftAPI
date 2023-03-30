@@ -49,10 +49,12 @@ public class TestProductCategoryReal : TestMgmtEntities
     //}
 
     [TestMethod]
-    [DataRow(1, "Thiết kế phần mềm")] // 
+    [DataRow(1, "Xây dựng hệ thống quản lý")]
     [DataRow(2, "Thiết kế website")]
     [DataRow(3, "Thiết kế ứng dụng mobile")]
-    [DataRow(4, "Xây dựng hệ thống quản lý")] 
+    [DataRow(4, "Nâng cấp hệ thống")]
+    [DataRow(5, "Dịch vụ Marketing Online")] // 
+
     public async Task UpdateAsync(int id, string name)
     {
         await TestUpdateAsync(new MProductCategoryEntity()

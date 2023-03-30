@@ -7,7 +7,7 @@
 		<Version>1.0.0.1</Version>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory</BaseOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory</BaseOutputPath>
 		<OutputPath>$(BaseOutputPath)\bus</OutputPath>
 	</PropertyGroup>
 
@@ -48,13 +48,13 @@
 			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Model.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Data.Db">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\data\VSoft.Company.PRC.ProductCategory.Data.Db.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\data\VSoft.Company.PRC.ProductCategory.Data.Db.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Data.Entity">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\data\VSoft.Company.PRC.ProductCategory.Data.Entity.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\data\VSoft.Company.PRC.ProductCategory.Data.Entity.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Repository">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\repository\VSoft.Company.PRC.ProductCategory.Repository.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\repository\VSoft.Company.PRC.ProductCategory.Repository.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 

@@ -6,7 +6,7 @@ namespace VSoft.Company.PRC.ProductCategory.Business.Dto.Request
     public class ProductCategoryRemoveDtoRequest : MDtoRequest
     {
         [Required]
-        public string? CTMName { get; set; }
+        public string? PRCName { get; set; }
 
     }
 }

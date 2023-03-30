@@ -44,7 +44,7 @@
 		  <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Business\VegunSoft.Framework.Business.UnitTest.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Business.Dto">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\bus\VSoft.Company.PRC.ProductCategory.Business.Dto.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\bus\VSoft.Company.PRC.ProductCategory.Business.Dto.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 

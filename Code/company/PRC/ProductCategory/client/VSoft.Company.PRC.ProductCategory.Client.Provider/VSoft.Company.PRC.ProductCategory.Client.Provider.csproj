@@ -8,7 +8,7 @@
 		<Version>1.0.0.1</Version>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory</BaseOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory</BaseOutputPath>
 		<OutputPath>$(BaseOutputPath)\client</OutputPath>
 	</PropertyGroup>
 
@@ -39,11 +39,11 @@
 		<Reference Include="VegunSoft.Framework.Business.Dto">
 			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Business\VegunSoft.Framework.Business.Dto.dll</HintPath>
 		</Reference>
-		<Reference Include="VSoft.Company.CTM.OrderItemHistory.Business.Dto">
-		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\bus\VSoft.Company.PRC.ProductCategory.Business.Dto.dll</HintPath>
+		<Reference Include="VSoft.Company.PRC.OrderItemHistory.Business.Dto">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\bus\VSoft.Company.PRC.ProductCategory.Business.Dto.dll</HintPath>
 		</Reference>
-		<Reference Include="VSoft.Company.CTM.OrderItemHistory.Api.Cfg">
-		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\api\VSoft.Company.PRC.ProductCategory.Api.Cfg.dll</HintPath>
+		<Reference Include="VSoft.Company.PRC.OrderItemHistory.Api.Cfg">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\api\VSoft.Company.PRC.ProductCategory.Api.Cfg.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 

@@ -8,7 +8,7 @@
 		<Version>1.0.0.1</Version>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory</BaseOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory</BaseOutputPath>
 		<OutputPath>$(BaseOutputPath)\api</OutputPath>
 	</PropertyGroup>
 

@@ -39,7 +39,7 @@ public class ProductDbContext : EfcDbContext<ProductDbContext, MProductEntity>
         entity.Property(e => e.Category).HasMaxLength(100).HasDefaultValueSql("'NULL'");
         entity.Property(e => e.Description).HasMaxLength(512).HasDefaultValueSql("'NULL'");
         entity.Property(e => e.Name).HasMaxLength(100);
-        entity.Property(e => e.Quatity).HasColumnType("int(11)");
+        entity.Property(e => e.Quantity).HasColumnType("int(11)");
         entity.Property(e => e.Keyword).HasColumnType("varchar(512)").HasColumnName("Keyword");
     }
 

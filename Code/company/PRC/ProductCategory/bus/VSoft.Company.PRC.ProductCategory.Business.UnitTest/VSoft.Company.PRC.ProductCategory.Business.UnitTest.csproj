@@ -63,19 +63,19 @@
 		  <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.Provider.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Data.Db">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\data\VSoft.Company.PRC.ProductCategory.Data.Db.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\data\VSoft.Company.PRC.ProductCategory.Data.Db.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Data.Entity">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\data\VSoft.Company.PRC.ProductCategory.Data.Entity.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\data\VSoft.Company.PRC.ProductCategory.Data.Entity.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Repository">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\repository\VSoft.Company.PRC.ProductCategory.Repository.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\repository\VSoft.Company.PRC.ProductCategory.Repository.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Repository.Efc">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\repository\VSoft.Company.PRC.ProductCategory.Repository.Efc.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\repository\VSoft.Company.PRC.ProductCategory.Repository.Efc.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Repository.Efc.Provider">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\ProductCategory\repository\VSoft.Company.PRC.ProductCategory.Repository.Efc.Provider.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\repository\VSoft.Company.PRC.ProductCategory.Repository.Efc.Provider.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
