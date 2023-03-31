@@ -21,7 +21,7 @@ namespace VSoft.Company.PRO.Product.Data.Migrate.Real.Migrations
                     Name = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
                     Price = table.Column<double>(type: "double", nullable: false),
                     Quantity = table.Column<int>(type: "int(11)", nullable: false),
-                    Category = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: true, defaultValueSql: "'NULL'"),
+                    CategoryId = table.Column<int>(type: "int(11)", nullable: false),
                     Description = table.Column<string>(type: "varchar(512)", maxLength: 512, nullable: true, defaultValueSql: "'NULL'")
                 },
                 constraints: table =>

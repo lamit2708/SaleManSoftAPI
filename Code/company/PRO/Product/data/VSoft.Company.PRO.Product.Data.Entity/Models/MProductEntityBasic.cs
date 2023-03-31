@@ -12,7 +12,7 @@ namespace VSoft.Company.PRO.Product.Data.Entity.Models
 
         public int Quantity { get; set; }
 
-        public string? Category { get; set; }
+        public int CategoryId { get; set; }
 
         public string? Description { get; set; }
 

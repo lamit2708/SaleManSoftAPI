@@ -28,11 +28,9 @@ namespace VSoft.Company.PRO.Product.Data.Migrate.Real.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int(11)");
 
-                    b.Property<string>("Category")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)")
-                        .HasDefaultValueSql("'NULL'");
+                    b.Property<int>("CategoryId")
+                       .ValueGeneratedOnAdd()
+                        .HasColumnType("int(11)");
 
                     b.Property<string>("Description")
                         .ValueGeneratedOnAdd()
