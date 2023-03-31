@@ -1,9 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using VegunSoft.Framework.Business.Dto.Request;
+﻿using VegunSoft.Framework.Business.Dto.Request;
 
 namespace VSoft.Company.TEA.Team.Business.Dto.Request
 {
-    public class TeamDeleteDtoRequest : MDtoRequestDelete<long>
+    public class TeamDeleteDtoRequest : MDtoRequestDelete<int>
     {
        
        
