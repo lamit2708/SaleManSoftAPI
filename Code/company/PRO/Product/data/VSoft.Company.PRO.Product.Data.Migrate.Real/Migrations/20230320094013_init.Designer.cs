@@ -48,7 +48,7 @@ namespace VSoft.Company.PRO.Product.Data.Migrate.Real.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("double");
 
-                    b.Property<int>("Quatity")
+                    b.Property<int>("Quantity")
                         .HasColumnType("int(11)");
 
                     b.HasKey("Id")

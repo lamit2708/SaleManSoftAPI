@@ -12,7 +12,7 @@ public static class ProductDtoMethods
             Id = src.Id,
             Name = src.Name,
             Price = src.Price,
-            Quatity = src.Quatity,
+            Quantity = src.Quantity,
             Category = src.Category,
             Description = src.Description,
         };

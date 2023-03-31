@@ -18,9 +18,11 @@ public class TestProductCategoryReal : TestMgmtEntities
     }
 
     [TestMethod]
-    [DataRow("Phần mềm")]
-    [DataRow("Dự án web")]
-    [DataRow("Dự án mobile")]
+    [DataRow( "Xây dựng hệ thống quản lý")]
+    [DataRow( "Thiết kế website")]
+    [DataRow( "Thiết kế ứng dụng mobile")]
+    [DataRow( "Nâng cấp hệ thống")]
+    [DataRow( "Dịch vụ Marketing Online")]
     public async Task CreateAsync(string name)
     {
         var e = new A01().GetCreateEntity();

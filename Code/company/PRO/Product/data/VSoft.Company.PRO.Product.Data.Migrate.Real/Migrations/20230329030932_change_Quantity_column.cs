@@ -11,7 +11,7 @@ namespace VSoft.Company.PRO.Product.Data.Migrate.Real.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.RenameColumn(
-                name: "Quatity",
+                name: "Quantity",
                 table: "Product",
                 newName: "Quantity");
         }
@@ -22,7 +22,7 @@ namespace VSoft.Company.PRO.Product.Data.Migrate.Real.Migrations
             migrationBuilder.RenameColumn(
                 name: "Quantity",
                 table: "Product",
-                newName: "Quatity");
+                newName: "Quantity");
         }
     }
 }
