@@ -3,7 +3,11 @@ using VegunSoft.Framework.Api.DtoClient.Provider.Services;
 using VegunSoft.Framework.Api.DtoClient.Token.Services;
 using VegunSoft.Framework.Api.Route.Methods;
 using VegunSoft.Framework.Business.Dto.Request;
+using VegunSoft.Framework.Business.Dto.Response;
+using VegunSoft.Framework.Paging.Provider.Request;
+using VegunSoft.Framework.Paging.Provider.Response;
 using VSoft.Company.TEA.Team.Api.Cfg.Routes;
+using VSoft.Company.TEA.Team.Business.Dto.Data;
 using VSoft.Company.TEA.Team.Business.Dto.Request;
 using VSoft.Company.TEA.Team.Business.Dto.Response;
 using VSoft.Company.TEA.Team.Client.Models;
@@ -18,6 +22,11 @@ public class TeamClient : ApiDtoClientJSon<ITeamClient, MTeamClient>, ITeamClien
     }
 
     public override string Controller { get; } = nameof(ITeamControllerPath.Team);
+
+    public Task<MDtoResponse<PagedList<TeamDto>>> GetTableByKeyword(string keyWord, PagingParameters pageParameter)
+    {
+        return null;
+    }
 
     public Task<TeamFindDtoResponse> FindAsync(MDtoRequestFindByString request)
     {
