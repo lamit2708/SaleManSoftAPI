@@ -22,6 +22,9 @@
 		<Reference Include="VegunSoft.Framework.Api.DtoClient.Cfg">
 			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\ApiDtoClient\VegunSoft.Framework.Api.DtoClient.Cfg.dll</HintPath>
 		</Reference>
+		<Reference Include="VegunSoft.Framework.Paging.Provider">
+		  <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet\Paging\VegunSoft.Framework.Paging.Provider.dll</HintPath>
+		</Reference>
 		<Reference Include="VSoft.Company.TEA.OrderItemHistory.Business.Dto">
 			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\bus\VSoft.Company.TEA.Team.Business.Dto.dll</HintPath>
 		</Reference>
