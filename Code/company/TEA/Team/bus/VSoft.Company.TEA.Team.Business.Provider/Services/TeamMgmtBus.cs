@@ -201,7 +201,7 @@ public class TeamMgmtBus : BusinessRepositoryService<TeamDto, ITeamRepository>, 
 
     public TeamDeleteDtoResponse Delete(TeamDeleteDtoRequest request)
     {
-        return Delete<TeamDeleteDtoRequest, TeamDeleteDtoResponse, long>
+        return Delete<TeamDeleteDtoRequest, TeamDeleteDtoResponse, int>
         (
              request,
              (id) =>
@@ -215,7 +215,7 @@ public class TeamMgmtBus : BusinessRepositoryService<TeamDto, ITeamRepository>, 
 
     public async Task<TeamDeleteDtoResponse> DeleteAsync(TeamDeleteDtoRequest request)
     {
-        return await DeleteAsync<TeamDeleteDtoRequest, TeamDeleteDtoResponse, long>
+        return await DeleteAsync<TeamDeleteDtoRequest, TeamDeleteDtoResponse, int>
         (
              request,
              async (id) =>

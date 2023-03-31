@@ -102,7 +102,7 @@ namespace VSoft.Company.TEA.Team.Business.UnitTest.Test.Tests
         [DataRow(63491)]
         [DataRow(63492)]
         [DataRow(63493)]
-        public async Task DeleteAsync(long id)
+        public async Task DeleteAsync(int id)
         {
             await TestDeleteAsync(new TeamDeleteDtoRequest()
             {
