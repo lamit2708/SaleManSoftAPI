@@ -20,7 +20,7 @@ namespace VSoft.Company.PRO.Product.Data.Migrate.Real.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
                     Price = table.Column<double>(type: "double", nullable: false),
-                    Quatity = table.Column<int>(type: "int(11)", nullable: false),
+                    Quantity = table.Column<int>(type: "int(11)", nullable: false),
                     Category = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: true, defaultValueSql: "'NULL'"),
                     Description = table.Column<string>(type: "varchar(512)", maxLength: 512, nullable: true, defaultValueSql: "'NULL'")
                 },

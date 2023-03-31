@@ -61,13 +61,13 @@ public class TestProductReal : TestMgmtEntities
     // [DataRow("Đặng Thế Nhân1", "35049843957", "aaa@gmail.com")]
     // [DataRow("Lê Vũ Lâm1", "02345332565", "abc@yahoo.com")]
     [DataRow("Phần mềm tính tiền", "abc xyz", 20000,1)]
-    public async Task CreateWithKeywordAsync(string fullName, string description, double price,int quatity)
+    public async Task CreateWithKeywordAsync(string fullName, string description, double price,int quantity)
     {
         var e = new A01().GetCreateEntity();
         e.Name = fullName;
         e.Description = description;
         e.Price = price;
-        e.Quatity = quatity;
+        e.Quantity = quantity;
        
 
         await RunTest("CreateWithKeywordAsync", async (r, l) =>
