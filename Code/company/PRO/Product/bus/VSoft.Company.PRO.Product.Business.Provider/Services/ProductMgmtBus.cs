@@ -201,7 +201,7 @@ public class ProductMgmtBus : BusinessRepositoryService<ProductDto, IProductRepo
 
     public ProductDeleteDtoResponse Delete(ProductDeleteDtoRequest request)
     {
-        return Delete<ProductDeleteDtoRequest, ProductDeleteDtoResponse, long>
+        return Delete<ProductDeleteDtoRequest, ProductDeleteDtoResponse, int>
         (
              request,
              (id) =>
@@ -215,7 +215,7 @@ public class ProductMgmtBus : BusinessRepositoryService<ProductDto, IProductRepo
 
     public async Task<ProductDeleteDtoResponse> DeleteAsync(ProductDeleteDtoRequest request)
     {
-        return await DeleteAsync<ProductDeleteDtoRequest, ProductDeleteDtoResponse, long>
+        return await DeleteAsync<ProductDeleteDtoRequest, ProductDeleteDtoResponse, int>
         (
              request,
              async (id) =>

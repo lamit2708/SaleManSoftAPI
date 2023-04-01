@@ -13,8 +13,9 @@ public static class ProductDtoMethods
             Name = src.Name,
             Price = src.Price,
             Quantity = src.Quantity,
-            Category = src.Category,
+            CategoryId = src.CategoryId,
             Description = src.Description,
-        };
+            Keyword = src.Keyword,
+};
     }
 }

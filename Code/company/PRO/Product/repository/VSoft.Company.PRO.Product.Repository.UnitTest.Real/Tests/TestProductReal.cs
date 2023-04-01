@@ -30,7 +30,6 @@ public class TestProductReal : TestMgmtEntities
     [DataRow(10, "Thiết kế website quản trị, giới thiệu doanh nghiệp", 20000000, 1, 2, "Website giới thiệu sản phẩm, dịch vụ, nhân sự, thế mạnh công ty, giúp quảng bá thương hiệu và tìm khách hàng hiệu quả", "")]
     [DataRow(11, "App thanh toán ví điện tử", 100000000, 1, 3, "App liên kết với nhiều ngân hàng tại Việt Nam và bạn dễ dàng nạp tiền vào ví một cách đơn giản và nhanh chóng, giúp nạp nạp thẻ điện thoại, thanh toán tiền điện nước, mua sắm online,...", "")]
     [DataRow(12, "App đặt vé du lịch", 20000000, 1, 3, "App đặt vé máy bay, vé tàu, xe; Đặt phòng khách sạn, homestay tuỳ thích; Đặt dịch vụ đưa đón sân bay; Đặt các vé tham quan với mức giá ưu đãi; Đặt tour du lịch chuyên nghiệp nâng cao trải nghiệm người dùng…", "")]
-
     [DataRow(13, "Nâng cấp hệ thống ERP", 100000000, 1, 4, "Hỗ trợ nâng cấp cải tiến các chức năng của hệ thống ERP", "")]
     [DataRow(14, "Nâng cấp hệ thống CRM", 50000000, 1, 4, "Hỗ trợ nâng cấp cải tiến các chức năng của hệ thống CRM", "")]
     [DataRow(15, "Nâng cấp hệ thống thương mại điện tử", 50000000, 1, 4, "Hỗ trợ nâng cấp cải tiến các chức năng của hệ thống thương mại điện tử", "")]
