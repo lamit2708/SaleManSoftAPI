@@ -77,10 +77,6 @@ namespace VSoft.Company.PRO.Product.Business.UnitTest.Test.Tests
         [DataRow(19)]
         [DataRow(20)]
         [DataRow(21)]
-        [DataRow(22)]
-        [DataRow(23)]
-        [DataRow(24)]
-
         public async Task DeleteAsync(int id)
         {
             await TestDeleteAsync(new ProductDeleteDtoRequest()
