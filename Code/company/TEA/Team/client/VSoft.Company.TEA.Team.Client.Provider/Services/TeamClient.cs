@@ -19,7 +19,8 @@ public class TeamClient : ApiDtoClientJSon<ITeamClient, MTeamClient>, ITeamClien
 {
     public TeamClient(IConfigurationRoot configuration, MTeamClient clientConfig, ITokenService tokenService) : base(configuration, clientConfig, tokenService)
     {
-        BaseAddress = "https://localhost:7174/";
+      //  BaseAddress = "https://localhost:7174/";
+      //  Client.BaseAddress = new Uri(BaseAddress);
     }
 
     public override string Controller { get; } = nameof(ITeamControllerPath.Team);
