@@ -14,4 +14,13 @@ public static class TeamEntityMethods
             Description = src.Description,
         };
     }
+
+    public static List<TeamDto> GetDto(this List<MTeamEntity> srcs)
+    {
+        var rs = new List<TeamDto>();
+        if (srcs == null)
+            return rs;
+        srcs.ForEach(src => rs.Add(src.GetDto()));
+        return rs;
+    }
 }

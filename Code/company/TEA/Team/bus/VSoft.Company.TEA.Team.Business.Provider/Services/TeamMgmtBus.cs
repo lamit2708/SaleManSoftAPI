@@ -13,6 +13,9 @@ using System.Text;
 using VegunSoft.Framework.Business.Provider.Repository.Services;
 using VegunSoft.Framework.Business.Dto.Request;
 using VegunSoft.Framework.Business.Dto.Response;
+using VegunSoft.Framework.Paging.Provider.Response;
+using VegunSoft.Framework.Paging.Provider.Request;
+using VSoft.Company.TEA.Team.Business.entity.Extension.Methods;
 
 namespace VSoft.Company.TEA.Team.Business.Provider.Services;
 
@@ -345,5 +348,17 @@ public class TeamMgmtBus : BusinessRepositoryService<TeamDto, ITeamRepository>, 
     public async Task<TeamSaveRangeDtoResponse> SaveRangeTransactionAsync(TeamSaveRangeDtoRequest request)
     {
         return await SaveRangeAsync(request, (rq) => (Repository?.SaveRangeTransactionAsync(rq)) ?? Task.FromResult<MSaveRangeResults<MTeamEntity>?>(null));
+    }
+
+    public async Task<TeamTableKeySearchDtoResponse> GetTableByKeySearch(TeamTableKeySearchDtoRequest request)
+    {
+        var rsRespo = await Repository?.GetTableByKeySearchAsync(request.Data, request.PagingParams);
+        var response = new TeamTableKeySearchDtoResponse();
+        if (rsRespo != null) 
+        {
+            response.Data = rsRespo.Items.GetDto().ToArray();
+            response.MetaData = rsRespo.MetaData;
+        };
+        return response;
     }
 }

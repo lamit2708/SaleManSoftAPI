@@ -19,6 +19,9 @@
 	  <Reference Include="VegunSoft.Framework.Entity.Key">
 	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Entity\VegunSoft.Framework.Entity.Key.dll</HintPath>
 	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Paging.Provider">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet\Paging\VegunSoft.Framework.Paging.Provider.dll</HintPath>
+	  </Reference>
 	  <Reference Include="VegunSoft.Framework.Repository">
 	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.dll</HintPath>
 	  </Reference>
