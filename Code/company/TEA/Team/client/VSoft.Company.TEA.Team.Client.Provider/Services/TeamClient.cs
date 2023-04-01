@@ -19,13 +19,15 @@ public class TeamClient : ApiDtoClientJSon<ITeamClient, MTeamClient>, ITeamClien
 {
     public TeamClient(IConfigurationRoot configuration, MTeamClient clientConfig, ITokenService tokenService) : base(configuration, clientConfig, tokenService)
     {
+        BaseAddress = "https://localhost:7174/";
     }
 
     public override string Controller { get; } = nameof(ITeamControllerPath.Team);
 
-    public Task<MDtoResponse<PagedList<TeamDto>>> GetTableByKeyword(string keyWord, PagingParameters pageParameter)
+    public Task<TeamTableKeySearchDtoResponse> GetTableByKeyword(TeamTableKeySearchDtoRequest request)
     {
-        return null;
+        var relativePath = Controller.GetApiPath(nameof(ITeamActionName.FindRange));
+        return GetAsync<TeamTableKeySearchDtoRequest, TeamTableKeySearchDtoResponse>(relativePath, request);
     }
 
     public Task<TeamFindDtoResponse> FindAsync(MDtoRequestFindByString request)

@@ -3,6 +3,7 @@ using VSoft.Company.TEA.Team.Business.Services;
 using VSoft.Company.TEA.Team.Business.Dto.Request;
 using VSoft.Company.TEA.Team.Api.Cfg.Routes;
 using VegunSoft.Framework.Business.Dto.Request;
+using VSoft.Company.TEA.Team.Business.Dto.Response;
 
 namespace VSoft.Company.TEA.Team.Api.Controller.Base.Controllers;
 
@@ -13,7 +14,7 @@ public abstract class TeamBaseController : ControllerBase
     public TeamBaseController(ITeamMgmtBus bus)
     {
         Bus = bus;
-    }    
+    }
 
     [HttpGet(nameof(ITeamActionName.FindOne))]
     public async Task<IActionResult> FindAsync([FromQuery] MDtoRequestFindByInt dtoRequest)
@@ -22,10 +23,17 @@ public abstract class TeamBaseController : ControllerBase
         return Ok(res);
     }
 
+    //[HttpGet(nameof(ITeamActionName.FindRange))]
+    //public async Task<IActionResult> FindRangeAsync([FromBody] MDtoRequestFindRangeByInts dtosRequest)
+    //{
+    //    var res = await Bus.FindRangeAsync(dtosRequest);
+    //    return Ok(res);
+    //}
+
     [HttpGet(nameof(ITeamActionName.FindRange))]
-    public async Task<IActionResult> FindRangeAsync([FromBody] MDtoRequestFindRangeByInts dtosRequest)
+    public async Task<IActionResult> FindTableByKeySearch([FromBody] TeamTableKeySearchDtoRequest dtosRequest)
     {
-        var res = await Bus.FindRangeAsync(dtosRequest);
+        var res = await Bus.GetTableByKeySearch(dtosRequest);
         return Ok(res);
     }
 

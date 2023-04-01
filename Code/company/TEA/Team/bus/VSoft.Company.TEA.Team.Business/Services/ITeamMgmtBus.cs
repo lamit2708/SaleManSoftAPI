@@ -1,5 +1,8 @@
 ﻿using VegunSoft.Framework.Business.Dto.Request;
 using VegunSoft.Framework.Business.Dto.Response;
+using VegunSoft.Framework.Paging.Provider.Request;
+using VegunSoft.Framework.Paging.Provider.Response;
+using VSoft.Company.TEA.Team.Business.Dto.Data;
 using VSoft.Company.TEA.Team.Business.Dto.Request;
 using VSoft.Company.TEA.Team.Business.Dto.Response;
 
@@ -46,4 +49,6 @@ public interface ITeamMgmtBus
     Task<TeamSaveRangeDtoResponse> SaveRangeAsync(TeamSaveRangeDtoRequest request);
 
     Task<TeamSaveRangeDtoResponse> SaveRangeTransactionAsync(TeamSaveRangeDtoRequest request);
+
+    Task<TeamTableKeySearchDtoResponse> GetTableByKeySearch(TeamTableKeySearchDtoRequest request);
 }
