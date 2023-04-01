@@ -36,7 +36,7 @@ public class ProductDbContext : EfcDbContext<ProductDbContext, MProductEntity>
     protected void ConfigBasicFields(EntityTypeBuilder<MProductEntity> entity)
     {
         entity.Property(e => e.Id).HasColumnType("int(11)");
-        entity.Property(e => e.Category).HasMaxLength(100).HasDefaultValueSql("'NULL'");
+        entity.Property(e => e.CategoryId).HasColumnType("int(11)");
         entity.Property(e => e.Description).HasMaxLength(512).HasDefaultValueSql("'NULL'");
         entity.Property(e => e.Name).HasMaxLength(100);
         entity.Property(e => e.Quantity).HasColumnType("int(11)");

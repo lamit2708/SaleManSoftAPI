@@ -19,10 +19,7 @@ public class TestProductCategoryReal : TestMgmtEntities
 
     [TestMethod]
     [DataRow( "Xây dựng hệ thống quản lý")]
-    [DataRow( "Thiết kế website")]
-    [DataRow( "Thiết kế ứng dụng mobile")]
-    [DataRow( "Nâng cấp hệ thống")]
-    [DataRow( "Dịch vụ Marketing Online")]
+
     public async Task CreateAsync(string name)
     {
         var e = new A01().GetCreateEntity();
@@ -50,6 +47,21 @@ public class TestProductCategoryReal : TestMgmtEntities
     //    });
     //}
 
+    [TestMethod]
+    [DataRow(1, "Xây dựng hệ thống quản lý")]
+    [DataRow(2, "Thiết kế website")]
+    [DataRow(3, "Thiết kế ứng dụng mobile")]
+    [DataRow(4, "Nâng cấp hệ thống")]
+    [DataRow(5, "Dịch vụ Marketing Online")]
+    public async Task CreateSeedDataAsync(int Id, string name)
+    {
+        var e = new A01().GetCreateEntity();
+        e.Id=Id;
+        e.Name = name;
+
+
+        await TestCreateAsync(e);
+    }
     [TestMethod]
     [DataRow(1, "Xây dựng hệ thống quản lý")]
     [DataRow(2, "Thiết kế website")]
