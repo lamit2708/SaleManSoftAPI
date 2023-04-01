@@ -14,7 +14,7 @@ public abstract class TestDto
     public virtual ProductDto GetCreateDto(string fullName)
     {
         var e = Dto;
-        e.FullName = fullName;
+        e.Name = fullName;
         return e;
     }
 
@@ -30,7 +30,7 @@ public abstract class TestDto
         var e = Dto;
         var arr = data.Split(" / ");
         e.Id = Convert.ToInt32(arr[0]);
-        e.FullName = arr[1];
+        e.Name = arr[1];
         return e;
     }
 
@@ -38,7 +38,7 @@ public abstract class TestDto
     {
         var e = Dto;
         e.Id = id;
-        e.FullName = fullName;        
+        e.Name = fullName;        
         return e;
     }
 

@@ -39,7 +39,7 @@ public class MgmtTest : TestMgmtClient
     public async Task CreateAsync(string name, string desc)
     {
         var dto = new A01().GetCreateDto();
-        dto.FullName = name;
+        dto.Name = name;
         
         await TestCreateAsync(new ProductInsertDtoRequest()
         {
