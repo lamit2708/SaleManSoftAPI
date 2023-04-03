@@ -3,6 +3,9 @@ using VegunSoft.Framework.Repository.Id.Efc.Provider.Services;
 using VSoft.Company.PRO.Product.Data.Db.Contexts;
 using VSoft.Company.PRO.Product.Data.Entity.Models;
 using VSoft.Company.PRO.Product.Repository.Efc.Services;
+using VegunSoft.Framework.Paging.Provider.Request;
+using VegunSoft.Framework.Paging.Provider.Response;
+using VegunSoft.Framework.Value.Property.Methods;
 
 namespace VSoft.Company.PRO.Product.Repository.Efc.Provider.Services;
 
@@ -109,5 +112,24 @@ public class EfcProductRepository : EFcRepositoryEntityMgmtId<ProductDbContext, 
 
         return str;
 
+    }
+    public async Task<PagedList<MProductEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams)
+    {
+        IQueryable<MProductEntity>? query;
+        if (string.IsNullOrEmpty(keySearch))
+            query = Entities;
+        else
+        {
+            var unsignedKey = keySearch.ConvertToUnsignedString();
+            query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+        }
+
+        var count = await query.CountAsync();
+
+        var data = await query
+            .Skip((pagParams.PageNumber - 1) * pagParams.PageSize)
+            .Take(pagParams.PageSize)
+            .ToListAsync();
+        return new PagedList<MProductEntity>(data, count, pagParams.PageNumber, pagParams.PageSize);
     }
 }
