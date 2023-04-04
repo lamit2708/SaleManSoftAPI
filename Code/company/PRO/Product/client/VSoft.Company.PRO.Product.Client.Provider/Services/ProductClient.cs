@@ -19,10 +19,10 @@ public class ProductClient : ApiDtoClientJSon<IProductClient, MProductClient>, I
 
     public override string Controller { get; } = nameof(IProductControllerPath.Product);
 
-    public Task<ProductFindDtoResponse> FindAsync(MDtoRequestFindByString request)
+    public Task<ProductFindDtoResponse> FindAsync(MDtoRequestFindByInt request)
     {
         var relativePath = Controller.GetApiPath(nameof(IProductActionName.FindOne));
-        return GetAsync<MDtoRequestFindByString, ProductFindDtoResponse>(relativePath, request);
+        return GetAsync<MDtoRequestFindByInt, ProductFindDtoResponse>(relativePath, request);
     }
 
     public Task<ProductFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request)

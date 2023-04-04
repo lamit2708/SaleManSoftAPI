@@ -8,7 +8,7 @@ namespace VSoft.Company.PRO.Product.Client.Services;
 public interface IProductClient: IApiDtoClientJSon<IProductClient>
 {  
 
-    Task<ProductFindDtoResponse> FindAsync(MDtoRequestFindByString request);
+    Task<ProductFindDtoResponse> FindAsync(MDtoRequestFindByInt request);
 
     Task<ProductFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request);
 
