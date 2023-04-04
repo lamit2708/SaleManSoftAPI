@@ -358,6 +358,7 @@ public class TeamMgmtBus : BusinessRepositoryService<TeamDto, ITeamRepository>, 
         {
             response.Data = rsRespo.Items.GetDto().ToArray();
             response.MetaData = rsRespo.MetaData;
+            response.IsSuccess = true;
         };
         return response;
     }
