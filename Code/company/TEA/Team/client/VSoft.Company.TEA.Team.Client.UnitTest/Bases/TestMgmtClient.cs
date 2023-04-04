@@ -28,7 +28,7 @@ namespace VSoft.Company.TEA.Team.Api.UnitTest.Client.Bases
             ServiceCollection?.AddSingleton<ITeamClient, TeamClient>();
         }
        
-        protected async Task TestFindAsync(MDtoRequestFindByString request)
+        protected async Task TestFindAsync(MDtoRequestFindByInt request)
         {
             await RunTest("TestFindAsync", async (log) =>
             {

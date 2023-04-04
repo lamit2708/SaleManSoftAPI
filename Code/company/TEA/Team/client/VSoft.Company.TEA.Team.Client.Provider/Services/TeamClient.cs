@@ -48,10 +48,14 @@ public class TeamClient : ApiDtoClientJSon<ITeamClient, MTeamClient>, ITeamClien
         return GetQueryAsync<TeamTableKeySearchDtoResponse>(relativePath, query);
     }
 
-    public Task<TeamFindDtoResponse> FindAsync(MDtoRequestFindByString request)
+    public Task<TeamFindDtoResponse> FindAsync(MDtoRequestFindByInt request)
     {
         var relativePath = Controller.GetApiPath(nameof(ITeamActionName.FindOne));
-        return GetAsync<MDtoRequestFindByString, TeamFindDtoResponse>(relativePath, request);
+        var query = new Dictionary<string, string>()
+        {
+            [nameof(request.Id)] = request.Id.ToString(),
+        };
+        return GetQueryAsync<TeamFindDtoResponse>(relativePath, query);
     }
 
     public Task<TeamFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request)
