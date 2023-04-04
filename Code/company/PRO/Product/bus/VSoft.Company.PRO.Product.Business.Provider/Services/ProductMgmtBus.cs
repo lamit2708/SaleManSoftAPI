@@ -112,7 +112,7 @@ public class ProductMgmtBus : BusinessRepositoryService<ProductDto, IProductRepo
             async (data) =>
             {
                 var inputEntity = data?.GetEntity(false) ?? new MProductEntity();
-                var resultEntity = await (Repository?.CreateAsync(inputEntity) ?? Task.FromResult<MProductEntity?>(new MProductEntity()));
+                var resultEntity = await (Repository?.CreateWithKeywordAsync(inputEntity) ?? Task.FromResult<MProductEntity?>(new MProductEntity()));
                 return resultEntity?.GetDto();
             }
         );
