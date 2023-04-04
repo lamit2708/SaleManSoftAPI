@@ -8,10 +8,7 @@ namespace VSoft.Company.PRO.Product.Client.UnitTest.Test.Values.GroupA
         protected override ProductDto Dto => new ProductDto()
         {
            
-            FullName = "Đặng Thế Nhân",
-          
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+           
 
         };
     }

@@ -17,4 +17,12 @@ public static class ProductEntityMethods
             Description = src.Description,
         };
     }
+    public static List<ProductDto> GetDto(this List<MProductEntity> srcs)
+    {
+        var rs = new List<ProductDto>();
+        if (srcs == null)
+            return rs;
+        srcs.ForEach(src => rs.Add(src.GetDto()));
+        return rs;
+    }
 }

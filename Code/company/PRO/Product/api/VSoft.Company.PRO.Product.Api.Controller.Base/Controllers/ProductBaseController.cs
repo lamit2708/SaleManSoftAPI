@@ -4,6 +4,7 @@ using VSoft.Company.PRO.Product.Business.Dto.Request;
 using VSoft.Company.PRO.Product.Api.Cfg.Routes;
 using VegunSoft.Framework.Business.Dto.Request;
 
+
 namespace VSoft.Company.PRO.Product.Api.Controller.Base.Controllers;
 
 public abstract class ProductBaseController : ControllerBase
@@ -28,7 +29,12 @@ public abstract class ProductBaseController : ControllerBase
         var res = await Bus.FindRangeAsync(dtosRequest);
         return Ok(res);
     }
-
+    [HttpGet(nameof(IProductActionName.FindTable))]
+    public async Task<IActionResult> FindTableByKeySearch([FromQuery] ProductTableKeySearchDtoRequest dtosRequest)
+    {
+        var res = await Bus.GetTableByKeySearch(dtosRequest);
+        return Ok(res);
+    }
     [HttpPost(nameof(IProductActionName.CreateOne))]
     public async Task<IActionResult> CreateAsync([FromBody] ProductInsertDtoRequest dtoRequest)
     {

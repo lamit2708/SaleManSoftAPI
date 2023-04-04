@@ -121,7 +121,8 @@ public class EfcProductRepository : EFcRepositoryEntityMgmtId<ProductDbContext, 
         else
         {
             var unsignedKey = keySearch.ConvertToUnsignedString();
-            query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+            //query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+            query = Entities.Where(x => x.Name.Contains(keySearch));
         }
 
         var count = await query.CountAsync();
