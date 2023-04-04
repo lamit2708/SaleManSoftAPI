@@ -45,10 +45,22 @@ public class EfcProductRepository : EFcRepositoryEntityMgmtId<ProductDbContext, 
         return base.Update(entity);
 
     }
+    public Task<MProductEntity?> UpdateWithKeywordAsync(MProductEntity entity)
+    {
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Description}");
+        return base.UpdateAsync(entity);
+
+    }
     public MProductEntity? CreateWithKeyword(MProductEntity entity)
     {
         entity.Keyword = CreateKeyword($"{entity.Name} {entity.Description}");
         return base.Create(entity);
+
+    }
+    public Task<MProductEntity?> CreateWithKeywordAsync(MProductEntity entity)
+    {
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Description}");
+        return base.CreateAsync(entity);
 
     }
 
@@ -121,7 +133,8 @@ public class EfcProductRepository : EFcRepositoryEntityMgmtId<ProductDbContext, 
         else
         {
             var unsignedKey = keySearch.ConvertToUnsignedString();
-            query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+            //query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+            query = Entities.Where(x => x.Name.Contains(keySearch));
         }
 
         var count = await query.CountAsync();

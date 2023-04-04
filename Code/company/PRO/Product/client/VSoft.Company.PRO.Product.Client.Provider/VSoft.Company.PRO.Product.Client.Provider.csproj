@@ -45,6 +45,9 @@
 		<Reference Include="VSoft.Company.PRO.OrderItemHistory.Api.Cfg">
 		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRO\Product\api\VSoft.Company.PRO.Product.Api.Cfg.dll</HintPath>
 		</Reference>
+		<Reference Include="VegunSoft.Framework.Paging.Provider">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet\Paging\VegunSoft.Framework.Paging.Provider.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 
 </Project>

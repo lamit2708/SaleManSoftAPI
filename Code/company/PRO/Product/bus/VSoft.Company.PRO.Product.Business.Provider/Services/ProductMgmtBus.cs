@@ -14,6 +14,7 @@ using VegunSoft.Framework.Business.Provider.Repository.Services;
 using VegunSoft.Framework.Business.Dto.Request;
 using VegunSoft.Framework.Business.Dto.Response;
 
+
 namespace VSoft.Company.PRO.Product.Business.Provider.Services;
 
 public class ProductMgmtBus : BusinessRepositoryService<ProductDto, IProductRepository>, IProductMgmtBus
@@ -165,7 +166,7 @@ public class ProductMgmtBus : BusinessRepositoryService<ProductDto, IProductRepo
             async (data) =>
             {
                 var inputEntity = data?.GetEntity(true) ?? new MProductEntity();
-                var resultEntity = await (Repository?.UpdateAsync(inputEntity) ?? Task.FromResult<MProductEntity?>(new MProductEntity()));
+                var resultEntity = await (Repository?.UpdateWithKeywordAsync(inputEntity) ?? Task.FromResult<MProductEntity?>(new MProductEntity()));
                 return resultEntity?.GetDto();
             }
         );
@@ -345,5 +346,18 @@ public class ProductMgmtBus : BusinessRepositoryService<ProductDto, IProductRepo
     public async Task<ProductSaveRangeDtoResponse> SaveRangeTransactionAsync(ProductSaveRangeDtoRequest request)
     {
         return await SaveRangeAsync(request, (rq) => (Repository?.SaveRangeTransactionAsync(rq)) ?? Task.FromResult<MSaveRangeResults<MProductEntity>?>(null));
+    }
+
+    public async Task<ProductTableKeySearchDtoResponse> GetTableByKeySearch(ProductTableKeySearchDtoRequest request)
+    {
+        var rsRespo = await Repository?.GetTableByKeySearchAsync(request.Data, request.PagingParams);
+        var response = new ProductTableKeySearchDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.Items.GetDto().ToArray();
+            response.MetaData = rsRespo.MetaData;
+            response.IsSuccess = true;
+        };
+        return response;
     }
 }
