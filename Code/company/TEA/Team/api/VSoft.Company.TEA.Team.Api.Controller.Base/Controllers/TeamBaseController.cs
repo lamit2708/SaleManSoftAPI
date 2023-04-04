@@ -23,15 +23,15 @@ public abstract class TeamBaseController : ControllerBase
         return Ok(res);
     }
 
-    //[HttpGet(nameof(ITeamActionName.FindRange))]
-    //public async Task<IActionResult> FindRangeAsync([FromBody] MDtoRequestFindRangeByInts dtosRequest)
-    //{
-    //    var res = await Bus.FindRangeAsync(dtosRequest);
-    //    return Ok(res);
-    //}
-
     [HttpGet(nameof(ITeamActionName.FindRange))]
-    public async Task<IActionResult> FindTableByKeySearch([FromBody] TeamTableKeySearchDtoRequest dtosRequest)
+    public async Task<IActionResult> FindRangeAsync([FromBody] MDtoRequestFindRangeByInts dtosRequest)
+    {
+        var res = await Bus.FindRangeAsync(dtosRequest);
+        return Ok(res);
+    }
+
+    [HttpGet(nameof(ITeamActionName.FindTable))]
+    public async Task<IActionResult> FindTableByKeySearch([FromQuery] TeamTableKeySearchDtoRequest dtosRequest)
     {
         var res = await Bus.GetTableByKeySearch(dtosRequest);
         return Ok(res);

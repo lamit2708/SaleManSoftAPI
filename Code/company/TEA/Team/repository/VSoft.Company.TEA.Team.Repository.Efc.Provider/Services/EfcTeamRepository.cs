@@ -41,7 +41,8 @@ public class EfcTeamRepository : EFcRepositoryEntityMgmtId<TeamDbContext, MTeamE
         else
         {
             var unsignedKey = keySearch.ConvertToUnsignedString();
-            query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+            //query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+            query = Entities.Where(x => x.Name.Contains(keySearch));
         }
 
         var count = await query.CountAsync();
