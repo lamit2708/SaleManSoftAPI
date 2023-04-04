@@ -25,5 +25,7 @@ public interface IProductClient: IApiDtoClientJSon<IProductClient>
     Task<ProductDeleteRangeDtoResponse> DeleteRangeAsync(ProductDeleteRangeDtoRequest request);
 
     Task<ProductSaveRangeDtoResponse> SaveRangeAsync(ProductSaveRangeDtoRequest request);
-   
+    Task<ProductTableKeySearchDtoResponse> GetTableByKeyword(ProductTableKeySearchDtoRequest request);
+
+
 }
