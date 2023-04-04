@@ -13,9 +13,9 @@ public class MgmtTest : TestMgmtClient
     [DataRow("1fbdbe39-a443-4403-bb81-d4c070f18762", DisplayName = "Case 2")]
     public async Task FindAsync(string id)
     {
-        await TestFindAsync(new MDtoRequestFindByString()
+        await TestFindAsync(new MDtoRequestFindByInt()
         {
-            Id = id,
+            Id = Int32.Parse(id),
             ShowExMessage = true,
             ShowExContent = true,
             LangCode= "VN",           

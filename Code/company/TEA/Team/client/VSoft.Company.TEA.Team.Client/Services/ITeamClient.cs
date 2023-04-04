@@ -9,7 +9,7 @@ public interface ITeamClient: IApiDtoClientJSon<ITeamClient>
 {
     Task<TeamTableKeySearchDtoResponse> GetTableByKeyword(TeamTableKeySearchDtoRequest request);
 
-    Task<TeamFindDtoResponse> FindAsync(MDtoRequestFindByString request);
+    Task<TeamFindDtoResponse> FindAsync(MDtoRequestFindByInt request);
 
     Task<TeamFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request);
 
