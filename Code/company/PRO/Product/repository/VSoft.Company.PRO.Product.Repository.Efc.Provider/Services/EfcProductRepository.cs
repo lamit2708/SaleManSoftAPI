@@ -45,10 +45,22 @@ public class EfcProductRepository : EFcRepositoryEntityMgmtId<ProductDbContext, 
         return base.Update(entity);
 
     }
+    public Task<MProductEntity?> UpdateWithKeywordAsync(MProductEntity entity)
+    {
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Description}");
+        return base.UpdateAsync(entity);
+
+    }
     public MProductEntity? CreateWithKeyword(MProductEntity entity)
     {
         entity.Keyword = CreateKeyword($"{entity.Name} {entity.Description}");
         return base.Create(entity);
+
+    }
+    public Task<MProductEntity?> CreateWithKeywordAsync(MProductEntity entity)
+    {
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Description}");
+        return base.CreateAsync(entity);
 
     }
 

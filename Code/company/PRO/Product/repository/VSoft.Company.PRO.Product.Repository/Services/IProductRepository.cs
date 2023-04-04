@@ -17,8 +17,10 @@ public interface IProductRepository : IEfcRepositoryEntityMgmtId<ProductDbContex
 
 
     MProductEntity? UpdateWithKeyword(MProductEntity entity);
+    Task<MProductEntity?> UpdateWithKeywordAsync(MProductEntity entity);
 
     MProductEntity? CreateWithKeyword(MProductEntity entity);
+    Task<MProductEntity?> CreateWithKeywordAsync(MProductEntity entity);
     Task<PagedList<MProductEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams);
 
 }
