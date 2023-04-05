@@ -39,7 +39,7 @@ public class MgmtTest : TestMgmtClient
     public async Task CreateAsync(string name, string desc)
     {
         var dto = new A01().GetCreateDto();
-        dto.FullName = name;
+        dto.Name = name;
         
         await TestCreateAsync(new CustomerInsertDtoRequest()
         {
@@ -101,7 +101,7 @@ public class MgmtTest : TestMgmtClient
 
     [TestMethod]
     [DataRow(63494, 63495, 63496)]
-    public async Task DeleteRangeAsync(int id1, int id2, int id3)
+    public async Task DeleteRangeAsync(long id1, long id2, long id3)
     {
         await TestDeleteRangeAsync(new CustomerDeleteRangeDtoRequest()
         {
@@ -123,7 +123,7 @@ public class MgmtTest : TestMgmtClient
         {
             CreateData = new[] { ec1, ec2 },
             UpdateData = new[] { eu1, eu2, eu3 },
-            DeleteIds = new[] { id1, id2 },
+            DeleteIds = new[] { (long) id1, (long)id2 },
         });
     }
 }

@@ -21,7 +21,7 @@ namespace VSoft.Company.CTM.Customer.Business.UnitTest.Test.Tests
         }
 
         [TestMethod]
-        [DataRow(63494, 63495, 63496)]
+        [DataRow(1, 2, 3)]
         public async Task FindRangeAsync(long id1, long id2, long id3)
         {
             await TestFindRangeAsync(new MDtoRequestFindRangeByLongs()
@@ -31,41 +31,50 @@ namespace VSoft.Company.CTM.Customer.Business.UnitTest.Test.Tests
         }
 
         [TestMethod]
-        [DataRow("Đặng Thế Nhân", "0923232311", "aaa@gmail.com")]
-        //[DataRow("Lê Vũ Lâm", "0234532565", "abc@yahoo.com")]
-        //[DataRow("Nguyễn Tấn Phát", "54235235236", "xyz@gmail.com")]
-        public async Task TestCreate(string name, string phone, string email)
+        [DataRow("Nguyễn Ngọc Ngân", "0923232611", "ngan@gmail.com", "22 Đặng Văn Bi, TP Thủ Đức", true, 1)]
+        //[DataRow("Lê Vũ Lâm", "0923232312", "lam@gmail.com", "32 Kha Vạn Cân, TP Thủ Đức", true, 1)]
+        //[DataRow("Vũ Thị Thọ", "0923232313", "tho@gmail.com", "32 Tô Ngọc Vân, TP Thủ Đức", false, 2)]
+
+
+        public async Task TestCreate(string name, string phone, string email, string address, bool gender, int priority)
         {
+
             var e = new CustomerDto();
             e.Name = name;
             e.Phone = phone;
             e.Email = email;
+            e.Address = address;
+            e.Gender = gender;
+            e.PriorityId = priority;
             await TestCreateAsync(new CustomerInsertDtoRequest()
+            {
+                Data = e
+            });
+        }
+        [TestMethod]
+        [DataRow(1, "Nguyễn Văn Nam", "0923232411", "nam@gmail.com", "22 Đặng Văn Bi, TP Thủ Đức", true, 1)]
+        [DataRow(2, "Lê Thanh Hoàng", "0923232412", "hoang@gmail.com", "32 Kha Vạn Cân, TP Thủ Đức", true, 1)]
+        [DataRow(3, "Vũ Thị Thọ", "0923232413", "tho@gmail.com", "32 Tô Ngọc Vân, TP Thủ Đức", false, 2)]
+        [DataRow(4, "Trương Anh Tuấn", "0923232414", "tuan@gmail.com", "32 Tô Ngọc Vân, TP Thủ Đức", true, 2)]
+        public async Task TestUpdate(int id, string name, string phone, string email, string address, bool gender, int priority)
+        {
+
+            var e = new CustomerDto();
+            e.Id = id;
+            e.Name = name;
+            e.Phone = phone;
+            e.Email = email;
+            e.Address = address;
+            e.Gender = gender;
+            e.PriorityId = priority;
+            await TestUpdateAsync(new CustomerUpdateDtoRequest()
             {
                 Data = e
             });
         }
 
         [TestMethod]
-        [DataRow(15,"Đặng Thế Nhân", "09629938815", "aaa@gmail.com")]
-        //[DataRow(2,"Lê Vũ Lâm", "0234532565", "abc@yahoo.com")]
-        //[DataRow(3,"Nguyễn Tấn Phát", "54235235236", "xyz@gmail.com")]
-        public async Task TestUpdate(int id, string name, string phone, string email)
-        {
-            await TestUpdateAsync(new CustomerUpdateDtoRequest()
-            {
-                Data = new CustomerDto()
-                {
-                   Id = id,
-                   Name = name,
-                   Phone = phone,
-                   Email = email
-                }
-            });
-        }
-
-        [TestMethod]
-        [DataRow(15)]
+        [DataRow(20)]
         //[DataRow(12)]
         public async Task DeleteAsync(long id)
         {
