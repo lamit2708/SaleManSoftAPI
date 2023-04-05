@@ -1,4 +1,6 @@
-﻿using VegunSoft.Framework.Repository.Id.Efc.Services;
+﻿using VegunSoft.Framework.Paging.Provider.Request;
+using VegunSoft.Framework.Paging.Provider.Response;
+using VegunSoft.Framework.Repository.Id.Efc.Services;
 using VSoft.Company.CTM.Customer.Data.Db.Contexts;
 using VSoft.Company.CTM.Customer.Data.Entity.Models;
 
@@ -16,5 +18,11 @@ public interface ICustomerRepository : IEfcRepositoryEntityMgmtId<CustomerDbCont
     MCustomerEntity? CreateWithKeyword(MCustomerEntity entity);
 
     MCustomerEntity? UpdateWithKeyword(MCustomerEntity entity);
+
+    Task<MCustomerEntity?> UpdateWithKeywordAsync(MCustomerEntity entity);
+
+    Task<MCustomerEntity?> CreateWithKeywordAsync(MCustomerEntity entity);
+    Task<PagedList<MCustomerEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams);
+
 
 }

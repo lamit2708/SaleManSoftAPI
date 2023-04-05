@@ -12,29 +12,32 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="VegunSoft.Framework.Entity.Key">
-	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Entity\VegunSoft.Framework.Entity.Key.dll</HintPath>
-	  </Reference>
-	  <Reference Include="VegunSoft.Framework.Repository">
-	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.dll</HintPath>
-	  </Reference>
-	  <Reference Include="VegunSoft.Framework.Repository.Id.Efc">
-	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.dll</HintPath>
-	  </Reference>
-	  <Reference Include="VSoft.Company.CTM.Customer.Data.Db">
-	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\Customer\data\VSoft.Company.CTM.Customer.Data.Db.dll</HintPath>
-	  </Reference>
-	  <Reference Include="VSoft.Company.CTM.Customer.Data.Entity">
-	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\Customer\data\VSoft.Company.CTM.Customer.Data.Entity.dll</HintPath>
-	  </Reference>
+		<Reference Include="VegunSoft.Framework.Entity.Key">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Entity\VegunSoft.Framework.Entity.Key.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Repository">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Repository.Id.Efc">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.CTM.Customer.Data.Db">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\Customer\data\VSoft.Company.CTM.Customer.Data.Db.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.CTM.Customer.Data.Entity">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\Customer\data\VSoft.Company.CTM.Customer.Data.Entity.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Paging.Provider">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet\Paging\VegunSoft.Framework.Paging.Provider.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
+		<Folder Include="Models\" />
 	</ItemGroup>
 
 </Project>

@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using VegunSoft.Framework.Paging.Provider.Request;
+using VegunSoft.Framework.Paging.Provider.Response;
 using VegunSoft.Framework.Repository.Id.Efc.Provider.Services;
+using VegunSoft.Framework.Value.Property.Methods;
 using VSoft.Company.CTM.Customer.Data.Db.Contexts;
 using VSoft.Company.CTM.Customer.Data.Entity.Models;
 using VSoft.Company.CTM.Customer.Repository.Efc.Services;
@@ -54,6 +57,20 @@ public class EfcCustomerRepository : EFcRepositoryEntityMgmtId<CustomerDbContext
     {
         entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email}");
         return base.Create(entity);
+
+    }
+
+    public Task<MCustomerEntity?> UpdateWithKeywordAsync(MCustomerEntity entity)
+    {
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email}");
+        return base.UpdateAsync(entity);
+
+    }
+ 
+    public Task<MCustomerEntity?> CreateWithKeywordAsync(MCustomerEntity entity)
+    {
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email}");
+        return base.CreateAsync(entity);
 
     }
 
@@ -118,6 +135,25 @@ public class EfcCustomerRepository : EFcRepositoryEntityMgmtId<CustomerDbContext
         return str;
 
     }
+    public async Task<PagedList<MCustomerEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams)
+    {
+        IQueryable<MCustomerEntity>? query;
+        if (string.IsNullOrEmpty(keySearch))
+            query = Entities;
+        else
+        {
+            var unsignedKey = keySearch.ConvertToUnsignedString();
+            //query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+            query = Entities.Where(x => x.Name.Contains(keySearch));
+        }
 
+        var count = await query.CountAsync();
+
+        var data = await query
+            .Skip((pagParams.PageNumber - 1) * pagParams.PageSize)
+            .Take(pagParams.PageSize)
+            .ToListAsync();
+        return new PagedList<MCustomerEntity>(data, count, pagParams.PageNumber, pagParams.PageSize);
+    }
 
 }

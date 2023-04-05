@@ -111,7 +111,7 @@ public class CustomerMgmtBus : BusinessRepositoryService<CustomerDto, ICustomerR
             async (data) =>
             {
                 var inputEntity = data?.GetEntity(false) ?? new MCustomerEntity();
-                var resultEntity = await (Repository?.CreateAsync(inputEntity) ?? Task.FromResult<MCustomerEntity?>(new MCustomerEntity()));
+                var resultEntity = await (Repository?.CreateWithKeywordAsync(inputEntity) ?? Task.FromResult<MCustomerEntity?>(new MCustomerEntity()));
                 return resultEntity?.GetDto();
             }
         );
@@ -165,7 +165,7 @@ public class CustomerMgmtBus : BusinessRepositoryService<CustomerDto, ICustomerR
             async (data) =>
             {
                 var inputEntity = data?.GetEntity(true) ?? new MCustomerEntity();
-                var resultEntity = await (Repository?.UpdateAsync(inputEntity) ?? Task.FromResult<MCustomerEntity?>(new MCustomerEntity()));
+                var resultEntity = await (Repository?.UpdateWithKeywordAsync(inputEntity) ?? Task.FromResult<MCustomerEntity?>(new MCustomerEntity()));
                 return resultEntity?.GetDto();
             }
         );

@@ -31,13 +31,13 @@ namespace VSoft.Company.CTM.Customer.Business.UnitTest.Test.Tests
         }
 
         [TestMethod]
-        [DataRow("Đặng Thế Nhân", "3504984957", "aaa@gmail.com")]
-        [DataRow("Lê Vũ Lâm", "0234532565", "abc@yahoo.com")]
-        [DataRow("Nguyễn Tấn Phát", "54235235236", "xyz@gmail.com")]
-        public async Task TestCreate(string fullName, string phone, string email)
+        [DataRow("Đặng Thế Nhân", "0923232311", "aaa@gmail.com")]
+        //[DataRow("Lê Vũ Lâm", "0234532565", "abc@yahoo.com")]
+        //[DataRow("Nguyễn Tấn Phát", "54235235236", "xyz@gmail.com")]
+        public async Task TestCreate(string name, string phone, string email)
         {
             var e = new CustomerDto();
-            e.Name = fullName;
+            e.Name = name;
             e.Phone = phone;
             e.Email = email;
             await TestCreateAsync(new CustomerInsertDtoRequest()
@@ -47,17 +47,17 @@ namespace VSoft.Company.CTM.Customer.Business.UnitTest.Test.Tests
         }
 
         [TestMethod]
-        [DataRow(1,"Đặng Thế Nhân", "3504984957", "aaa@gmail.com")]
-        [DataRow(2,"Lê Vũ Lâm", "0234532565", "abc@yahoo.com")]
-        [DataRow(3,"Nguyễn Tấn Phát", "54235235236", "xyz@gmail.com")]
-        public async Task TestUpdate(int id, string fullName, string phone, string email)
+        [DataRow(15,"Đặng Thế Nhân", "09629938815", "aaa@gmail.com")]
+        //[DataRow(2,"Lê Vũ Lâm", "0234532565", "abc@yahoo.com")]
+        //[DataRow(3,"Nguyễn Tấn Phát", "54235235236", "xyz@gmail.com")]
+        public async Task TestUpdate(int id, string name, string phone, string email)
         {
             await TestUpdateAsync(new CustomerUpdateDtoRequest()
             {
                 Data = new CustomerDto()
                 {
                    Id = id,
-                   Name = fullName,
+                   Name = name,
                    Phone = phone,
                    Email = email
                 }
@@ -65,9 +65,8 @@ namespace VSoft.Company.CTM.Customer.Business.UnitTest.Test.Tests
         }
 
         [TestMethod]
-        [DataRow(1)]
-        [DataRow(2)]
-        [DataRow(3)]
+        [DataRow(15)]
+        //[DataRow(12)]
         public async Task DeleteAsync(long id)
         {
             await TestDeleteAsync(new CustomerDeleteDtoRequest()
