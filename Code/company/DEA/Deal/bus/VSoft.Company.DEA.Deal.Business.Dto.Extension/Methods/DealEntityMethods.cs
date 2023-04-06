@@ -19,4 +19,13 @@ public static class DealEntityMethods
             Description = src.Description,
         };
     }
+
+    public static List<DealDto> GetDto(this List<MDealEntity> srcs)
+    {
+        var rs = new List<DealDto>();
+        if (srcs == null)
+            return rs;
+        srcs.ForEach(src => rs.Add(src.GetDto()));
+        return rs;
+    }
 }

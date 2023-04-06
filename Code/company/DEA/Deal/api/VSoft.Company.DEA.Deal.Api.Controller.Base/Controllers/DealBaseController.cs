@@ -29,6 +29,13 @@ public abstract class DealBaseController : ControllerBase
         return Ok(res);
     }
 
+    [HttpGet(nameof(IDealActionName.FindTable))]
+    public async Task<IActionResult> FindTableByKeySearch([FromQuery] DealTableKeySearchDtoRequest dtosRequest)
+    {
+        var res = await Bus.GetTableByKeySearch(dtosRequest);
+        return Ok(res);
+    }
+
     [HttpPost(nameof(IDealActionName.CreateOne))]
     public async Task<IActionResult> CreateAsync([FromBody] DealInsertDtoRequest dtoRequest)
     {

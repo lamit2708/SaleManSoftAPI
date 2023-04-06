@@ -6,7 +6,8 @@ using VSoft.Company.DEA.Deal.Business.Dto.Response;
 namespace VSoft.Company.DEA.Deal.Client.Services;
 
 public interface IDealClient: IApiDtoClientJSon<IDealClient>
-{  
+{
+    Task<DealTableKeySearchDtoResponse> GetTableByKeyword(DealTableKeySearchDtoRequest request);
 
     Task<DealFindDtoResponse> FindAsync(MDtoRequestFindByString request);
 
