@@ -13,6 +13,7 @@ using System.Text;
 using VegunSoft.Framework.Business.Provider.Repository.Services;
 using VegunSoft.Framework.Business.Dto.Request;
 using VegunSoft.Framework.Business.Dto.Response;
+using VSoft.Company.CTM.Customer.Business.Dto.Response;
 
 namespace VSoft.Company.CTM.Customer.Business.Provider.Services;
 
@@ -345,5 +346,17 @@ public class CustomerMgmtBus : BusinessRepositoryService<CustomerDto, ICustomerR
     public async Task<CustomerSaveRangeDtoResponse> SaveRangeTransactionAsync(CustomerSaveRangeDtoRequest request)
     {
         return await SaveRangeAsync(request, (rq) => (Repository?.SaveRangeTransactionAsync(rq)) ?? Task.FromResult<MSaveRangeResults<MCustomerEntity>?>(null));
+    }
+    public async Task<CustomerTableKeySearchDtoResponse> GetTableByKeySearch(CustomerTableKeySearchDtoRequest request)
+    {
+        var rsRespo = await Repository?.GetTableByKeySearchAsync(request.Data, request.PagingParams);
+        var response = new CustomerTableKeySearchDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.Items.GetDto().ToArray();
+            response.MetaData = rsRespo.MetaData;
+            response.IsSuccess = true;
+        };
+        return response;
     }
 }

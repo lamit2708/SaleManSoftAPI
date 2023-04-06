@@ -20,4 +20,12 @@ public static class CustomerEntityMethods
             IsBought = src.IsBought,
         };
     }
+    public static List<CustomerDto> GetDto(this List<MCustomerEntity> srcs)
+    {
+        var rs = new List<CustomerDto>();
+        if (srcs == null)
+            return rs;
+        srcs.ForEach(src => rs.Add(src.GetDto()));
+        return rs;
+    }
 }
