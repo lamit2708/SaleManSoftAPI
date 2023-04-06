@@ -77,4 +77,11 @@ public abstract class CustomerBaseController : ControllerBase
         var res = await Bus.DeleteRangeAsync(dtosRequest);
         return Ok(res);
     }
+
+    [HttpGet(nameof(ICustomerActionName.FindTable))]
+    public async Task<IActionResult> FindTableByKeySearch([FromQuery] CustomerTableKeySearchDtoRequest dtosRequest)
+    {
+        var res = await Bus.GetTableByKeySearch(dtosRequest);
+        return Ok(res);
+    }
 }

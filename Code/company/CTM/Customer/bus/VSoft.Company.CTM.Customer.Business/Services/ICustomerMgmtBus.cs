@@ -46,4 +46,5 @@ public interface ICustomerMgmtBus
     Task<CustomerSaveRangeDtoResponse> SaveRangeAsync(CustomerSaveRangeDtoRequest request);
 
     Task<CustomerSaveRangeDtoResponse> SaveRangeTransactionAsync(CustomerSaveRangeDtoRequest request);
+    Task<CustomerTableKeySearchDtoResponse> GetTableByKeySearch(CustomerTableKeySearchDtoRequest request);
 }
