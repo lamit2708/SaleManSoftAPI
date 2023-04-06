@@ -22,7 +22,12 @@ public class ProductClient : ApiDtoClientJSon<IProductClient, MProductClient>, I
     public Task<ProductFindDtoResponse> FindAsync(MDtoRequestFindByInt request)
     {
         var relativePath = Controller.GetApiPath(nameof(IProductActionName.FindOne));
-        return GetAsync<MDtoRequestFindByInt, ProductFindDtoResponse>(relativePath, request);
+        var query = new Dictionary<string, string>()
+        {
+            [nameof(request.Id)] = request.Id.ToString(),
+        };
+        return GetQueryAsync<ProductFindDtoResponse>(relativePath, query);
+        //return GetAsync<MDtoRequestFindByInt, ProductFindDtoResponse>(relativePath, request);
     }
 
     public Task<ProductFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request)

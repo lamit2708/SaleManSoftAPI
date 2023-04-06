@@ -8,10 +8,9 @@ namespace VSoft.Company.DEA.Deal.Client.UnitTest.Test.Values.GroupA
         protected override DealDto Dto => new DealDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+            Name = "Đặng Thế Nhân",
           
             CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
 
         };
     }

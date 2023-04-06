@@ -46,4 +46,6 @@ public interface IDealMgmtBus
     Task<DealSaveRangeDtoResponse> SaveRangeAsync(DealSaveRangeDtoRequest request);
 
     Task<DealSaveRangeDtoResponse> SaveRangeTransactionAsync(DealSaveRangeDtoRequest request);
+
+    Task<DealTableKeySearchDtoResponse> GetTableByKeySearch(DealTableKeySearchDtoRequest request);
 }
