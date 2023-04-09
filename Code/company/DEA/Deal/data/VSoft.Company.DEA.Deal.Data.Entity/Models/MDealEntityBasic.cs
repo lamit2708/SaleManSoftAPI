@@ -8,7 +8,7 @@ namespace VSoft.Company.DEA.Deal.Data.Entity.Models
 
         public DateTime CreatedDate { get; set; }
 
-        public long DealId { get; set; }
+        public long CustomerId { get; set; }
 
         public int DealStepId { get; set; }
 
@@ -19,5 +19,11 @@ namespace VSoft.Company.DEA.Deal.Data.Entity.Models
         public string? Name { get; set; }
 
         public string? Description { get; set; }
+
+        public double PridictPrice { get; set; }
+
+        public DateTime? DateFor { get; set; }
+
+        public double? PricePossible { get; set; }
     }
 }

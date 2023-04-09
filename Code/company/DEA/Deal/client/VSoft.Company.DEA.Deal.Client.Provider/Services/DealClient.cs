@@ -45,7 +45,12 @@ public class DealClient : ApiDtoClientJSon<IDealClient, MDealClient>, IDealClien
     public Task<DealFindDtoResponse> FindAsync(MDtoRequestFindByString request)
     {
         var relativePath = Controller.GetApiPath(nameof(IDealActionName.FindOne));
-        return GetAsync<MDtoRequestFindByString, DealFindDtoResponse>(relativePath, request);
+        var query = new Dictionary<string, string>()
+        {
+            [nameof(request.Id)] = request.Id.ToString(),
+        };
+        return GetQueryAsync<DealFindDtoResponse>(relativePath, query);
+        //return GetAsync<MDtoRequestFindByString, DealFindDtoResponse>(relativePath, request);
     }
 
     public Task<DealFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request)

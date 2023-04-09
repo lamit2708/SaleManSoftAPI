@@ -2,8 +2,9 @@
 using VegunSoft.Framework.Efc.Migrate.Provider.Sqlite.Services;
 using VSoft.Company.DEA.Deal.Data.Db.Contexts;
 using VSoft.Company.DEA.Deal.Data.Entity.Models;
-await new EfcSingleMigrateServiceSqlite<DealDbContext, MDealEntity>().LogCustom(async (dbContext) => {
-    var list = dbContext.Items.Where(x => x.Name == "Đặng Thế Nhân").Select(p => new MDealEntityBasic {Id = p.Id, Name = p.Name }).ToList();
+await new EfcSingleMigrateServiceSqlite<DealDbContext, MDealEntity>().LogCustom(async (dbContext) =>
+{
+    var list = dbContext.Items.Where(x => x.Name == "Đặng Thế Nhân").Select(p => new MDealEntityBasic { Id = p.Id, Name = p.Name }).ToList();
     list.ForEach(data =>
     {
         if (data != null)
@@ -15,6 +16,6 @@ await new EfcSingleMigrateServiceSqlite<DealDbContext, MDealEntity>().LogCustom(
     });
     Console.WriteLine($"=========================");
 
-    var fullName =  await dbContext.Items.Where(x => x.Id == 1).Select(p => p.Name).FirstOrDefaultAsync();
+    var fullName = await dbContext.Items.Where(x => x.Id == 1).Select(p => p.Name).FirstOrDefaultAsync();
     Console.WriteLine($"FullName : {fullName}");
 });

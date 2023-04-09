@@ -10,13 +10,16 @@ public static class DealEntityMethods
         return new DealDto()
         {
             Id = src.Id,
-            Name = src.Name,
             CreatedDate = src.CreatedDate,
-            DealId = src.DealId,
+            CustomerId = src.CustomerId,
             DealStepId = src.DealStepId,
             UserId = src.UserId,
             OrderId = src.OrderId,
+            Name = src.Name,
             Description = src.Description,
+            PridictPrice = src.PridictPrice,
+            DateFor = src.DateFor,
+            PricePossible = src.PricePossible,
         };
     }
 
