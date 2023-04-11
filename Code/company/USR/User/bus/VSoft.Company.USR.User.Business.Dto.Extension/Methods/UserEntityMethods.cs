@@ -19,4 +19,13 @@ public static class UserEntityMethods
 
         };
     }
+
+    public static List<UserDto> GetDto(this List<MUserEntity> srcs)
+    {
+        var rs = new List<UserDto>();
+        if (srcs == null)
+            return rs;
+        srcs.ForEach(src => rs.Add(src.GetDto()));
+        return rs;
+    }
 }

@@ -8,7 +8,7 @@
 		<Version>1.0.0.1</Version>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User</BaseOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User</BaseOutputPath>
 		<OutputPath>$(BaseOutputPath)\client</OutputPath>
 	</PropertyGroup>
 
@@ -22,8 +22,8 @@
 		<Reference Include="VegunSoft.Framework.Api.DtoClient.Cfg">
 			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\ApiDtoClient\VegunSoft.Framework.Api.DtoClient.Cfg.dll</HintPath>
 		</Reference>
-		<Reference Include="VSoft.Company.CTM.OrderItemHistory.Business.Dto">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\bus\VSoft.Company.USR.User.Business.Dto.dll</HintPath>
+		<Reference Include="VSoft.Company.USR.OrderItemHistory.Business.Dto">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\bus\VSoft.Company.USR.User.Business.Dto.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 

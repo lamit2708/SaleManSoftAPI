@@ -29,6 +29,13 @@ public abstract class UserBaseController : ControllerBase
         return Ok(res);
     }
 
+    [HttpGet(nameof(IUserActionName.FindTable))]
+    public async Task<IActionResult> FindTableByKeySearch([FromQuery] UserTableKeySearchDtoRequest dtosRequest)
+    {
+        var res = await Bus.GetTableByKeySearch(dtosRequest);
+        return Ok(res);
+    }
+
     [HttpPost(nameof(IUserActionName.CreateOne))]
     public async Task<IActionResult> CreateAsync([FromBody] UserInsertDtoRequest dtoRequest)
     {

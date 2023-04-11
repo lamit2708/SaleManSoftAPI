@@ -7,7 +7,7 @@
 		<Version>1.0.0.1</Version>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User</BaseOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User</BaseOutputPath>
 		<OutputPath>$(BaseOutputPath)\data</OutputPath>		
 	</PropertyGroup>
 

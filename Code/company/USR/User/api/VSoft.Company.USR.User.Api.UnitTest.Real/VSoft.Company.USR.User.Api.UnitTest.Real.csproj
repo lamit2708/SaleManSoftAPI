@@ -38,26 +38,29 @@
 	  <Reference Include="VegunSoft.Framework.Repository.Efc.Provider">
 	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Efc.Provider.dll</HintPath>
 	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Value.Property">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet\Value\Property\VegunSoft.Framework.Value.Property.dll</HintPath>
+	  </Reference>
 	  <Reference Include="VSoft.Company.USR.User.Business">
-	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\bus\VSoft.Company.USR.User.Business.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\bus\VSoft.Company.USR.User.Business.dll</HintPath>
 	  </Reference>
 	  <Reference Include="VSoft.Company.USR.User.Business.Cfg">
-	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\bus\VSoft.Company.USR.User.Business.Cfg.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\bus\VSoft.Company.USR.User.Business.Cfg.dll</HintPath>
 	  </Reference>
 	  <Reference Include="VSoft.Company.USR.User.Business.Provider">
-	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\bus\VSoft.Company.USR.User.Business.Provider.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\bus\VSoft.Company.USR.User.Business.Provider.dll</HintPath>
 	  </Reference>
 	  <Reference Include="VSoft.Company.USR.User.Data.Db">
-	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\data\VSoft.Company.USR.User.Data.Db.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\data\VSoft.Company.USR.User.Data.Db.dll</HintPath>
 	  </Reference>
 	  <Reference Include="VSoft.Company.USR.User.Repository">
-	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\repository\VSoft.Company.USR.User.Repository.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\repository\VSoft.Company.USR.User.Repository.dll</HintPath>
 	  </Reference>
 	  <Reference Include="VSoft.Company.USR.User.Repository.Efc">
-	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\repository\VSoft.Company.USR.User.Repository.Efc.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\repository\VSoft.Company.USR.User.Repository.Efc.dll</HintPath>
 	  </Reference>
 	  <Reference Include="VSoft.Company.USR.User.Repository.Efc.Provider">
-	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\repository\VSoft.Company.USR.User.Repository.Efc.Provider.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\repository\VSoft.Company.USR.User.Repository.Efc.Provider.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 

@@ -6,7 +6,7 @@ namespace VSoft.Company.USR.User.Business.Dto.Request
     public class UserRemoveDtoRequest : MDtoRequest
     {
         [Required]
-        public string? CTMName { get; set; }
+        public string? USRName { get; set; }
        
     }
 }
