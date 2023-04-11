@@ -6,7 +6,8 @@ using VSoft.Company.ACT.Activity.Business.Dto.Response;
 namespace VSoft.Company.ACT.Activity.Client.Services;
 
 public interface IActivityClient: IApiDtoClientJSon<IActivityClient>
-{  
+{
+    Task<ActivityTableKeySearchDtoResponse> GetTableByKeyword(ActivityTableKeySearchDtoRequest request);
 
     Task<ActivityFindDtoResponse> FindAsync(MDtoRequestFindByString request);
 

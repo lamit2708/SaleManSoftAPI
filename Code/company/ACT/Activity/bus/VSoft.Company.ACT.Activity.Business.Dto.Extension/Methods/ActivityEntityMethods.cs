@@ -11,7 +11,24 @@ public static class ActivityEntityMethods
         {
             Id = src.Id,
             Name = src.Name,
-            Description = src.Description
+            Content = src.Content,
+            ActivityType = src.ActivityType,
+            Date = src.Date,
+            From = src.From,
+            To = src.To,
+            ToWho = src.ToWho,
+            SubType = src.SubType,
+            CreatedDate = src.CreatedDate,
+            CreatedUser = src.CreatedUser,
         };
+    }
+
+    public static List<ActivityDto> GetDto(this List<MActivityEntity> srcs)
+    {
+        var rs = new List<ActivityDto>();
+        if (srcs == null)
+            return rs;
+        srcs.ForEach(src => rs.Add(src.GetDto()));
+        return rs;
     }
 }

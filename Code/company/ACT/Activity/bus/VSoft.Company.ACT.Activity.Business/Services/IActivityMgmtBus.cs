@@ -46,4 +46,6 @@ public interface IActivityMgmtBus
     Task<ActivitySaveRangeDtoResponse> SaveRangeAsync(ActivitySaveRangeDtoRequest request);
 
     Task<ActivitySaveRangeDtoResponse> SaveRangeTransactionAsync(ActivitySaveRangeDtoRequest request);
+
+    Task<ActivityTableKeySearchDtoResponse> GetTableByKeySearch(ActivityTableKeySearchDtoRequest request);
 }

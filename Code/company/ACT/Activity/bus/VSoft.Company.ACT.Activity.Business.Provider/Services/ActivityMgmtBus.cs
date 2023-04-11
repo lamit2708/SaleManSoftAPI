@@ -346,4 +346,17 @@ public class ActivityMgmtBus : BusinessRepositoryService<ActivityDto, IActivityR
     {
         return await SaveRangeAsync(request, (rq) => (Repository?.SaveRangeTransactionAsync(rq)) ?? Task.FromResult<MSaveRangeResults<MActivityEntity>?>(null));
     }
+
+    public async Task<ActivityTableKeySearchDtoResponse> GetTableByKeySearch(ActivityTableKeySearchDtoRequest request)
+    {
+        var rsRespo = await Repository?.GetTableByKeySearchAsync(request.Data, request.PagingParams);
+        var response = new ActivityTableKeySearchDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.Items.GetDto().ToArray();
+            response.MetaData = rsRespo.MetaData;
+            response.IsSuccess = true;
+        };
+        return response;
+    }
 }

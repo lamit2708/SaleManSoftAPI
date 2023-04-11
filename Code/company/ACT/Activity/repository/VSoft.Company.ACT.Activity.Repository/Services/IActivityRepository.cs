@@ -1,4 +1,6 @@
-﻿using VegunSoft.Framework.Repository.Id.Efc.Services;
+﻿using VegunSoft.Framework.Paging.Provider.Request;
+using VegunSoft.Framework.Paging.Provider.Response;
+using VegunSoft.Framework.Repository.Id.Efc.Services;
 using VSoft.Company.ACT.Activity.Data.Db.Contexts;
 using VSoft.Company.ACT.Activity.Data.Entity.Models;
 
@@ -10,4 +12,6 @@ public interface IActivityRepository : IEfcRepositoryEntityMgmtId<ActivityDbCont
     string? GetFullName(int? id);
 
     Task<string?> GetFullNameAsync(int? id);
+
+    Task<PagedList<MActivityEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams);
 }

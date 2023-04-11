@@ -11,7 +11,15 @@ public static class ActivityDtoMethods
         {
             Id = src.Id,
             Name = src.Name,
-            Description = src.Description
+            Content = src.Content,
+            ActivityType = src.ActivityType,
+            Date = src.Date,
+            From = src.From,
+            To = src.To,
+            ToWho = src.ToWho,  
+            SubType = src.SubType,
+            CreatedDate = src.CreatedDate,
+            CreatedUser = src.CreatedUser,  
         };
     }
 }

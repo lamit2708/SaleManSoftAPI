@@ -8,10 +8,10 @@ namespace VSoft.Company.ACT.Activity.Client.UnitTest.Test.Values.GroupA
         protected override ActivityDto Dto => new ActivityDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+            //FullName = "Đặng Thế Nhân",
           
             CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+            //UpdatedDate = DateTime.Now,
 
         };
     }

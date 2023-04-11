@@ -35,10 +35,18 @@ public class ActivityDbContext : EfcDbContext<ActivityDbContext, MActivityEntity
     protected void ConfigBasicFields(EntityTypeBuilder<MActivityEntity> entity)
     {
         entity.Property(e => e.Id).HasColumnType("int(11)");
-        entity.Property(e => e.Description).HasMaxLength(512);
         entity.Property(e => e.Name).HasMaxLength(100);
+        entity.Property(e => e.Content).HasMaxLength(512);
+        entity.Property(e => e.ActivityType).HasMaxLength(100);
+        entity.Property(e => e.Date).IsRequired(false);
+        entity.Property(e => e.From).IsRequired(false);
+        entity.Property(e => e.To).IsRequired(false);
+        entity.Property(e => e.ToWho).IsRequired(false).HasMaxLength(100);
+        entity.Property(e => e.SubType).IsRequired(false).HasMaxLength(100);
+        entity.Property(e => e.CreatedDate).IsRequired(false).HasDefaultValue(DateTime.Now);
+        entity.Property(e => e.CreatedUser).HasColumnType("int(11)").IsRequired(false);
     }
 
- 
+
 
 }

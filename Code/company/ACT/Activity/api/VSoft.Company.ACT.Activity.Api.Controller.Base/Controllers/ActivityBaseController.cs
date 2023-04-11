@@ -29,6 +29,13 @@ public abstract class ActivityBaseController : ControllerBase
         return Ok(res);
     }
 
+    [HttpGet(nameof(IActivityActionName.FindTable))]
+    public async Task<IActionResult> FindTableByKeySearch([FromQuery] ActivityTableKeySearchDtoRequest dtosRequest)
+    {
+        var res = await Bus.GetTableByKeySearch(dtosRequest);
+        return Ok(res);
+    }
+
     [HttpPost(nameof(IActivityActionName.CreateOne))]
     public async Task<IActionResult> CreateAsync([FromBody] ActivityInsertDtoRequest dtoRequest)
     {
