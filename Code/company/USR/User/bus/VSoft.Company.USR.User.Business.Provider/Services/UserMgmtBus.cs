@@ -347,5 +347,16 @@ public class UserMgmtBus : BusinessRepositoryService<UserDto, IUserRepository>, 
         return await SaveRangeAsync(request, (rq) => (Repository?.SaveRangeTransactionAsync(rq)) ?? Task.FromResult<MSaveRangeResults<MUserEntity>?>(null));
     }
 
-   
+    public async Task<UserTableKeySearchDtoResponse> GetTableByKeySearch(UserTableKeySearchDtoRequest request)
+    {
+        var rsRespo = await Repository?.GetTableByKeySearchAsync(request.Data, request.PagingParams);
+        var response = new UserTableKeySearchDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.Items.GetDto().ToArray();
+            response.MetaData = rsRespo.MetaData;
+            response.IsSuccess = true;
+        };
+        return response;
+    }
 }

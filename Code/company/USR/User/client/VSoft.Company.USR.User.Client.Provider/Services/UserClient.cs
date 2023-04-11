@@ -19,10 +19,37 @@ public class UserClient : ApiDtoClientJSon<IUserClient, MUserClient>, IUserClien
 
     public override string Controller { get; } = nameof(IUserControllerPath.User);
 
+    public Task<UserTableKeySearchDtoResponse> GetTableByKeyword(UserTableKeySearchDtoRequest request)
+    {
+        var relativePath = Controller.GetApiPath(nameof(IUserActionName.FindTable));
+        var pagingParamName = nameof(request.PagingParams);
+        var langCodeName = nameof(request.LangCode);
+        var langShowExContent = nameof(request.ShowExContent);
+        var langShowExMessage = nameof(request.ShowExMessage);
+        var query = new Dictionary<string, string>()
+        {
+            [$"{pagingParamName}.{nameof(request.PagingParams.PageNumber)}"] = request.PagingParams.PageNumber.ToString(),
+            [$"{pagingParamName}.{nameof(request.PagingParams.PageSize)}"] = request.PagingParams.PageSize.ToString(),
+        };
+        if (request.LangCode != null)
+            query.Add(langCodeName, request.LangCode.ToString());
+        if (request.ShowExContent != null)
+            query.Add(langShowExContent, request.ShowExContent.ToString());
+        if (request.ShowExMessage != null)
+            query.Add(langShowExMessage, request.ShowExMessage.ToString());
+        if (!string.IsNullOrEmpty(request.Data))
+            query.Add(nameof(request.Data), request.Data);
+        return GetQueryAsync<UserTableKeySearchDtoResponse>(relativePath, query);
+    }
+
     public Task<UserFindDtoResponse> FindAsync(MDtoRequestFindByString request)
     {
         var relativePath = Controller.GetApiPath(nameof(IUserActionName.FindOne));
-        return GetAsync<MDtoRequestFindByString, UserFindDtoResponse>(relativePath, request);
+        var query = new Dictionary<string, string>()
+        {
+            [nameof(request.Id)] = request.Id.ToString(),
+        };
+        return GetQueryAsync<UserFindDtoResponse>(relativePath, query);
     }
 
     public Task<UserFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request)

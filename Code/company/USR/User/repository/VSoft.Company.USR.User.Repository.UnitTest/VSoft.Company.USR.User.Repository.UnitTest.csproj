@@ -54,10 +54,10 @@
       <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.UnitTest.dll</HintPath>
     </Reference>
     <Reference Include="VSoft.Company.USR.User.Data.Db">
-      <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\data\VSoft.Company.USR.User.Data.Db.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\data\VSoft.Company.USR.User.Data.Db.dll</HintPath>
     </Reference>
     <Reference Include="VSoft.Company.USR.User.Data.Entity">
-      <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\data\VSoft.Company.USR.User.Data.Entity.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\data\VSoft.Company.USR.User.Data.Entity.dll</HintPath>
     </Reference>
   </ItemGroup>
 

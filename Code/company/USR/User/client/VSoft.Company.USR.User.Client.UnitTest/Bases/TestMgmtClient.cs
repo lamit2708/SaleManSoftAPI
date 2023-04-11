@@ -15,7 +15,7 @@ namespace VSoft.Company.USR.User.Api.UnitTest.Client.Bases
         protected override List<string>? LogFields { get; set; } = new List<string>()
         {
            nameof(Model.Id),
-            nameof(Model.FullName),
+            //nameof(Model.FullName),
            
         };
 

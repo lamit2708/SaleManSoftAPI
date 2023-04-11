@@ -6,7 +6,8 @@ using VSoft.Company.USR.User.Business.Dto.Response;
 namespace VSoft.Company.USR.User.Client.Services;
 
 public interface IUserClient: IApiDtoClientJSon<IUserClient>
-{  
+{
+    Task<UserTableKeySearchDtoResponse> GetTableByKeyword(UserTableKeySearchDtoRequest request);
 
     Task<UserFindDtoResponse> FindAsync(MDtoRequestFindByString request);
 

@@ -7,7 +7,7 @@
 		<Version>1.0.0.1</Version>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User</BaseOutputPath>
+		<BaseOutputPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User</BaseOutputPath>
 		<OutputPath>$(BaseOutputPath)\bus</OutputPath>
 	</PropertyGroup>
 
@@ -20,7 +20,7 @@
 			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Business\VegunSoft.Framework.Business.Dto.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.USR.User.Data.Entity">
-		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\User\data\VSoft.Company.USR.User.Data.Entity.dll</HintPath>
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\data\VSoft.Company.USR.User.Data.Entity.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
