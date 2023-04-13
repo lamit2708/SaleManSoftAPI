@@ -29,6 +29,13 @@ public abstract class ProductCategoryBaseController : ControllerBase
         return Ok(res);
     }
 
+    [HttpGet(nameof(IProductCategoryActionName.GetAll))]
+    public async Task<IActionResult> FindAllAsync()
+    {
+        var res = await Bus.GetAll();
+        return Ok(res);
+    }
+
 
     [HttpGet(nameof(IProductCategoryActionName.FindTable))]
     public async Task<IActionResult> FindTableByKeySearch([FromQuery] ProductCategoryTableKeySearchDtoRequest dtosRequest)

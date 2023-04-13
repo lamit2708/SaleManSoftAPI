@@ -359,4 +359,16 @@ public class ProductCategoryMgmtBus : BusinessRepositoryService<ProductCategoryD
         };
         return response;
     }
+
+    public async Task<ProductCategoryFindRangeDtoResponse> GetAll()
+    {
+        var rsRespo = Repository?.GetAll()?.ToList();
+        var response = new ProductCategoryFindRangeDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.GetDto().ToArray();
+            response.Total = rsRespo.Count;
+        };
+        return response;
+    }
 }
