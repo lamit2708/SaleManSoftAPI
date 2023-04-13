@@ -8,7 +8,6 @@ namespace VSoft.Company.PRC.ProductCategory.Repository.Services;
 
 public interface IProductCategoryRepository : IEfcRepositoryEntityMgmtId<ProductCategoryDbContext, MProductCategoryEntity, int>
 {
-
     string? GetFullName(int? id);
 
     Task<string?> GetFullNameAsync(int? id);

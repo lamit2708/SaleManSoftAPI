@@ -29,6 +29,12 @@ public class ProductCategoryClient : ApiDtoClientJSon<IProductCategoryClient, MP
         return GetQueryAsync<ProductCategoryFindDtoResponse>(relativePath, query);
     }
 
+    public Task<ProductCategoryFindRangeDtoResponse> GetAll()
+    {
+        var relativePath = Controller.GetApiPath(nameof(IProductCategoryActionName.GetAll));
+        return GetQueryAsync<ProductCategoryFindRangeDtoResponse>(relativePath, null);
+    }
+
     public Task<ProductCategoryTableKeySearchDtoResponse> GetTableByKeyword(ProductCategoryTableKeySearchDtoRequest request)
     {
         var relativePath = Controller.GetApiPath(nameof(IProductCategoryActionName.FindTable));

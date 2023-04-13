@@ -11,6 +11,8 @@ public interface IProductCategoryClient : IApiDtoClientJSon<IProductCategoryClie
 
     Task<ProductCategoryFindDtoResponse> FindAsync(MDtoRequestFindByString request);
 
+    Task<ProductCategoryFindRangeDtoResponse> GetAll();
+
     Task<ProductCategoryFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request);
 
     Task<ProductCategoryInsertDtoResponse> CreateAsync(ProductCategoryInsertDtoRequest request);
