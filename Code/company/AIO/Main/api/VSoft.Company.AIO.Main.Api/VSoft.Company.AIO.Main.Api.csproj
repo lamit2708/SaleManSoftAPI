@@ -42,6 +42,14 @@
 		<Reference Include="VSoft.Company.ACT.Activity.Api.Controller">
 		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\api\VSoft.Company.ACT.Activity.Api.Controller.dll</HintPath>
 		</Reference>
+
+		<Reference Include="VSoft.Company.PRC.ProductCategory.Api.Base">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\api\VSoft.Company.PRC.ProductCategory.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.PRC.ProductCategory.Api.Controller">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\api\VSoft.Company.PRC.ProductCategory.Api.Controller.dll</HintPath>
+		</Reference>
+		
 		<Reference Include="VSoft.Company.CTM.Customer.Api.Base">
 		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\Customer\api\VSoft.Company.CTM.Customer.Api.Base.dll</HintPath>
 		</Reference>
