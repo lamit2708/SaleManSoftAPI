@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
+		<PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="VegunSoft.Framework.Api.Service.UnitTest">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-api\ApiService\VegunSoft.Framework.Api.Service.UnitTest.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Efc">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Efc.Cfg">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Cfg.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Efc.Provider.SqlServer">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Provider.SqlServer.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Repository">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Repository.Efc.Provider">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Efc.Provider.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.ACT.Activity.Api.Base">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\api\VSoft.Company.ACT.Activity.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.ACT.Activity.Api.Controller">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\api\VSoft.Company.ACT.Activity.Api.Controller.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.CTM.Customer.Api.Base">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\Customer\api\VSoft.Company.CTM.Customer.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.CTM.Customer.Api.Controller">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\CTM\Customer\api\VSoft.Company.CTM.Customer.Api.Controller.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.DEA.Deal.Api.Base">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DEA\Deal\api\VSoft.Company.DEA.Deal.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.DEA.Deal.Api.Controller">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DEA\Deal\api\VSoft.Company.DEA.Deal.Api.Controller.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.PRO.Product.Api.Base">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRO\Product\api\VSoft.Company.PRO.Product.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.PRO.Product.Api.Controller">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRO\Product\api\VSoft.Company.PRO.Product.Api.Controller.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.TEA.Team.Api.Base">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\api\VSoft.Company.TEA.Team.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.TEA.Team.Api.Controller">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\api\VSoft.Company.TEA.Team.Api.Controller.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.TEA.Team.Business">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\bus\VSoft.Company.TEA.Team.Business.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.TEA.Team.Business.Cfg">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\bus\VSoft.Company.TEA.Team.Business.Cfg.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.TEA.Team.Business.Provider">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\bus\VSoft.Company.TEA.Team.Business.Provider.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.TEA.Team.Data.Db">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\data\VSoft.Company.TEA.Team.Data.Db.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.TEA.Team.Repository">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\repository\VSoft.Company.TEA.Team.Repository.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.TEA.Team.Repository.Efc">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\repository\VSoft.Company.TEA.Team.Repository.Efc.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.TEA.Team.Repository.Efc.Provider">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\repository\VSoft.Company.TEA.Team.Repository.Efc.Provider.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.USR.User.Api.Base">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\api\VSoft.Company.USR.User.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.USR.User.Api.Controller">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\api\VSoft.Company.USR.User.Api.Controller.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>
