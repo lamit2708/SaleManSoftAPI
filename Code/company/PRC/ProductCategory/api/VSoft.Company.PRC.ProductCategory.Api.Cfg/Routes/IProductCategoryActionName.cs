@@ -4,6 +4,6 @@ namespace VSoft.Company.PRC.ProductCategory.Api.Cfg.Routes
 {
     public interface IProductCategoryActionName : IApiActionName
     {
-
+        string? FindTable { get; set; }
     }
 }

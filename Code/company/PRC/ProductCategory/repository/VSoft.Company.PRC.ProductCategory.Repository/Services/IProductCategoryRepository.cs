@@ -1,4 +1,6 @@
-﻿using VegunSoft.Framework.Repository.Id.Efc.Services;
+﻿using VegunSoft.Framework.Paging.Provider.Request;
+using VegunSoft.Framework.Paging.Provider.Response;
+using VegunSoft.Framework.Repository.Id.Efc.Services;
 using VSoft.Company.PRC.ProductCategory.Data.Db.Contexts;
 using VSoft.Company.PRC.ProductCategory.Data.Entity.Models;
 
@@ -13,8 +15,6 @@ public interface IProductCategoryRepository : IEfcRepositoryEntityMgmtId<Product
 
     Task<List<MProductCategoryEntity>> GetProductCategorysByNameAsync(string name);
 
-    //MProductCategoryEntity? CreateWithKeyword(MProductCategoryEntity entity);
-
-    //MProductCategoryEntity? UpdateWithKeyword(MProductCategoryEntity entity);
+    Task<PagedList<MProductCategoryEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams);
 
 }

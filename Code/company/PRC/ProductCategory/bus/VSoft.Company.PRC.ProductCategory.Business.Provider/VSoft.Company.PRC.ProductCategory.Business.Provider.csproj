@@ -56,6 +56,9 @@
 		<Reference Include="VSoft.Company.PRC.ProductCategory.Repository">
 			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRC\ProductCategory\repository\VSoft.Company.PRC.ProductCategory.Repository.dll</HintPath>
 		</Reference>
+		<Reference Include="VegunSoft.Framework.Paging.Provider">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet\Paging\VegunSoft.Framework.Paging.Provider.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 
 </Project>

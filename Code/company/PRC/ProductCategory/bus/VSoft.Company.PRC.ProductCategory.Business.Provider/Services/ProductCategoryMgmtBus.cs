@@ -346,4 +346,17 @@ public class ProductCategoryMgmtBus : BusinessRepositoryService<ProductCategoryD
     {
         return await SaveRangeAsync(request, (rq) => (Repository?.SaveRangeTransactionAsync(rq)) ?? Task.FromResult<MSaveRangeResults<MProductCategoryEntity>?>(null));
     }
+
+    public async Task<ProductCategoryTableKeySearchDtoResponse> GetTableByKeySearch(ProductCategoryTableKeySearchDtoRequest request)
+    {
+        var rsRespo = await Repository?.GetTableByKeySearchAsync(request.Data, request.PagingParams);
+        var response = new ProductCategoryTableKeySearchDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.Items.GetDto().ToArray();
+            response.MetaData = rsRespo.MetaData;
+            response.IsSuccess = true;
+        };
+        return response;
+    }
 }

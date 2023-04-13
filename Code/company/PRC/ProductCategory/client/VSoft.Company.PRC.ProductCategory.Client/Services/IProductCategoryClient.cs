@@ -7,6 +7,7 @@ namespace VSoft.Company.PRC.ProductCategory.Client.Services;
 
 public interface IProductCategoryClient : IApiDtoClientJSon<IProductCategoryClient>
 {
+    Task<ProductCategoryTableKeySearchDtoResponse> GetTableByKeyword(ProductCategoryTableKeySearchDtoRequest request);
 
     Task<ProductCategoryFindDtoResponse> FindAsync(MDtoRequestFindByString request);
 

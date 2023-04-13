@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using VegunSoft.Framework.Paging.Provider.Request;
+using VegunSoft.Framework.Paging.Provider.Response;
 using VegunSoft.Framework.Repository.Id.Efc.Provider.Services;
+using VegunSoft.Framework.Value.Property.Methods;
 using VSoft.Company.PRC.ProductCategory.Data.Db.Contexts;
 using VSoft.Company.PRC.ProductCategory.Data.Entity.Models;
 using VSoft.Company.PRC.ProductCategory.Repository.Efc.Services;
@@ -62,63 +65,57 @@ public class EfcProductCategoryRepository : EFcRepositoryEntityMgmtId<ProductCat
     {
         return RemoveSign4VietnameseString(v);
     }
+
     private static readonly string[] VietnameseSigns = new string[]
-
-   {
-
+    {
         "aAeEoOuUiIdDyY",
-
         "áàạảãâấầậẩẫăắằặẳẵ",
-
         "ÁÀẠẢÃÂẤẦẬẨẪĂẮẰẶẲẴ",
-
         "éèẹẻẽêếềệểễ",
-
         "ÉÈẸẺẼÊẾỀỆỂỄ",
-
         "óòọỏõôốồộổỗơớờợởỡ",
-
         "ÓÒỌỎÕÔỐỒỘỔỖƠỚỜỢỞỠ",
-
         "úùụủũưứừựửữ",
-
         "ÚÙỤỦŨƯỨỪỰỬỮ",
-
         "íìịỉĩ",
-
         "ÍÌỊỈĨ",
-
         "đ",
-
         "Đ",
-
         "ýỳỵỷỹ",
-
         "ÝỲỴỶỸ"
-
-   };
+    };
 
 
 
     public static string RemoveSign4VietnameseString(string str)
-
     {
-
         //Tiến hành thay thế , lọc bỏ dấu cho chuỗi
-
         for (int i = 1; i < VietnameseSigns.Length; i++)
-
         {
-
             for (int j = 0; j < VietnameseSigns[i].Length; j++)
-
                 str = str.Replace(VietnameseSigns[i][j], VietnameseSigns[0][i - 1]);
-
         }
-
         return str;
-
     }
 
+    public async Task<PagedList<MProductCategoryEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams)
+    {
+        IQueryable<MProductCategoryEntity>? query;
+        if (string.IsNullOrEmpty(keySearch))
+            query = Entities;
+        else
+        {
+            var unsignedKey = keySearch.ConvertToUnsignedString();
+            //query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+            query = Entities.Where(x => x.Name.Contains(keySearch));
+        }
 
+        var count = await query.CountAsync();
+
+        var data = await query
+            .Skip((pagParams.PageNumber - 1) * pagParams.PageSize)
+            .Take(pagParams.PageSize)
+            .ToListAsync();
+        return new PagedList<MProductCategoryEntity>(data, count, pagParams.PageNumber, pagParams.PageSize);
+    }
 }

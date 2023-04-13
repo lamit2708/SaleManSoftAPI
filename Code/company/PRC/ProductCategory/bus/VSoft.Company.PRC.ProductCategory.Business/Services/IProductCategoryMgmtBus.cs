@@ -46,4 +46,6 @@ public interface IProductCategoryMgmtBus
     Task<ProductCategorySaveRangeDtoResponse> SaveRangeAsync(ProductCategorySaveRangeDtoRequest request);
 
     Task<ProductCategorySaveRangeDtoResponse> SaveRangeTransactionAsync(ProductCategorySaveRangeDtoRequest request);
+
+    Task<ProductCategoryTableKeySearchDtoResponse> GetTableByKeySearch(ProductCategoryTableKeySearchDtoRequest request);
 }

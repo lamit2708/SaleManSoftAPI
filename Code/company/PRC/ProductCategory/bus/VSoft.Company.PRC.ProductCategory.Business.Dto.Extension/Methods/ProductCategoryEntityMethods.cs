@@ -14,4 +14,13 @@ public static class ProductCategoryEntityMethods
            
         };
     }
+
+    public static List<ProductCategoryDto> GetDto(this List<MProductCategoryEntity> srcs)
+    {
+        var rs = new List<ProductCategoryDto>();
+        if (srcs == null)
+            return rs;
+        srcs.ForEach(src => rs.Add(src.GetDto()));
+        return rs;
+    }
 }
