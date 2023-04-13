@@ -11,7 +11,7 @@ using VSoft.Company.CTM.Customer.Data.Db.Contexts;
 namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
 {
     [DbContext(typeof(CustomerDbContext))]
-    [Migration("20230316090937_init")]
+    [Migration("20230413115001_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -33,12 +33,12 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)")
-                        .HasDefaultValueSql("'NULL'");
+                        .HasDefaultValueSql("NULL");
 
                     b.Property<long?>("CustomerInfoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint(20)")
-                        .HasDefaultValueSql("'NULL'");
+                        .HasDefaultValueSql("NULL");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -48,11 +48,15 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
                     b.Property<bool?>("Gender")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("tinyint(1)")
-                        .HasDefaultValueSql("'NULL'")
+                        .HasDefaultValueSql("NULL")
                         .HasComment("True: Male, False: Female");
 
                     b.Property<bool>("IsBought")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Keyword")
+                        .HasColumnType("varchar(512)")
+                        .HasColumnName("Keyword");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -67,7 +71,7 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
                     b.Property<int?>("PriorityId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int(11)")
-                        .HasDefaultValueSql("'NULL'");
+                        .HasDefaultValueSql("NULL");
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");

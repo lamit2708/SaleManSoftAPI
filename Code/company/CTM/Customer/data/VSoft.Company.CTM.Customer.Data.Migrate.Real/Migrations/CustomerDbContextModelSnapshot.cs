@@ -30,12 +30,12 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)")
-                        .HasDefaultValueSql("'NULL'");
+                        .HasDefaultValueSql("NULL");
 
                     b.Property<long?>("CustomerInfoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint(20)")
-                        .HasDefaultValueSql("'NULL'");
+                        .HasDefaultValueSql("NULL");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -45,7 +45,7 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
                     b.Property<bool?>("Gender")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("tinyint(1)")
-                        .HasDefaultValueSql("'NULL'")
+                        .HasDefaultValueSql("NULL")
                         .HasComment("True: Male, False: Female");
 
                     b.Property<bool>("IsBought")
@@ -68,7 +68,7 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
                     b.Property<int?>("PriorityId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int(11)")
-                        .HasDefaultValueSql("'NULL'");
+                        .HasDefaultValueSql("NULL");
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");

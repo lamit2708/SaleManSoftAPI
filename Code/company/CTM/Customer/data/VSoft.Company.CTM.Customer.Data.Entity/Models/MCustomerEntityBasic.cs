@@ -22,7 +22,7 @@ namespace VSoft.Company.CTM.Customer.Data.Entity.Models
         /// <summary>
         /// True: Male, False: Female
         /// </summary>
-        public bool? Gender { get; set; }
+        public bool? Gender { get; set; } = false;
 
         public int? PriorityId { get; set; }
 

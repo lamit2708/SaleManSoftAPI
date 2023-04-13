@@ -45,18 +45,18 @@ public class CustomerDbContext : EfcDbContext<CustomerDbContext, MCustomerEntity
         entity.Property(e => e.Keyword).HasColumnType("varchar(512)").HasColumnName("Keyword");
         entity.Property(e => e.Address)
             .HasMaxLength(100)
-            .HasDefaultValueSql("'NULL'");
+            .HasDefaultValueSql("NULL");
         entity.Property(e => e.CustomerInfoId)
-            .HasDefaultValueSql("'NULL'")
+            .HasDefaultValueSql("NULL")
             .HasColumnType("bigint(20)");
         entity.Property(e => e.Email).HasMaxLength(100);
         entity.Property(e => e.Gender)
-            .HasDefaultValueSql("'NULL'")
+            .HasDefaultValueSql("NULL")
             .HasComment("True: Male, False: Female");
         entity.Property(e => e.Name).HasMaxLength(100);
         entity.Property(e => e.Phone).HasMaxLength(100);
         entity.Property(e => e.PriorityId)
-            .HasDefaultValueSql("'NULL'")
+            .HasDefaultValueSql("NULL")
             .HasColumnType("int(11)");
     }
 
