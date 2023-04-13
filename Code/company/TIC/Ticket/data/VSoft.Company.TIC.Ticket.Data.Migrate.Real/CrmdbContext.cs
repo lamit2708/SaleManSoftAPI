@@ -19,7 +19,7 @@ public partial class CrmdbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseMySQL("Data Source=103.15.50.87;Initial Catalog=crmdb;USER ID=root;Password=root");
+        => optionsBuilder.UseMySQL("Data Source=localhost;Initial Catalog=crmdb;USER ID=root;Password=root");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
