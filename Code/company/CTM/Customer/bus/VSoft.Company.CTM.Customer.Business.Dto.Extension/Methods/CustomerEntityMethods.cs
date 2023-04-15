@@ -16,8 +16,14 @@ public static class CustomerEntityMethods
             Address = src.Address,
             Gender = src.Gender,
             PriorityId = src.PriorityId,
-            CustomerInfoId = src.CustomerInfoId,
+            //CustomerInfoId = src.CustomerInfoId,
             IsBought = src.IsBought,
+            BirthDate = src.BirthDate,
+            Keyword = src.Keyword,
+            CustomerSourceId = src.CustomerSourceId,
+            IsMarrage = src.IsMarrage,
+            Job = src.Job,
+            Hobby = src.Hobby
         };
     }
     public static List<CustomerDto> GetDto(this List<MCustomerEntity> srcs)

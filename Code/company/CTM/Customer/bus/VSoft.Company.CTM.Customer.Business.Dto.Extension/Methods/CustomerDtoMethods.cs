@@ -16,8 +16,15 @@ public static class CustomerDtoMethods
             Address = src.Address,
             Gender = src.Gender,
             PriorityId = src.PriorityId,
-            CustomerInfoId = src.CustomerInfoId,
+            //CustomerInfoId = src.CustomerInfoId,
             IsBought = src.IsBought,
-        };
+            Hobby = src.Hobby,
+		    Job = src.Job,
+            BirthDate = src.BirthDate,
+            IsMarrage = src.IsMarrage,
+            CustomerSourceId = src.CustomerSourceId,
+            Keyword = src.Keyword,
+
+};
     }
 }

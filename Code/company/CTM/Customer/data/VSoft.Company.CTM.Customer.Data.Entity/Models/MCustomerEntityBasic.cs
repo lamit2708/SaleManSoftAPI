@@ -26,10 +26,20 @@ namespace VSoft.Company.CTM.Customer.Data.Entity.Models
 
         public int? PriorityId { get; set; }
 
-        public long? CustomerInfoId { get; set; }
+        //public long? CustomerInfoId { get; set; }
 
         public bool IsBought { get; set; }
 
         public string? Keyword { get; set; }
+
+        public int? CustomerSourceId { get; set; }
+
+        public string? Hobby { get; set; }
+
+        public string? Job { get; set; }
+
+        public DateTime? BirthDate { get; set; }
+
+        public bool? IsMarrage { get; set; }
     }
 }

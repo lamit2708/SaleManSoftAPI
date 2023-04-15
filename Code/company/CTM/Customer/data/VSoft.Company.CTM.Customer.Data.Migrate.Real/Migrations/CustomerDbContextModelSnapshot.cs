@@ -32,9 +32,14 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
                         .HasColumnType("varchar(100)")
                         .HasDefaultValueSql("NULL");
 
-                    b.Property<long?>("CustomerInfoId")
+                    b.Property<DateTime?>("BirthDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint(20)")
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("NULL");
+
+                    b.Property<int?>("CustomerSourceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int(11)")
                         .HasDefaultValueSql("NULL");
 
                     b.Property<string>("Email")
@@ -48,8 +53,25 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
                         .HasDefaultValueSql("NULL")
                         .HasComment("True: Male, False: Female");
 
+                    b.Property<string>("Hobby")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(512)
+                        .HasColumnType("varchar(512)")
+                        .HasDefaultValueSql("NULL");
+
                     b.Property<bool>("IsBought")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<bool?>("IsMarrage")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValueSql("NULL");
+
+                    b.Property<string>("Job")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)")
+                        .HasDefaultValueSql("NULL");
 
                     b.Property<string>("Keyword")
                         .HasColumnType("varchar(512)")
@@ -73,7 +95,7 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
                     b.HasKey("Id")
                         .HasName("PRIMARY");
 
-                    b.HasIndex(new[] { "CustomerInfoId" }, "FK_CustomerInfo_TO_Customer");
+                    b.HasIndex(new[] { "CustomerSourceId" }, "FK_CustomerSource_TO_CustomerInfo");
 
                     b.HasIndex(new[] { "PriorityId" }, "FK_Priority_TO_Customer");
 

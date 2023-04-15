@@ -49,27 +49,27 @@ public class EfcCustomerRepository : EFcRepositoryEntityMgmtId<CustomerDbContext
     }
     public MCustomerEntity? UpdateWithKeyword(MCustomerEntity entity)
     {
-        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email}");
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email} {entity.Address}");
         return base.Update(entity);
 
     }
     public MCustomerEntity? CreateWithKeyword(MCustomerEntity entity)
     {
-        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email}");
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email} {entity.Address}");
         return base.Create(entity);
 
     }
 
     public Task<MCustomerEntity?> UpdateWithKeywordAsync(MCustomerEntity entity)
     {
-        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email}");
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email} {entity.Address}");
         return base.UpdateAsync(entity);
 
     }
  
     public Task<MCustomerEntity?> CreateWithKeywordAsync(MCustomerEntity entity)
     {
-        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email}");
+        entity.Keyword = CreateKeyword($"{entity.Name} {entity.Phone} {entity.Email} {entity.Address}");
         return base.CreateAsync(entity);
 
     }

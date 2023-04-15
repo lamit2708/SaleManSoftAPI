@@ -1,4 +1,5 @@
-﻿using VegunSoft.Framework.Business.Dto.Request;
+﻿using System.Globalization;
+using VegunSoft.Framework.Business.Dto.Request;
 using VSoft.Company.CTM.Customer.Business.Dto.Data;
 using VSoft.Company.CTM.Customer.Business.Dto.Request;
 using VSoft.Company.CTM.Customer.Business.UnitTest.Bases;
@@ -31,43 +32,52 @@ namespace VSoft.Company.CTM.Customer.Business.UnitTest.Test.Tests
         }
 
         [TestMethod]
-        [DataRow("Nguyễn Ngọc Ngân", "0923232611", "ngan@gmail.com", "22 Đặng Văn Bi, TP Thủ Đức", true, 1)]
-        //[DataRow("Lê Vũ Lâm", "0923232312", "lam@gmail.com", "32 Kha Vạn Cân, TP Thủ Đức", true, 1)]
-        //[DataRow("Vũ Thị Thọ", "0923232313", "tho@gmail.com", "32 Tô Ngọc Vân, TP Thủ Đức", false, 2)]
+		[DataRow("Lê Ngọc Lan", "0434634266", "lanngoc@gmail.com", "66 Phạm Văn Đồng, TP Thủ Đức", true, "1985-08-10", 1, 1, true, "Công nghệ", "IT", false)]
+		//public async Task CreateWithKeywordAsync(string fullName, string phone, string email, string address, bool gender, string birthDate, int priorityId, int customerSourceId, bool isMarrage, string hobby, string job, bool isBought)
 
-
-        public async Task TestCreate(string name, string phone, string email, string address, bool gender, int priority)
-        {
+		public async Task TestCreate(string name, string phone, string email, string address, bool gender, string birthDate, int priorityId, int customerSourceId, bool isMarrage, string hobby, string job, bool isBought)
+		{
 
             var e = new CustomerDto();
-            e.Name = name;
-            e.Phone = phone;
-            e.Email = email;
-            e.Address = address;
-            e.Gender = gender;
-            e.PriorityId = priority;
-            await TestCreateAsync(new CustomerInsertDtoRequest()
+			e.Name = name;
+			e.Phone = phone;
+			e.Email = email;
+			e.Address = address;
+			e.Gender = gender;
+			e.BirthDate = DateTime.ParseExact(birthDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+			e.PriorityId = priorityId;
+			e.CustomerSourceId = customerSourceId;
+			e.IsMarrage = isMarrage;
+			e.Hobby = hobby;
+			e.Job = job;
+			e.IsBought = isBought;
+			await TestCreateAsync(new CustomerInsertDtoRequest()
             {
                 Data = e
             });
         }
         [TestMethod]
-        [DataRow(1, "Nguyễn Văn Nam", "0923232411", "nam@gmail.com", "22 Đặng Văn Bi, TP Thủ Đức", true, 1)]
-        [DataRow(2, "Lê Thanh Hoàng", "0923232412", "hoang@gmail.com", "32 Kha Vạn Cân, TP Thủ Đức", true, 1)]
-        [DataRow(3, "Vũ Thị Thọ", "0923232413", "tho@gmail.com", "32 Tô Ngọc Vân, TP Thủ Đức", false, 2)]
-        [DataRow(4, "Trương Anh Tuấn", "0923232414", "tuan@gmail.com", "32 Tô Ngọc Vân, TP Thủ Đức", true, 2)]
-        public async Task TestUpdate(int id, string name, string phone, string email, string address, bool gender, int priority)
-        {
+		[DataRow(25, "Nguyễn Thị Tuyết", "0434634277", "tuyetthi@gmail.com", "77 Lý Thường Kiệt,Q10, TP HCM", true, "1985-08-10", 1, 1, true, "Công nghệ", "IT", false)]
+		[DataRow(26, "Lê Ngọc Lan", "0434634266", "lanngoc@gmail.com", "66 Phạm Văn Đồng, TP Thủ Đức", true, "1985-08-10", 1, 1, true, "Công nghệ", "IT", false)]
+		//public async Task UpdateAsync(long id, string fullName, string phone, string email, string address, bool gender, string birthDate, int priorityId, int customerSourceId, bool isMarrage, string hobby, string job, bool isBought)
+	    public async Task TestUpdate(long id, string name, string phone, string email, string address, bool gender, string birthDate, int priorityId, int customerSourceId, bool isMarrage, string hobby, string job, bool isBought)
+		{
 
             var e = new CustomerDto();
             e.Id = id;
-            e.Name = name;
-            e.Phone = phone;
-            e.Email = email;
-            e.Address = address;
-            e.Gender = gender;
-            e.PriorityId = priority;
-            await TestUpdateAsync(new CustomerUpdateDtoRequest()
+			e.Name = name;
+			e.Phone = phone;
+			e.Email = email;
+			e.Address = address;
+			e.Gender = gender;
+			e.BirthDate = DateTime.ParseExact(birthDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+			e.PriorityId = priorityId;
+			e.CustomerSourceId = customerSourceId;
+			e.IsMarrage = isMarrage;
+			e.Hobby = hobby;
+			e.Job = job;
+			e.IsBought = isBought;
+			await TestUpdateAsync(new CustomerUpdateDtoRequest()
             {
                 Data = e
             });
