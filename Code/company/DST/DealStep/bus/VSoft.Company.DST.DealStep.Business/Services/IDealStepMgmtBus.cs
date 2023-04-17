@@ -46,4 +46,6 @@ public interface IDealStepMgmtBus
     Task<DealStepSaveRangeDtoResponse> SaveRangeAsync(DealStepSaveRangeDtoRequest request);
 
     Task<DealStepSaveRangeDtoResponse> SaveRangeTransactionAsync(DealStepSaveRangeDtoRequest request);
+
+    Task<DealStepFindRangeDtoResponse> GetAll();
 }

@@ -14,4 +14,13 @@ public static class DealStepEntityMethods
             Description = src.Description
         };
     }
+
+    public static List<DealStepDto> GetDto(this List<MDealStepEntity> srcs)
+    {
+        var rs = new List<DealStepDto>();
+        if (srcs == null)
+            return rs;
+        srcs.ForEach(src => rs.Add(src.GetDto()));
+        return rs;
+    }
 }

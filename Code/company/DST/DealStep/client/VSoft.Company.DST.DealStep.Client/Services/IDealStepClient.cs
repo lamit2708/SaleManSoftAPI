@@ -26,4 +26,5 @@ public interface IDealStepClient: IApiDtoClientJSon<IDealStepClient>
 
     Task<DealStepSaveRangeDtoResponse> SaveRangeAsync(DealStepSaveRangeDtoRequest request);
    
+    Task<DealStepFindRangeDtoResponse> GetAll();
 }
