@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\VSoft.Company.VDT.VDealTag.Api.Base\VSoft.Company.VDT.VDealTag.Api.Base.csproj" />
+	  <ProjectReference Include="..\VSoft.Company.VDT.VDealTag.Api.Controller\VSoft.Company.VDT.VDealTag.Api.Controller.csproj" />
+	  <ProjectReference Include="..\VSoft.Company.VDT.VDealTag.Api.UnitTest\VSoft.Company.VDT.VDealTag.Api.UnitTest.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="VegunSoft.Framework.Efc">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Efc.Cfg">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Cfg.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Efc.Provider.SqlServer">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Efc\VegunSoft.Framework.Efc.Provider.SqlServer.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Repository">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VegunSoft.Framework.Repository.Efc.Provider">
+	    <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Efc.Provider.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.VDT.VDealTag.Business">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\VDT\VDealTag\bus\VSoft.Company.VDT.VDealTag.Business.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.VDT.VDealTag.Business.Cfg">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\VDT\VDealTag\bus\VSoft.Company.VDT.VDealTag.Business.Cfg.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.VDT.VDealTag.Business.Provider">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\VDT\VDealTag\bus\VSoft.Company.VDT.VDealTag.Business.Provider.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.VDT.VDealTag.Data.Db">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\VDT\VDealTag\data\VSoft.Company.VDT.VDealTag.Data.Db.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.VDT.VDealTag.Repository">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\VDT\VDealTag\repository\VSoft.Company.VDT.VDealTag.Repository.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.VDT.VDealTag.Repository.Efc">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\VDT\VDealTag\repository\VSoft.Company.VDT.VDealTag.Repository.Efc.dll</HintPath>
+	  </Reference>
+	  <Reference Include="VSoft.Company.VDT.VDealTag.Repository.Efc.Provider">
+	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\VDT\VDealTag\repository\VSoft.Company.VDT.VDealTag.Repository.Efc.Provider.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
