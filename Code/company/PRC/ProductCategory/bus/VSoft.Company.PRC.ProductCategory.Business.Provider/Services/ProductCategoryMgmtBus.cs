@@ -368,6 +368,7 @@ public class ProductCategoryMgmtBus : BusinessRepositoryService<ProductCategoryD
         {
             response.Data = rsRespo.GetDto().ToArray();
             response.Total = rsRespo.Count;
+            response.IsSuccess = true;
         };
         return response;
     }
