@@ -30,7 +30,7 @@ public class CustomerDbContext : EfcDbContext<CustomerDbContext, MCustomerEntity
     {
         entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-        //entity.HasIndex(e => e.CustomerInfoId, "FK_CustomerInfo_TO_Customer");
+       // entity.HasIndex(e => e.CustomerInfoId, "FK_CustomerInfo_TO_Customer");
 
         entity.HasIndex(e => e.PriorityId, "FK_Priority_TO_Customer");
 

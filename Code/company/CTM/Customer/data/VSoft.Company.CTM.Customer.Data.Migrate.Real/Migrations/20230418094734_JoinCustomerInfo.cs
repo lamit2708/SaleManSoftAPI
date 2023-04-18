@@ -6,17 +6,17 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
 {
     /// <inheritdoc />
-    public partial class addCustomerInfo : Migration
+    public partial class JoinCustomerInfo : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            //migrationBuilder.AddColumn<DateTime>(
-            //    name: "BirthDate",
-            //    table: "Customer",
-            //    type: "datetime",
-            //    nullable: true,
-            //    defaultValueSql: "NULL");
+            migrationBuilder.AddColumn<DateTime>(
+                name: "BirthDate",
+                table: "Customer",
+                type: "datetime",
+                nullable: true,
+                defaultValueSql: "NULL");
 
             migrationBuilder.AddColumn<int>(
                 name: "CustomerSourceId",
@@ -52,9 +52,9 @@ namespace VSoft.Company.CTM.Customer.Data.Migrate.Real.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            //migrationBuilder.DropColumn(
-            //    name: "BirthDate",
-            //    table: "Customer");
+            migrationBuilder.DropColumn(
+                name: "BirthDate",
+                table: "Customer");
 
             migrationBuilder.DropColumn(
                 name: "CustomerSourceId",
