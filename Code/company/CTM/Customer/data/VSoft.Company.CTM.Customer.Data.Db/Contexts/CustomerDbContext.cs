@@ -35,7 +35,7 @@ public class CustomerDbContext : EfcDbContext<CustomerDbContext, MCustomerEntity
         entity.HasIndex(e => e.PriorityId, "FK_Priority_TO_Customer");
 
         entity.HasIndex(e => e.Phone, "UQ_Phone").IsUnique();
-		entity.HasIndex(e => e.CustomerSourceId, "FK_CustomerSource_TO_CustomerInfo");
+		//entity.HasIndex(e => e.CustomerSourceId, "FK_CustomerSource_TO_CustomerInfo");
 	}
 
   
