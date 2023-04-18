@@ -102,4 +102,9 @@ public class VDealTagMgmtBus : BusinessRepositoryService<VDealTagDto, IVDealTagR
         };
         return response;
     }
+
+    public async Task<VDealTagFilterDtoResponse> GetDataByFilter(VDealTagDataDtoResponse request)
+    {
+        return null;
+    }
 }

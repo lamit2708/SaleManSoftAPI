@@ -17,5 +17,5 @@ public interface IVDealTagRepository : IEfcRepositoryEntityReadOnlyId<VDealTagDb
 
     Task<PagedList<MVDealTagEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams);
 
-
+    Task<List<MVDealTagEntity>> GetAllDealTagByFilter(int? userId, int? teamId, DateTime date, string? keyword);
 }

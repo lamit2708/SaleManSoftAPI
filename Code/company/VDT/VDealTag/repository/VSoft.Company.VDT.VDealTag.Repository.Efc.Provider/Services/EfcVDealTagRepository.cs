@@ -69,4 +69,10 @@ public class EfcVDealTagRepository : EfcRepositoryEntityReadOnlyId<VDealTagDbCon
         return new PagedList<MVDealTagEntity>(data, count, pagParams.PageNumber, pagParams.PageSize);
     }
 
+    public async Task<List<MVDealTagEntity>> GetAllDealTagByFilter(int? userId, int? teamId, DateTime date, string? keyword)
+    {
+        var query = Entities;
+        if (userId != null)
+            query = query.Where(x => x.UserId  == userId);
+    }
 }

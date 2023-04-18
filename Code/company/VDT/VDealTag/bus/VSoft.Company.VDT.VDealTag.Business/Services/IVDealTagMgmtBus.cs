@@ -20,4 +20,6 @@ public interface IVDealTagMgmtBus
     Task<VDealTagFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByLongs request);
 
     Task<VDealTagTableKeySearchDtoResponse> GetTableByKeySearch(VDealTagTableKeySearchDtoRequest request);
+
+    Task<VDealTagFilterDtoResponse> GetDataByFilter(VDealTagDataDtoResponse request);
 }
