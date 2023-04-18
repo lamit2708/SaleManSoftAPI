@@ -2,6 +2,7 @@ using VegunSoft.Framework.Api.Service.UnitTest.Methods;
 using VSoft.Company.ACT.Activity.Api.Base.Methods;
 using VSoft.Company.CTM.Customer.Api.Base.Methods;
 using VSoft.Company.DEA.Deal.Api.Base.Methods;
+using VSoft.Company.DST.DealStep.Api.Base.Methods;
 using VSoft.Company.PRC.ProductCategory.Api.Base.Methods;
 using VSoft.Company.PRO.Product.Api.Base.Methods;
 using VSoft.Company.TEA.Team.Api.Base.Methods;
@@ -17,4 +18,5 @@ builder.RegisterTestApi((services, configuration) =>
     services.RegisterProductServices(configuration);
     services.RegisterUserServices(configuration);
     services.RegisterProductCategoryServices(configuration);
+    services.RegisterDealStepServices(configuration);
 });

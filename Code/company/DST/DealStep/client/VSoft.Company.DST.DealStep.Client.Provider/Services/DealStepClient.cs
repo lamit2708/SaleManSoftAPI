@@ -19,6 +19,12 @@ public class DealStepClient : ApiDtoClientJSon<IDealStepClient, MDealStepClient>
 
     public override string Controller { get; } = nameof(IDealStepControllerPath.DealStep);
 
+    public Task<DealStepFindRangeDtoResponse> GetAll()
+    {
+        var relativePath = Controller.GetApiPath(nameof(IDealStepActionName.GetAll));
+        return GetQueryAsync<DealStepFindRangeDtoResponse>(relativePath, null);
+    }
+
     public Task<DealStepFindDtoResponse> FindAsync(MDtoRequestFindByString request)
     {
         var relativePath = Controller.GetApiPath(nameof(IDealStepActionName.FindOne));

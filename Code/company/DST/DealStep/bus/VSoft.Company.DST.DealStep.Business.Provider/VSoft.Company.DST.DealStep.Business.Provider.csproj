@@ -48,7 +48,7 @@
 			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Model.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.DST.DealStep.Data.Db">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DST\DealStep\data\VSoft.Company.DST.DealStep.Data.Db.dll</HintPath>
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DST\DealStep\data\VSoft.Company.DST.DealStep.Data.Db.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.DST.DealStep.Data.Entity">
 			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\DST\DealStep\data\VSoft.Company.DST.DealStep.Data.Entity.dll</HintPath>

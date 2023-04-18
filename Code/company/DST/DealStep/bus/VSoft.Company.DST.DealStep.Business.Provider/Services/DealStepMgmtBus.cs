@@ -346,4 +346,16 @@ public class DealStepMgmtBus : BusinessRepositoryService<DealStepDto, IDealStepR
     {
         return await SaveRangeAsync(request, (rq) => (Repository?.SaveRangeTransactionAsync(rq)) ?? Task.FromResult<MSaveRangeResults<MDealStepEntity>?>(null));
     }
+
+    public async Task<DealStepFindRangeDtoResponse> GetAll()
+    {
+        var rsRespo = Repository?.GetAll()?.ToList();
+        var response = new DealStepFindRangeDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.GetDto().ToArray();
+            response.Total = rsRespo.Count;
+        };
+        return response;
+    }
 }

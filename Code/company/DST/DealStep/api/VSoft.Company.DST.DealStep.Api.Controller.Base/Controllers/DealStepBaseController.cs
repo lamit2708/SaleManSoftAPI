@@ -13,7 +13,14 @@ public abstract class DealStepBaseController : ControllerBase
     public DealStepBaseController(IDealStepMgmtBus bus)
     {
         Bus = bus;
-    }    
+    }
+
+    [HttpGet(nameof(IDealStepActionName.GetAll))]
+    public async Task<IActionResult> FindAllAsync()
+    {
+        var res = await Bus.GetAll();
+        return Ok(res);
+    }
 
     [HttpGet(nameof(IDealStepActionName.FindOne))]
     public async Task<IActionResult> FindAsync([FromQuery] MDtoRequestFindByInt dtoRequest)
