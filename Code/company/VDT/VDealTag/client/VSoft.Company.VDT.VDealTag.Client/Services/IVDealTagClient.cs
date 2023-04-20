@@ -14,4 +14,5 @@ public interface IVDealTagClient: IApiDtoClientJSon<IVDealTagClient>
 
     Task<VDealTagTableKeySearchDtoResponse> GetTableByKeyword(VDealTagTableKeySearchDtoRequest request);
 
+    Task<VDealTagFilterDtoResponse> GetByFilter(VDealTagFilterDtoRequest request);
 }
