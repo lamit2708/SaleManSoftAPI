@@ -26,5 +26,5 @@ public interface ICustomerClient: IApiDtoClientJSon<ICustomerClient>
 
     Task<CustomerSaveRangeDtoResponse> SaveRangeAsync(CustomerSaveRangeDtoRequest request);
     Task<CustomerTableKeySearchDtoResponse> GetTableByKeyword(CustomerTableKeySearchDtoRequest request);
-
+	Task<CustomerFindRangeDtoResponse> GetAll();
 }

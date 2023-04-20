@@ -19,11 +19,16 @@ public class CustomerClient : ApiDtoClientJSon<ICustomerClient, MCustomerClient>
 
     public override string Controller { get; } = nameof(ICustomerControllerPath.Customer);
 
-    //public Task<CustomerFindDtoResponse> FindAsync(MDtoRequestFindByString request)
-    //{
-    //    var relativePath = Controller.GetApiPath(nameof(ICustomerActionName.FindOne));
-    //    return GetAsync<MDtoRequestFindByString, CustomerFindDtoResponse>(relativePath, request);
-    //}
+	//public Task<CustomerFindDtoResponse> FindAsync(MDtoRequestFindByString request)
+	//{
+	//    var relativePath = Controller.GetApiPath(nameof(ICustomerActionName.FindOne));
+	//    return GetAsync<MDtoRequestFindByString, CustomerFindDtoResponse>(relativePath, request);
+	//}
+	public Task<CustomerFindRangeDtoResponse> GetAll()
+	{
+		var relativePath = Controller.GetApiPath(nameof(ICustomerActionName.GetAll));
+		return GetQueryAsync<CustomerFindRangeDtoResponse>(relativePath, null);
+	}
 	public Task<CustomerFindDtoResponse> FindAsync(MDtoRequestFindByString request)
 	{
 		var relativePath = Controller.GetApiPath(nameof(ICustomerActionName.FindOne));
