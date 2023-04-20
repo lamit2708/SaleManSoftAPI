@@ -26,5 +26,8 @@ public interface ITeamClient: IApiDtoClientJSon<ITeamClient>
     Task<TeamDeleteRangeDtoResponse> DeleteRangeAsync(TeamDeleteRangeDtoRequest request);
 
     Task<TeamSaveRangeDtoResponse> SaveRangeAsync(TeamSaveRangeDtoRequest request);
-   
+
+    Task<TeamKeyValueResponse> GetAll();
+
+
 }

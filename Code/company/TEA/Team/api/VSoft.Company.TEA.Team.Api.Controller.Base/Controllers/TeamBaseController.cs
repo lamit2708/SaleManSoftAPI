@@ -85,4 +85,11 @@ public abstract class TeamBaseController : ControllerBase
         var res = await Bus.DeleteRangeAsync(dtosRequest);
         return Ok(res);
     }
+
+    [HttpGet(nameof(ITeamActionName.GetAll))]
+    public async Task<IActionResult> FindAllAsync()
+    {
+        var res = await Bus.GetAll();
+        return Ok(res);
+    }
 }

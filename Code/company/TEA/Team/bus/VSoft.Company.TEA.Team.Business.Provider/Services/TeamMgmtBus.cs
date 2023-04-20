@@ -362,4 +362,19 @@ public class TeamMgmtBus : BusinessRepositoryService<TeamDto, ITeamRepository>, 
         };
         return response;
     }
+
+    public async Task<TeamKeyValueResponse> GetAll()
+    {
+        var rsRespo = Repository?.GetAll()?.ToList();
+        var rs = rsRespo.Select(x => new KeyValuePair<int, string>(x.Id, x.Name)).ToArray();
+
+        var response = new TeamKeyValueResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rs;
+            response.Total = rsRespo.Count;
+            response.IsSuccess = true;
+        };
+        return response;
+    }
 }

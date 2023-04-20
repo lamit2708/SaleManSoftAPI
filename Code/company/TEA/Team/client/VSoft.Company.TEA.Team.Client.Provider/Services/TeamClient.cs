@@ -105,4 +105,10 @@ public class TeamClient : ApiDtoClientJSon<ITeamClient, MTeamClient>, ITeamClien
         var relativePath = Controller.GetApiPath(nameof(ITeamActionName.SaveRange));
         return PostAsync<TeamSaveRangeDtoRequest, TeamSaveRangeDtoResponse>(relativePath, request);
     }
+
+    public Task<TeamKeyValueResponse> GetAll()
+    {
+        var relativePath = Controller.GetApiPath(nameof(ITeamActionName.GetAll));
+        return GetQueryAsync<TeamKeyValueResponse>(relativePath, null);
+    }
 }

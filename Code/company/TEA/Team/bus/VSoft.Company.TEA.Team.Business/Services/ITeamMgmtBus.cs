@@ -51,4 +51,6 @@ public interface ITeamMgmtBus
     Task<TeamSaveRangeDtoResponse> SaveRangeTransactionAsync(TeamSaveRangeDtoRequest request);
 
     Task<TeamTableKeySearchDtoResponse> GetTableByKeySearch(TeamTableKeySearchDtoRequest request);
+
+    Task<TeamKeyValueResponse> GetAll();
 }
