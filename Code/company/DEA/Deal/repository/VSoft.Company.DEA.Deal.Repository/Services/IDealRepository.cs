@@ -14,4 +14,5 @@ public interface IDealRepository : IEfcRepositoryEntityMgmtId<DealDbContext, MDe
     Task<string?> GetFullNameAsync(long? id);
 
     Task<PagedList<MDealEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams);
+    Task<PagedList<MDealViewEntity>> GetViewEntitiesByKeySearchAsync(string keySearch, PagingParameters pagParams);
 }

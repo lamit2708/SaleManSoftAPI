@@ -11,10 +11,30 @@ namespace VSoft.Company.DEA.Deal.Repository.Efc.Provider.Services;
 
 public class EfcDealRepository : EFcRepositoryEntityMgmtId<DealDbContext, MDealEntity, long>, IDealRepositoryEfc
 {
-
+    public DbSet<MDealViewEntity>? ViewEntities { get; private set; }
     public EfcDealRepository(DealDbContext dbContext) : base(dbContext, dbContext.Items)
     {
+        ViewEntities = dbContext.ViewItems;
+    }
+    public async Task<PagedList<MDealViewEntity>> GetViewEntitiesByKeySearchAsync(string keySearch, PagingParameters pagParams)
+    {
+        IQueryable<MDealViewEntity>? query;
+        if (string.IsNullOrEmpty(keySearch))
+            query = ViewEntities;
+        else
+        {
+            //var unsignedKey = keySearch.ConvertToUnsignedString();
+            //query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
+            query = ViewEntities.Where(x => x.Name.Contains(keySearch));
+        }
 
+        var count = await query.CountAsync();
+
+        var data = await query
+            .Skip((pagParams.PageNumber - 1) * pagParams.PageSize)
+            .Take(pagParams.PageSize)
+            .ToListAsync();
+        return new PagedList<MDealViewEntity>(data, count, pagParams.PageNumber, pagParams.PageSize);
     }
 
     public string? GetFullName(long? id)

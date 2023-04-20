@@ -22,8 +22,35 @@ public static class DealEntityMethods
             PricePossible = src.PricePossible,
         };
     }
+    public static DealDto GetDto(this MDealViewEntity src)
+    {
+        return new DealDto()
+        {
+            Id = src.Id,
+            CreatedDate = src.CreatedDate,
+            CustomerId = src.CustomerId,
+            DealStepId = src.DealStepId,
+            UserId = src.UserId,
+            OrderId = src.OrderId,
+            Name = src.Name,
+            Description = src.Description,
+            PridictPrice = src.PridictPrice,
+            DateFor = src.DateFor,
+            PricePossible = src.PricePossible,
+            UserFullName=src.UserFullName,
+            CustomerFullName=src.CustomerFullName,
+        };
+    }
 
     public static List<DealDto> GetDto(this List<MDealEntity> srcs)
+    {
+        var rs = new List<DealDto>();
+        if (srcs == null)
+            return rs;
+        srcs.ForEach(src => rs.Add(src.GetDto()));
+        return rs;
+    }
+    public static List<DealDto> GetDto(this List<MDealViewEntity> srcs)
     {
         var rs = new List<DealDto>();
         if (srcs == null)
