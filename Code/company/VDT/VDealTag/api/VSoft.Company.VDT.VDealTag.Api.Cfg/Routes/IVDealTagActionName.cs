@@ -5,5 +5,6 @@ namespace VSoft.Company.VDT.VDealTag.Api.Cfg.Routes
     public interface IVDealTagActionName: IApiActionName
     {
         string? FindTable { get; set; }
+        string? Filter { get; set; }
     }
 }

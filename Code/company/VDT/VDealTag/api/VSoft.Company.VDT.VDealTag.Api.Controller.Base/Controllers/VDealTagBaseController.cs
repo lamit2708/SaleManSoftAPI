@@ -35,4 +35,11 @@ public abstract class VDealTagBaseController : ControllerBase
         var res = await Bus.GetTableByKeySearch(dtosRequest);
         return Ok(res);
     }
+
+    [HttpGet(nameof(IVDealTagActionName.Filter))]
+    public async Task<IActionResult> FindByFilter([FromQuery] VDealTagFilterDtoRequest dtosRequest)
+    {
+        var res = await Bus.GetDataByFilter(dtosRequest);
+        return Ok(res);
+    }
 }

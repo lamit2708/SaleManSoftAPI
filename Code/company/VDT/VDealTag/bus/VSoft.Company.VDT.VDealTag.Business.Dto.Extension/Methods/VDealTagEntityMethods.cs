@@ -15,7 +15,11 @@ public static class VDealTagEntityMethods
             CustomerName = src.CustomerName,
             CustomerPhone = src.CustomerPhone,
             PridictPrice = src.PridictPrice,
-            DealStepId = src.DealStepId
+            DealStepId = src.DealStepId,
+            UserId = src.UserId,
+            UserName = src.UserName,
+            TeamId = src.TeamId,
+            DateFor = src.DateFor,
         };
     }
     public static List<VDealTagDto> GetDto(this List<MVDealTagEntity> srcs)

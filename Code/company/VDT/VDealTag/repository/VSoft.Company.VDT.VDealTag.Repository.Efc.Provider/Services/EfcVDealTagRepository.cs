@@ -37,18 +37,18 @@ public class EfcVDealTagRepository : EfcRepositoryEntityReadOnlyId<VDealTagDbCon
         if (DbContext == null) throw new Exception("Context is null");
         if (Entities == null) throw new Exception("Entities is null");
         if (id == null) throw new Exception("id is null");
-        return Entities.Where(x => x.Id == id).Select(x => x.CustomerName ?? string.Empty).FirstOrDefaultAsync() ;
+        return Entities.Where(x => x.Id == id).Select(x => x.CustomerName ?? string.Empty).FirstOrDefaultAsync();
     }
 
     public Task<List<MVDealTagEntity>> GetVDealTagsByNameAsync(string name)
     {
         if (DbContext == null) throw new Exception("Context is null");
         if (Entities == null) throw new Exception("Entities is null");
-        if (string.IsNullOrEmpty(name )) throw new Exception("The name is null");
-        return Entities.Where(x => (x.CustomerName??string.Empty).ToLower().Contains(name.ToLower())).ToListAsync();
+        if (string.IsNullOrEmpty(name)) throw new Exception("The name is null");
+        return Entities.Where(x => (x.CustomerName ?? string.Empty).ToLower().Contains(name.ToLower())).ToListAsync();
     }
 
-    public async Task<PagedList<MVDealTagEntity>> GetTableByKeySearchAsync(string keySearch, PagingParameters pagParams)
+    public async Task<PagedList<MVDealTagEntity>> GetTableByKeySearchAsync(string? keySearch, PagingParameters pagParams)
     {
         IQueryable<MVDealTagEntity>? query;
         if (string.IsNullOrEmpty(keySearch))
@@ -60,7 +60,7 @@ public class EfcVDealTagRepository : EfcRepositoryEntityReadOnlyId<VDealTagDbCon
             query = Entities.Where(x => x.CustomerName.Contains(keySearch));
         }
 
-        var count = await query.CountAsync();
+        var count = await query?.CountAsync();
 
         var data = await query
             .Skip((pagParams.PageNumber - 1) * pagParams.PageSize)
@@ -69,10 +69,32 @@ public class EfcVDealTagRepository : EfcRepositoryEntityReadOnlyId<VDealTagDbCon
         return new PagedList<MVDealTagEntity>(data, count, pagParams.PageNumber, pagParams.PageSize);
     }
 
-    public async Task<List<MVDealTagEntity>> GetAllDealTagByFilter(int? userId, int? teamId, DateTime date, string? keyword)
+    public async Task<List<MVDealTagEntity>> GetAllDealTagByFilter(int? userId, int? teamId, DateTime? date, string? keyword)
     {
-        var query = Entities;
-        if (userId != null)
-            query = query.Where(x => x.UserId  == userId);
+        IQueryable<MVDealTagEntity>? query = Entities;
+        if (userId != null && userId != 0)
+        {
+            var userIdSearch = userId ?? 1;
+            query = query?.Where(x => x.UserId == userIdSearch);
+        }
+        if (teamId != null && teamId != 0)
+        {
+            var teamIdSearch = teamId ?? 1;
+            query = query?.Where(x => x.TeamId == teamIdSearch);
+        }
+        if (date != null)
+        {
+            var dateSearch = date?.Date ?? DateTime.Now.Date;
+            query = query?.Where(x => x.DateFor >= dateSearch);
+        }
+        if (!string.IsNullOrEmpty(keyword))
+        {
+            string stringSearch = keyword ?? "";
+            query = query.Where(x => x.DealName.ToLower().Contains(stringSearch.ToLower())
+            || x.CustomerName.ToLower().Contains(stringSearch.ToLower())
+            || x.UserName.ToLower().Contains(stringSearch.ToLower()));
+        }
+        var rs = await query.ToListAsync();
+        return rs;
     }
 }

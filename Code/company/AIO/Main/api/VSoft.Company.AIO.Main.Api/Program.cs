@@ -7,6 +7,7 @@ using VSoft.Company.PRC.ProductCategory.Api.Base.Methods;
 using VSoft.Company.PRO.Product.Api.Base.Methods;
 using VSoft.Company.TEA.Team.Api.Base.Methods;
 using VSoft.Company.USR.User.Api.Base.Methods;
+using VSoft.Company.VDT.VDealTag.Api.Base.Methods;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.RegisterTestApi((services, configuration) =>
@@ -19,4 +20,5 @@ builder.RegisterTestApi((services, configuration) =>
     services.RegisterUserServices(configuration);
     services.RegisterProductCategoryServices(configuration);
     services.RegisterDealStepServices(configuration);
+    services.RegisterVDealTagServices(configuration);
 });

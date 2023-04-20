@@ -103,8 +103,17 @@ public class VDealTagMgmtBus : BusinessRepositoryService<VDealTagDto, IVDealTagR
         return response;
     }
 
-    public async Task<VDealTagFilterDtoResponse> GetDataByFilter(VDealTagDataDtoResponse request)
+    public async Task<VDealTagFilterDtoResponse> GetDataByFilter(VDealTagFilterDtoRequest request)
     {
-        return null;
+        var filter = request.Filter;
+        var rsRespo = await Repository?.GetAllDealTagByFilter(filter.UserId, filter.TeamId, filter.Date, filter.Keyword);
+        var response = new VDealTagFilterDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo?.GetDto().ToArray();
+            response.Filter = filter;
+            response.IsSuccess = true;
+        }
+        return response;
     }
 }

@@ -12,19 +12,6 @@ public interface IVDealTagClient: IApiDtoClientJSon<IVDealTagClient>
 
     Task<VDealTagFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request);
 
-    Task<VDealTagInsertDtoResponse> CreateAsync(VDealTagInsertDtoRequest request);
-
-    Task<VDealTagInsertRangeDtoResponse> CreateRangeAsync(VDealTagInsertRangeDtoRequest request);
-
-    Task<VDealTagUpdateDtoResponse> UpdateAsync(VDealTagUpdateDtoRequest request);
-
-    Task<VDealTagUpdateRangeDtoResponse> UpdateRangeAsync(VDealTagUpdateRangeDtoRequest request);
-
-    Task<VDealTagDeleteDtoResponse> DeleteAsync(VDealTagDeleteDtoRequest request);
-
-    Task<VDealTagDeleteRangeDtoResponse> DeleteRangeAsync(VDealTagDeleteRangeDtoRequest request);
-
-    Task<VDealTagSaveRangeDtoResponse> SaveRangeAsync(VDealTagSaveRangeDtoRequest request);
     Task<VDealTagTableKeySearchDtoResponse> GetTableByKeyword(VDealTagTableKeySearchDtoRequest request);
 
 }

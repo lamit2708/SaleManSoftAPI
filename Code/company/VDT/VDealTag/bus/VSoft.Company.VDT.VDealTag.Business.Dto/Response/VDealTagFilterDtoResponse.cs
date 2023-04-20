@@ -3,7 +3,7 @@ using VSoft.Company.VDT.VDealTag.Business.Dto.Data;
 
 namespace VSoft.Company.VDT.VDealTag.Business.Dto.Response
 {
-    public class VDealTagFilterDtoResponse : MDtoResponse
+    public class VDealTagFilterDtoResponse : MDtoResponseRange<VDealTagDto>
     {
        public VDealTagFilterDto Filter { get; set; }
     }

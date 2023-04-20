@@ -19,11 +19,6 @@ public class VDealTagClient : ApiDtoClientJSon<IVDealTagClient, MVDealTagClient>
 
     public override string Controller { get; } = nameof(IVDealTagControllerPath.VDealTag);
 
-    //public Task<VDealTagFindDtoResponse> FindAsync(MDtoRequestFindByString request)
-    //{
-    //    var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.FindOne));
-    //    return GetAsync<MDtoRequestFindByString, VDealTagFindDtoResponse>(relativePath, request);
-    //}
 	public Task<VDealTagFindDtoResponse> FindAsync(MDtoRequestFindByString request)
 	{
 		var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.FindOne));
@@ -39,47 +34,6 @@ public class VDealTagClient : ApiDtoClientJSon<IVDealTagClient, MVDealTagClient>
         return GetAsync<MDtoRequestFindRangeByStrings, VDealTagFindRangeDtoResponse>(relativePath, request);
     }
 
-    public Task<VDealTagInsertDtoResponse> CreateAsync(VDealTagInsertDtoRequest request)
-    {
-        var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.CreateOne));
-        return PostAsync<VDealTagInsertDtoRequest, VDealTagInsertDtoResponse>(relativePath, request);
-    }
-
-    public Task<VDealTagInsertRangeDtoResponse> CreateRangeAsync(VDealTagInsertRangeDtoRequest request)
-    {
-        var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.CreateRange));
-        return PostAsync<VDealTagInsertRangeDtoRequest, VDealTagInsertRangeDtoResponse>(relativePath, request);
-    }
-
-    public Task<VDealTagUpdateDtoResponse> UpdateAsync(VDealTagUpdateDtoRequest request)
-    {
-        var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.UpdateOne));
-        return PutAsync<VDealTagUpdateDtoRequest, VDealTagUpdateDtoResponse>(relativePath, request);
-    }
-
-    public Task<VDealTagUpdateRangeDtoResponse> UpdateRangeAsync(VDealTagUpdateRangeDtoRequest request)
-    {
-        var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.UpdateRange));
-        return PutAsync<VDealTagUpdateRangeDtoRequest, VDealTagUpdateRangeDtoResponse>(relativePath, request);
-    }
-
-    public Task<VDealTagDeleteDtoResponse> DeleteAsync(VDealTagDeleteDtoRequest request)
-    {
-        var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.DeleteOne));
-        return DeleteAsync<VDealTagDeleteDtoRequest, VDealTagDeleteDtoResponse>(relativePath, request);
-    }
-
-    public Task<VDealTagDeleteRangeDtoResponse> DeleteRangeAsync(VDealTagDeleteRangeDtoRequest request)
-    {
-        var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.DeleteRange));
-        return DeleteAsync<VDealTagDeleteRangeDtoRequest, VDealTagDeleteRangeDtoResponse>(relativePath, request);
-    }
-
-    public Task<VDealTagSaveRangeDtoResponse> SaveRangeAsync(VDealTagSaveRangeDtoRequest request)
-    {
-        var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.SaveRange));
-        return PostAsync<VDealTagSaveRangeDtoRequest, VDealTagSaveRangeDtoResponse>(relativePath, request);
-    }
     public Task<VDealTagTableKeySearchDtoResponse> GetTableByKeyword(VDealTagTableKeySearchDtoRequest request)
     {
         var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.FindTable));
@@ -101,5 +55,33 @@ public class VDealTagClient : ApiDtoClientJSon<IVDealTagClient, MVDealTagClient>
         if (!string.IsNullOrEmpty(request.Data))
             query.Add(nameof(request.Data), request.Data);
         return GetQueryAsync<VDealTagTableKeySearchDtoResponse>(relativePath, query);
+    }
+
+    public Task<VDealTagFilterDtoResponse> GetByFilter(VDealTagFilterDtoRequest request)
+    {
+        var relativePath = Controller.GetApiPath(nameof(IVDealTagActionName.Filter));
+        var filterName = nameof(request.Filter);
+        var langCodeName = nameof(request.LangCode);
+        var langShowExContent = nameof(request.ShowExContent);
+        var langShowExMessage = nameof(request.ShowExMessage);
+        var query = new Dictionary<string, string>()
+        {
+            [$"{filterName}.{nameof(request.Filter.Buffer)}"] = "a",
+        };
+        if (request.LangCode != null)
+            query.Add(langCodeName, request.LangCode.ToString());
+        if (request.ShowExContent != null)
+            query.Add(langShowExContent, request.ShowExContent.ToString());
+        if (request.ShowExMessage != null)
+            query.Add(langShowExMessage, request.ShowExMessage.ToString());
+        if (request.Filter.TeamId != null)
+            query.Add($"{filterName}.{nameof(request.Filter.TeamId)}", request.Filter.TeamId.ToString());
+        if (request.Filter.TeamId != null)
+            query.Add($"{filterName}.{nameof(request.Filter.UserId)}", request.Filter.UserId.ToString());
+        if (request.Filter.TeamId != null)
+            query.Add($"{filterName}.{nameof(request.Filter.Date)}", request.Filter.Date.ToString());
+        if (request.Filter.TeamId != null)
+            query.Add($"{filterName}.{nameof(request.Filter.Keyword)}", request.Filter.Keyword.ToString());
+        return GetQueryAsync<VDealTagFilterDtoResponse>(relativePath, query);
     }
 }

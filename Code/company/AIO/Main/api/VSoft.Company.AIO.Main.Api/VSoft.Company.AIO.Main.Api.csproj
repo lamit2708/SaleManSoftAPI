@@ -107,6 +107,13 @@
 		<Reference Include="VSoft.Company.USR.User.Api.Controller">
 		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\api\VSoft.Company.USR.User.Api.Controller.dll</HintPath>
 		</Reference>
+
+		<Reference Include="VSoft.Company.VDT.VDealTag.Api.Base">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\VDT\VDealTag\api\VSoft.Company.VDT.VDealTag.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.VDT.VDealTag.Api.Controller">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\VDT\VDealTag\api\VSoft.Company.VDT.VDealTag.Api.Controller.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 
 </Project>

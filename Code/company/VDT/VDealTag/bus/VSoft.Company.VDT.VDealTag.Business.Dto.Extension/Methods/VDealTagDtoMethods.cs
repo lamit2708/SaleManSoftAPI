@@ -15,7 +15,11 @@ public static class VDealTagDtoMethods
             CustomerName = src.CustomerName,
             CustomerPhone = src.CustomerPhone,
             PridictPrice = src.PridictPrice,
-            DealStepId = src.DealStepId
+            DealStepId = src.DealStepId,
+            UserId = src.UserId,
+            UserName = src.UserName,
+            TeamId = src.TeamId,
+            DateFor = src.DateFor,
         };
     }
 }

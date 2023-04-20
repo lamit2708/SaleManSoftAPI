@@ -21,5 +21,5 @@ public interface IVDealTagMgmtBus
 
     Task<VDealTagTableKeySearchDtoResponse> GetTableByKeySearch(VDealTagTableKeySearchDtoRequest request);
 
-    Task<VDealTagFilterDtoResponse> GetDataByFilter(VDealTagDataDtoResponse request);
+    Task<VDealTagFilterDtoResponse> GetDataByFilter(VDealTagFilterDtoRequest request);
 }

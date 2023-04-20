@@ -23,27 +23,28 @@ public class VDealTagDbContext : EfcDbContext<VDealTagDbContext, MVDealTagEntity
 
     protected void ConfigTable(EntityTypeBuilder<MVDealTagEntity> entity)
     {
-        entity.ToTable("VDealTag");
+        entity.HasNoKey().ToTable("VDealTag");
     }
 
     protected void ConfigIndex(EntityTypeBuilder<MVDealTagEntity> entity)
     {
-        entity.HasKey(e => e.Id).HasName("PRIMARY");
-        entity.HasIndex(e => e.Id, "FK_Priority_TO_VDealTag");
-        entity.HasIndex(e => e.CustomerId, "UQ_CustomerId").IsUnique();
+
 	}
 
   
     protected void ConfigBasicFields(EntityTypeBuilder<MVDealTagEntity> entity)
     {
 
-        entity.Property(e => e.Id).HasColumnType("bigint(20)");
         entity.Property(e => e.CustomerId).HasColumnType("bigint(20)");
-        entity.Property(e => e.DealName).HasColumnType("varchar(100)");
-        entity.Property(e => e.CustomerName).HasColumnType("varchar(100)");
-        entity.Property(e => e.CustomerPhone).HasColumnType("varchar(100)");
-        entity.Property(e => e.PridictPrice).HasColumnType("bigint(20)");
+        entity.Property(e => e.CustomerName).HasMaxLength(100);
+        entity.Property(e => e.CustomerPhone).HasMaxLength(100);
+        entity.Property(e => e.DateFor).HasDefaultValueSql("'NULL'").HasColumnType("datetime");
+        entity.Property(e => e.DealName).HasMaxLength(100).HasDefaultValueSql("'NULL'");
         entity.Property(e => e.DealStepId).HasColumnType("int(11)");
+        entity.Property(e => e.Id).HasColumnType("bigint(20)");
+        entity.Property(e => e.TeamId).HasDefaultValueSql("'NULL'").HasColumnType("int(11)");
+        entity.Property(e => e.UserId).HasColumnType("int(11)");
+        entity.Property(e => e.UserName).HasMaxLength(100);
     }
 
  
