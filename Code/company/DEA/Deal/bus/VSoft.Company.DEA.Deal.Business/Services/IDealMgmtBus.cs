@@ -31,6 +31,8 @@ public interface IDealMgmtBus
 
     Task<DealUpdateDtoResponse> UpdateAsync(DealUpdateDtoRequest request);
 
+    Task<DealUpdateDtoResponse> UpdateStepAsync(DealChangeStepDtoRequest request);
+
     DealUpdateRangeDtoResponse UpdateRange(DealUpdateRangeDtoRequest request);
 
     Task<DealUpdateRangeDtoResponse> UpdateRangeAsync(DealUpdateRangeDtoRequest request);

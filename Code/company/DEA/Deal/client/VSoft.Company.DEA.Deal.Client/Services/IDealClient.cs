@@ -21,6 +21,8 @@ public interface IDealClient: IApiDtoClientJSon<IDealClient>
 
     Task<DealUpdateRangeDtoResponse> UpdateRangeAsync(DealUpdateRangeDtoRequest request);
 
+    Task<DealUpdateDtoResponse> UpdateStepAsync(DealChangeStepDtoRequest request);
+
     Task<DealDeleteDtoResponse> DeleteAsync(DealDeleteDtoRequest request);
 
     Task<DealDeleteRangeDtoResponse> DeleteRangeAsync(DealDeleteRangeDtoRequest request);

@@ -29,8 +29,8 @@ public class DealDbContext : EfcDbContext<DealDbContext, MDealEntity>
     protected void ConfigIndex(EntityTypeBuilder<MDealEntity> entity)
     {
         entity.HasKey(e => e.Id).HasName("PRIMARY");
-        entity.HasIndex(e => e.CustomerId, "FK_Deal_TO_Deal");
-        entity.HasIndex(e => e.DealStepId, "FK_DealStep_TO_Deal");
+        entity.HasIndex(e => e.CustomerId, "FK_Customer_TO_Deal");
+        //entity.HasIndex(e => e.DealStepId, "FK_DealStep_TO_Deal");
         entity.HasIndex(e => e.OrderId, "FK_Order_TO_Deal");
         entity.HasIndex(e => e.UserId, "FK_User_TO_Deal");
     }

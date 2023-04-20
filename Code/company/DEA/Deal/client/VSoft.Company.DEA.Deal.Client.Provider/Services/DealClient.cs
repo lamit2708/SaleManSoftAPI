@@ -83,6 +83,12 @@ public class DealClient : ApiDtoClientJSon<IDealClient, MDealClient>, IDealClien
         return PutAsync<DealUpdateRangeDtoRequest, DealUpdateRangeDtoResponse>(relativePath, request);
     }
 
+    public Task<DealUpdateDtoResponse> UpdateStepAsync(DealChangeStepDtoRequest request)
+    {
+        var relativePath = Controller.GetApiPath(nameof(IDealActionName.UpdateStep));
+        return PutAsync<DealChangeStepDtoRequest, DealUpdateDtoResponse > (relativePath, request);
+    }
+
     public Task<DealDeleteDtoResponse> DeleteAsync(DealDeleteDtoRequest request)
     {
         var relativePath = Controller.GetApiPath(nameof(IDealActionName.DeleteOne));

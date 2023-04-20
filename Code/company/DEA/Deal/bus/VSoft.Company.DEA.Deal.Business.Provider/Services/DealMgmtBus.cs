@@ -171,6 +171,27 @@ public class DealMgmtBus : BusinessRepositoryService<DealDto, IDealRepository>, 
         );
     }
 
+    public async Task<DealUpdateDtoResponse> UpdateStepAsync(DealChangeStepDtoRequest request)
+    {
+        return await UpdateAsync<DealChangeStepDtoRequest, DealUpdateDtoResponse>
+        (
+            request,
+            async (data) =>
+            {
+                var dealId = data?.Id;
+                var inputEntity = Repository?.GetById(dealId);
+                if (inputEntity != null)
+                {
+                    inputEntity.DealStepId = data?.DealStepId ?? 0;
+                    var resultEntity = await (Repository?.UpdateAsync(inputEntity) ?? Task.FromResult<MDealEntity?>(new MDealEntity()));
+                    return resultEntity?.GetDto();
+                }
+                //inputEntity = data?.GetEntity(true) ?? new MDealEntity();
+                return null;
+            }
+        );
+    }
+
     public DealUpdateRangeDtoResponse UpdateRange(DealUpdateRangeDtoRequest request)
     {
         return UpdateRange<DealUpdateRangeDtoRequest, DealUpdateRangeDtoResponse>

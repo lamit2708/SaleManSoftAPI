@@ -71,6 +71,13 @@ public abstract class DealBaseController : ControllerBase
         return Ok(res);
     }
 
+    [HttpPut(nameof(IDealActionName.UpdateStep))]
+    public async Task<IActionResult> UpdateStepAsync([FromBody] DealChangeStepDtoRequest dtosRequest)
+    {
+        var res = await Bus.UpdateStepAsync(dtosRequest);
+        return Ok(res);
+    }
+
     [HttpDelete(nameof(IDealActionName.DeleteOne))]
     public async Task<IActionResult> DeleteAsync([FromBody] DealDeleteDtoRequest dtoRequest)
     {

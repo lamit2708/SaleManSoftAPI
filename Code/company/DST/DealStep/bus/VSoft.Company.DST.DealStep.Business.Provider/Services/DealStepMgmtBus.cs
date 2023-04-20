@@ -355,6 +355,7 @@ public class DealStepMgmtBus : BusinessRepositoryService<DealStepDto, IDealStepR
         {
             response.Data = rsRespo.GetDto().ToArray();
             response.Total = rsRespo.Count;
+            response.IsSuccess = true;
         };
         return response;
     }
