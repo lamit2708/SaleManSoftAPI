@@ -380,4 +380,16 @@ public class DealMgmtBus : BusinessRepositoryService<DealDto, IDealRepository>, 
         };
         return response;
     }
+    public async Task<DealTableKeySearchDtoResponse> GetViewByKeySearch(DealTableKeySearchDtoRequest request)
+    {
+        var rsRespo = await Repository?.GetViewEntitiesByKeySearchAsync(request.Data, request.PagingParams);
+        var response = new DealTableKeySearchDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.Items.GetDto().ToArray();
+            response.MetaData = rsRespo.MetaData;
+            response.IsSuccess = true;
+        };
+        return response;
+    }
 }

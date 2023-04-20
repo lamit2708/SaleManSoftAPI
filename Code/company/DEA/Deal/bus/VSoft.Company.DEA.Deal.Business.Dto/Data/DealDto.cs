@@ -24,6 +24,8 @@ namespace VSoft.Company.DEA.Deal.Business.Dto.Data
         public DateTime? DateFor { get; set; }
 
         public double? PricePossible { get; set; }
+        public string? UserFullName { get; set; }
+        public string? CustomerFullName { get; set; }
 
         public override string ToString()
         {

@@ -32,7 +32,7 @@ public abstract class DealBaseController : ControllerBase
     [HttpGet(nameof(IDealActionName.FindTable))]
     public async Task<IActionResult> FindTableByKeySearch([FromQuery] DealTableKeySearchDtoRequest dtosRequest)
     {
-        var res = await Bus.GetTableByKeySearch(dtosRequest);
+        var res = await Bus.GetViewByKeySearch(dtosRequest);
         return Ok(res);
     }
 
