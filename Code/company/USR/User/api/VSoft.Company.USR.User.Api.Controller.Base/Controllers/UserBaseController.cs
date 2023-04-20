@@ -84,4 +84,11 @@ public abstract class UserBaseController : ControllerBase
         var res = await Bus.DeleteRangeAsync(dtosRequest);
         return Ok(res);
     }
+	[HttpGet(nameof(IUserActionName.GetAll))]
+	public async Task<IActionResult> FindAllAsync()
+	{
+		var res = await Bus.GetAll();
+		return Ok(res);
+	}
+
 }

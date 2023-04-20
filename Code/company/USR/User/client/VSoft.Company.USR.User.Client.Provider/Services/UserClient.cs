@@ -99,4 +99,9 @@ public class UserClient : ApiDtoClientJSon<IUserClient, MUserClient>, IUserClien
         var relativePath = Controller.GetApiPath(nameof(IUserActionName.SaveRange));
         return PostAsync<UserSaveRangeDtoRequest, UserSaveRangeDtoResponse>(relativePath, request);
     }
+	public Task<UserKeyValueResponse> GetAll()
+	{
+		var relativePath = Controller.GetApiPath(nameof(IUserActionName.GetAll));
+		return GetQueryAsync<UserKeyValueResponse>(relativePath, null);
+	}
 }

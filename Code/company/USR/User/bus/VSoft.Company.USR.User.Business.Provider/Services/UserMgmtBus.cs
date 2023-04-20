@@ -359,4 +359,18 @@ public class UserMgmtBus : BusinessRepositoryService<UserDto, IUserRepository>, 
         };
         return response;
     }
+	public async Task<UserKeyValueResponse> GetAll()
+	{
+		var rsRespo = Repository?.GetAll()?.ToList();
+        var rs = rsRespo.Select(x => new KeyValuePair<int, string>(x.Id, x.Username)).ToArray();
+
+		var response = new UserKeyValueResponse();
+		if (rsRespo != null)
+		{
+			response.Data = rs;
+			response.Total = rsRespo.Count;
+            response.IsSuccess = true;
+		};
+		return response;
+	}
 }

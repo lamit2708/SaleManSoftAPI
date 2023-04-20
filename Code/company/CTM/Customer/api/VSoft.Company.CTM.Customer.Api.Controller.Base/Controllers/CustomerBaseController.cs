@@ -13,9 +13,15 @@ public abstract class CustomerBaseController : ControllerBase
     public CustomerBaseController(ICustomerMgmtBus bus)
     {
         Bus = bus;
-    }    
+    }
+	[HttpGet(nameof(ICustomerActionName.GetAll))]
+	public async Task<IActionResult> FindAllAsync()
+	{
+		var res = await Bus.GetAll();
+		return Ok(res);
+	}
 
-    [HttpGet(nameof(ICustomerActionName.FindOne))]
+	[HttpGet(nameof(ICustomerActionName.FindOne))]
     public async Task<IActionResult> FindAsync([FromQuery] MDtoRequestFindByLong dtoRequest)
     {
         var res = await Bus.FindAsync(dtoRequest);

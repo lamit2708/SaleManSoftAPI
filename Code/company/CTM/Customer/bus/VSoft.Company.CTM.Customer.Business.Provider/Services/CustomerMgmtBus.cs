@@ -359,4 +359,16 @@ public class CustomerMgmtBus : BusinessRepositoryService<CustomerDto, ICustomerR
         };
         return response;
     }
+	public async Task<CustomerFindRangeDtoResponse> GetAll()
+	{
+		var rsRespo = Repository?.GetAll()?.ToList();
+		var response = new CustomerFindRangeDtoResponse();
+		if (rsRespo != null)
+		{
+			response.Data = rsRespo.GetDto().ToArray();
+			response.Total = rsRespo.Count;
+			response.IsSuccess = true;
+		};
+		return response;
+	}
 }

@@ -26,5 +26,5 @@ public interface IUserClient: IApiDtoClientJSon<IUserClient>
     Task<UserDeleteRangeDtoResponse> DeleteRangeAsync(UserDeleteRangeDtoRequest request);
 
     Task<UserSaveRangeDtoResponse> SaveRangeAsync(UserSaveRangeDtoRequest request);
-   
+	Task<UserKeyValueResponse> GetAll();
 }

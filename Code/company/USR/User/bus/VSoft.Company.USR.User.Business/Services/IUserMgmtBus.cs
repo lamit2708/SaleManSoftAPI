@@ -48,4 +48,5 @@ public interface IUserMgmtBus
     Task<UserSaveRangeDtoResponse> SaveRangeTransactionAsync(UserSaveRangeDtoRequest request);
 
     Task<UserTableKeySearchDtoResponse> GetTableByKeySearch(UserTableKeySearchDtoRequest request);
+	Task<UserKeyValueResponse> GetAll();
 }
