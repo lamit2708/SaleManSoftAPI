@@ -76,11 +76,11 @@ public class VDealTagClient : ApiDtoClientJSon<IVDealTagClient, MVDealTagClient>
             query.Add(langShowExMessage, request.ShowExMessage.ToString());
         if (request.Filter.TeamId != null)
             query.Add($"{filterName}.{nameof(request.Filter.TeamId)}", request.Filter.TeamId.ToString());
-        if (request.Filter.TeamId != null)
+        if (request.Filter.UserId != null)
             query.Add($"{filterName}.{nameof(request.Filter.UserId)}", request.Filter.UserId.ToString());
-        if (request.Filter.TeamId != null)
+        if (request.Filter.Date != null)
             query.Add($"{filterName}.{nameof(request.Filter.Date)}", request.Filter.Date.ToString());
-        if (request.Filter.TeamId != null)
+        if (request.Filter.Keyword != null)
             query.Add($"{filterName}.{nameof(request.Filter.Keyword)}", request.Filter.Keyword.ToString());
         return GetQueryAsync<VDealTagFilterDtoResponse>(relativePath, query);
     }
