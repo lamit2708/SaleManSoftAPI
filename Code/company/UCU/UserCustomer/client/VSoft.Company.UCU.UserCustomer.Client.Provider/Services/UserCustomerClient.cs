@@ -19,6 +19,29 @@ public class UserCustomerClient : ApiDtoClientJSon<IUserCustomerClient, MUserCus
 
     public override string Controller { get; } = nameof(IUserCustomerControllerPath.UserCustomer);
 
+    public Task<UserCustomerTableKeySearchDtoResponse> GetTableByKeyword(UserCustomerTableKeySearchDtoRequest request)
+    {
+        var relativePath = Controller.GetApiPath(nameof(IUserCustomerActionName.FindTable));
+        var pagingParamName = nameof(request.PagingParams);
+        var langCodeName = nameof(request.LangCode);
+        var langShowExContent = nameof(request.ShowExContent);
+        var langShowExMessage = nameof(request.ShowExMessage);
+        var query = new Dictionary<string, string>()
+        {
+            [$"{pagingParamName}.{nameof(request.PagingParams.PageNumber)}"] = request.PagingParams.PageNumber.ToString(),
+            [$"{pagingParamName}.{nameof(request.PagingParams.PageSize)}"] = request.PagingParams.PageSize.ToString(),
+        };
+        if (request.LangCode != null)
+            query.Add(langCodeName, request.LangCode.ToString());
+        if (request.ShowExContent != null)
+            query.Add(langShowExContent, request.ShowExContent.ToString());
+        if (request.ShowExMessage != null)
+            query.Add(langShowExMessage, request.ShowExMessage.ToString());
+        if (!string.IsNullOrEmpty(request.Data))
+            query.Add(nameof(request.Data), request.Data);
+        return GetQueryAsync<UserCustomerTableKeySearchDtoResponse>(relativePath, query);
+    }
+
     public Task<UserCustomerFindDtoResponse> FindAsync(MDtoRequestFindByString request)
     {
         var relativePath = Controller.GetApiPath(nameof(IUserCustomerActionName.FindOne));

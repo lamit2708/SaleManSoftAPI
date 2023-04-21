@@ -40,10 +40,13 @@
 			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Business\VegunSoft.Framework.Business.Dto.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.UCU.OrderItemHistory.Business.Dto">
-		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\bus\VSoft.Company.UCU.UserCustomer.Business.Dto.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\bus\VSoft.Company.UCU.UserCustomer.Business.Dto.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.UCU.OrderItemHistory.Api.Cfg">
-		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\api\VSoft.Company.UCU.UserCustomer.Api.Cfg.dll</HintPath>
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\api\VSoft.Company.UCU.UserCustomer.Api.Cfg.dll</HintPath>
+		</Reference>
+		<Reference Include="VegunSoft.Framework.Paging.Provider">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet\Paging\VegunSoft.Framework.Paging.Provider.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 

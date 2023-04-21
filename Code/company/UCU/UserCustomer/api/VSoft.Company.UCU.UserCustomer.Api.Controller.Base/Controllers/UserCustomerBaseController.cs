@@ -13,7 +13,14 @@ public abstract class UserCustomerBaseController : ControllerBase
     public UserCustomerBaseController(IUserCustomerMgmtBus bus)
     {
         Bus = bus;
-    }    
+    }
+
+    [HttpGet(nameof(IUserCustomerActionName.FindTable))]
+    public async Task<IActionResult> FindTableByKeySearch([FromQuery] UserCustomerTableKeySearchDtoRequest dtosRequest)
+    {
+        var res = await Bus.GetViewByKeySearch(dtosRequest);
+        return Ok(res);
+    }
 
     [HttpGet(nameof(IUserCustomerActionName.FindOne))]
     public async Task<IActionResult> FindAsync([FromQuery] MDtoRequestFindByInt dtoRequest)

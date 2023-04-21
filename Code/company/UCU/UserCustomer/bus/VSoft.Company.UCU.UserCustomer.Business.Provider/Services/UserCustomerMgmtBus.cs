@@ -36,6 +36,19 @@ public class UserCustomerMgmtBus : BusinessRepositoryService<UserCustomerDto, IU
 
     }
 
+    public async Task<UserCustomerTableKeySearchDtoResponse> GetViewByKeySearch(UserCustomerTableKeySearchDtoRequest request)
+    {
+        var rsRespo = await Repository?.GetViewEntitiesByKeySearchAsync(request.Data, request.PagingParams);
+        var response = new UserCustomerTableKeySearchDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.Items.GetDto().ToArray();
+            response.MetaData = rsRespo.MetaData;
+            response.IsSuccess = true;
+        };
+        return response;
+    }
+
     public MDtoResponseString GetFullName(MDtoRequestFindByInt request)
     {
         return GetValue<MDtoRequestFindByInt, MDtoResponseString, int, string>

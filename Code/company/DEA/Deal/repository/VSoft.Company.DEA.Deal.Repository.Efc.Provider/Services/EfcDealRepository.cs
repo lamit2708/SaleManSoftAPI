@@ -9,13 +9,14 @@ using VSoft.Company.DEA.Deal.Repository.Efc.Services;
 
 namespace VSoft.Company.DEA.Deal.Repository.Efc.Provider.Services;
 
-public class EfcDealRepository : EFcRepositoryEntityMgmtId<DealDbContext, MDealEntity, long>, IDealRepositoryEfc
+public class EfcDealRepository : EFcRepositoryEntityMgmtId<DealDbContext, MDealEntity, long, MDealViewEntity>, IDealRepositoryEfc
 {
-    public DbSet<MDealViewEntity>? ViewEntities { get; private set; }
-    public EfcDealRepository(DealDbContext dbContext) : base(dbContext, dbContext.Items)
+ 
+    public EfcDealRepository(DealDbContext dbContext) : base(dbContext, dbContext.Items, dbContext.ViewItems)
     {
-        ViewEntities = dbContext.ViewItems;
+       
     }
+
     public async Task<PagedList<MDealViewEntity>> GetViewEntitiesByKeySearchAsync(string keySearch, PagingParameters pagParams)
     {
         IQueryable<MDealViewEntity>? query;
@@ -23,11 +24,12 @@ public class EfcDealRepository : EFcRepositoryEntityMgmtId<DealDbContext, MDealE
             query = ViewEntities;
         else
         {
+            if (ViewEntities == null) return new PagedList<MDealViewEntity>();
             //var unsignedKey = keySearch.ConvertToUnsignedString();
             //query = Entities.Where(x => x.Name.ConvertToUnsignedString().Contains(unsignedKey));
-            query = ViewEntities.Where(x => x.Name.Contains(keySearch));
+            query = ViewEntities.Where(x => x.Name != null && x.Name.Contains(keySearch));
         }
-
+        if (query == null) return new PagedList<MDealViewEntity>();
         var count = await query.CountAsync();
 
         var data = await query

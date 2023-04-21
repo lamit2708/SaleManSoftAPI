@@ -31,6 +31,9 @@
 	  <Reference Include="VSoft.Company.UCU.UserCustomer.Data.Entity">
 	    <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\data\VSoft.Company.UCU.UserCustomer.Data.Entity.dll</HintPath>
 	  </Reference>
+		<Reference Include="VegunSoft.Framework.Paging.Provider">
+			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet\Paging\VegunSoft.Framework.Paging.Provider.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 
 	<ItemGroup>

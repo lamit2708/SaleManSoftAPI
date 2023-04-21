@@ -4,6 +4,6 @@ namespace VSoft.Company.UCU.UserCustomer.Api.Cfg.Routes
 {
     public interface IUserCustomerActionName: IApiActionName
     {
-
+        string? FindTable { get; set; }
     }
 }

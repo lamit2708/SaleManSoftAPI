@@ -5,7 +5,7 @@ using VSoft.Company.UCU.UserCustomer.Data.Entity.Models;
 
 namespace VSoft.Company.UCU.UserCustomer.Data.Db.Contexts;
 
-public class UserCustomerDbContext : EfcDbContext<UserCustomerDbContext, MUserCustomerEntity>
+public class UserCustomerDbContext : EfcDbViewContext<UserCustomerDbContext, MUserCustomerEntity, MUserCustomerViewEntity>
 {
     public UserCustomerDbContext(DbContextOptions<UserCustomerDbContext> options) : base(options)
     {
@@ -35,7 +35,7 @@ public class UserCustomerDbContext : EfcDbContext<UserCustomerDbContext, MUserCu
     }
 
   
-    protected void ConfigBasicFields(EntityTypeBuilder<MUserCustomerEntity> entity)
+    protected void ConfigBasicFields<T>(EntityTypeBuilder<T> entity) where T : MUserCustomerEntityBasic
     {
         entity.Property(e => e.Id).HasColumnType("int(11)");
         entity.Property(e => e.CreatedDateTeam).HasColumnType("datetime");
@@ -45,6 +45,14 @@ public class UserCustomerDbContext : EfcDbContext<UserCustomerDbContext, MUserCu
         entity.Property(e => e.UserId).HasDefaultValueSql("'NULL'").HasColumnType("int(11)");
     }
 
- 
+    protected override void ConfigureViewEntity(EntityTypeBuilder<MUserCustomerViewEntity> entity)
+    {
+        entity.ToTable("UserCustomerView");
 
+        ConfigBasicFields(entity);
+
+        entity.Property(e => e.CustomerFullName).HasMaxLength(100).HasDefaultValueSql("'NULL'");
+        entity.Property(e => e.UserFullName).HasMaxLength(100).HasDefaultValueSql("'NULL'");
+        entity.Property(e => e.TeamName).HasMaxLength(100).HasDefaultValueSql("'NULL'");
+    }
 }

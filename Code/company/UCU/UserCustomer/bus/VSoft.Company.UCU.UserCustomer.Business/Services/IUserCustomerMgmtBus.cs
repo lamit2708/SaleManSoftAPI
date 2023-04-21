@@ -7,6 +7,8 @@ namespace VSoft.Company.UCU.UserCustomer.Business.Services;
 
 public interface IUserCustomerMgmtBus
 {
+    Task<UserCustomerTableKeySearchDtoResponse> GetViewByKeySearch(UserCustomerTableKeySearchDtoRequest request);
+
     MDtoResponseString GetFullName(MDtoRequestFindByInt request);
 
     Task<MDtoResponseString> GetFullNameAsync(MDtoRequestFindByInt request);

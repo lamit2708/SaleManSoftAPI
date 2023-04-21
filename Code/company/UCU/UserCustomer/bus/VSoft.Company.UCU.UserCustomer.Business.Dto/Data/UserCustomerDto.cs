@@ -14,6 +14,12 @@
 
         public DateTime CreatedDateUser { get; set; }
 
+        public string? CustomerFullName { get; set; }
+
+        public string? UserFullName { get; set; }
+
+        public string? TeamName { get; set; }
+
         public override string ToString()
         {
             return $"{Id} / {CustomerId}";

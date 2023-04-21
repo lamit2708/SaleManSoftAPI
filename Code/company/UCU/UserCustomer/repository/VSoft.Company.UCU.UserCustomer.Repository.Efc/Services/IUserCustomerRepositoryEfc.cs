@@ -5,7 +5,7 @@ using VSoft.Company.UCU.UserCustomer.Repository.Services;
 
 namespace VSoft.Company.UCU.UserCustomer.Repository.Efc.Services;
 
-public interface IUserCustomerRepositoryEfc : IUserCustomerRepository, IEfcRepositoryEntityMgmtId<UserCustomerDbContext, MUserCustomerEntity, int>
+public interface IUserCustomerRepositoryEfc : IUserCustomerRepository, IEfcRepositoryEntityMgmtId<UserCustomerDbContext, MUserCustomerEntity, int, MUserCustomerViewEntity>
 {
    
 }
