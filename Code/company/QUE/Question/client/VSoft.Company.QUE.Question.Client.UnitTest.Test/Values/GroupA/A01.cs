@@ -8,10 +8,10 @@ namespace VSoft.Company.QUE.Question.Client.UnitTest.Test.Values.GroupA
         protected override QuestionDto Dto => new QuestionDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+           // FullName = "Đặng Thế Nhân",
           
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+           // CreatedDate = DateTime.Now,
+            //UpdatedDate = DateTime.Now,
 
         };
     }

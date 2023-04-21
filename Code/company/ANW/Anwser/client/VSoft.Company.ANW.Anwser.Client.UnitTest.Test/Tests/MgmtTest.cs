@@ -39,7 +39,7 @@ public class MgmtTest : TestMgmtClient
     public async Task CreateAsync(string name, string desc)
     {
         var dto = new A01().GetCreateDto();
-        dto.FullName = name;
+      //  dto.FullName = name;
         
         await TestCreateAsync(new AnwserInsertDtoRequest()
         {
@@ -101,7 +101,7 @@ public class MgmtTest : TestMgmtClient
 
     [TestMethod]
     [DataRow(63494, 63495, 63496)]
-    public async Task DeleteRangeAsync(int id1, int id2, int id3)
+    public async Task DeleteRangeAsync(long id1, long id2, long id3)
     {
         await TestDeleteRangeAsync(new AnwserDeleteRangeDtoRequest()
         {
@@ -112,7 +112,7 @@ public class MgmtTest : TestMgmtClient
 
     [TestMethod]
     [DataRow("Diễn giải A1", "Diễn giải B1", "63473 / Diễn giải 111", "63474 / Diễn giải 222", "63475 / Diễn giải 333", 63497, 63498)]
-    public async Task SaveRangeAsync(string note1, string note2, string data1, string data2, string data3, int id1, int id2)
+    public async Task SaveRangeAsync(string note1, string note2, string data1, string data2, string data3, long id1, long id2)
     {
         var ec1 = new A01().GetCreateDto(note1);
         var ec2 = new A01().GetCreateDto(note2);

@@ -8,10 +8,10 @@ namespace VSoft.Company.ANW.Anwser.Client.UnitTest.Test.Values.GroupA
         protected override AnwserDto Dto => new AnwserDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+           // FullName = "Đặng Thế Nhân",
           
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+          //  CreatedDate = DateTime.Now,
+           // UpdatedDate = DateTime.Now,
 
         };
     }

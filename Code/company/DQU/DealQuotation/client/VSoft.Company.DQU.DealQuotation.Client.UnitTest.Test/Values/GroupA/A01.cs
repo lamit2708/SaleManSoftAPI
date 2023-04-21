@@ -8,10 +8,10 @@ namespace VSoft.Company.DQU.DealQuotation.Client.UnitTest.Test.Values.GroupA
         protected override DealQuotationDto Dto => new DealQuotationDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+            //FullName = "Đặng Thế Nhân",
           
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+            //CreatedDate = DateTime.Now,
+            //UpdatedDate = DateTime.Now,
 
         };
     }

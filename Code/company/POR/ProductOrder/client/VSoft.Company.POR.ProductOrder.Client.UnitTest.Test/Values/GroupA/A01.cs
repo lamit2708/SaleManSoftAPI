@@ -8,10 +8,10 @@ namespace VSoft.Company.POR.ProductOrder.Client.UnitTest.Test.Values.GroupA
         protected override ProductOrderDto Dto => new ProductOrderDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+            //FullName = "Đặng Thế Nhân",
           
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+            //CreatedDate = DateTime.Now,
+            //UpdatedDate = DateTime.Now,
 
         };
     }

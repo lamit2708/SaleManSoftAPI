@@ -8,10 +8,10 @@ namespace VSoft.Company.PRI.Priority.Client.UnitTest.Test.Values.GroupA
         protected override PriorityDto Dto => new PriorityDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+            //FullName = "Đặng Thế Nhân",
           
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+            //CreatedDate = DateTime.Now,
+            //UpdatedDate = DateTime.Now,
 
         };
     }

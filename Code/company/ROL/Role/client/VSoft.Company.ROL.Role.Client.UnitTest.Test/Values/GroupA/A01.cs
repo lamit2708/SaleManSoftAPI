@@ -8,10 +8,10 @@ namespace VSoft.Company.ROL.Role.Client.UnitTest.Test.Values.GroupA
         protected override RoleDto Dto => new RoleDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+            //FullName = "Đặng Thế Nhân",
           
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+            //CreatedDate = DateTime.Now,
+            //UpdatedDate = DateTime.Now,
 
         };
     }

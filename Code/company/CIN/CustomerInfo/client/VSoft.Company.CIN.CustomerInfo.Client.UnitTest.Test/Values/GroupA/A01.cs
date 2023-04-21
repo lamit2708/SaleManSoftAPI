@@ -8,10 +8,10 @@ namespace VSoft.Company.CIN.CustomerInfo.Client.UnitTest.Test.Values.GroupA
         protected override CustomerInfoDto Dto => new CustomerInfoDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+            //FullName = "Đặng Thế Nhân",
           
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+            //CreatedDate = DateTime.Now,
+            //UpdatedDate = DateTime.Now,
 
         };
     }

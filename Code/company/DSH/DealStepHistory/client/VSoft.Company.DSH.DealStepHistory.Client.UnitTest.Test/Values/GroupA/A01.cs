@@ -8,10 +8,10 @@ namespace VSoft.Company.DSH.DealStepHistory.Client.UnitTest.Test.Values.GroupA
         protected override DealStepHistoryDto Dto => new DealStepHistoryDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+            //FullName = "Đặng Thế Nhân",
           
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+            //CreatedDate = DateTime.Now,
+            //UpdatedDate = DateTime.Now,
 
         };
     }

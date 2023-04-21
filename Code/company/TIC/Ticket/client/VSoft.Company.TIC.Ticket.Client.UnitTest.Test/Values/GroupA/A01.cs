@@ -8,10 +8,10 @@ namespace VSoft.Company.TIC.Ticket.Client.UnitTest.Test.Values.GroupA
         protected override TicketDto Dto => new TicketDto()
         {
            
-            FullName = "Đặng Thế Nhân",
+            //FullName = "Đặng Thế Nhân",
           
-            CreatedDate = DateTime.Now,
-            UpdatedDate = DateTime.Now,
+           // CreatedDate = DateTime.Now,
+           // UpdatedDate = DateTime.Now,
 
         };
     }
