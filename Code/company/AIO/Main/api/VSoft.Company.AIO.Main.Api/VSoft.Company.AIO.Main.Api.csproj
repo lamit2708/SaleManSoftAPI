@@ -36,6 +36,9 @@
 		<Reference Include="VegunSoft.Framework.Repository.Efc.Provider">
 			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Efc.Provider.dll</HintPath>
 		</Reference>
+		<Reference Include="VegunSoft.Framework.Repository.Id.Efc.Provider">
+		  <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.Provider.dll</HintPath>
+		</Reference>
 		<Reference Include="VSoft.Company.ACT.Activity.Api.Base">
 		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ACT\Activity\api\VSoft.Company.ACT.Activity.Api.Base.dll</HintPath>
 		</Reference>
@@ -100,6 +103,12 @@
 		</Reference>
 		<Reference Include="VSoft.Company.TEA.Team.Repository.Efc.Provider">
 			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\TEA\Team\repository\VSoft.Company.TEA.Team.Repository.Efc.Provider.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.UCU.UserCustomer.Api.Base">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\api\VSoft.Company.UCU.UserCustomer.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.UCU.UserCustomer.Api.Controller">
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\api\VSoft.Company.UCU.UserCustomer.Api.Controller.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.USR.User.Api.Base">
 		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\USR\User\api\VSoft.Company.USR.User.Api.Base.dll</HintPath>
