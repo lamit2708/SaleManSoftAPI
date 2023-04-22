@@ -14,8 +14,13 @@ public abstract class ProductBaseController : ControllerBase
     public ProductBaseController(IProductMgmtBus bus)
     {
         Bus = bus;
-    }    
-
+    }
+    [HttpGet(nameof(IProductActionName.GetAll))]
+    public async Task<IActionResult> FindAllAsync()
+    {
+        var res = await Bus.GetAll();
+        return Ok(res);
+    }
     [HttpGet(nameof(IProductActionName.FindOne))]
     public async Task<IActionResult> FindAsync([FromQuery] MDtoRequestFindByInt dtoRequest)
     {

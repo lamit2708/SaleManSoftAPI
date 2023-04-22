@@ -99,4 +99,9 @@ public class ProductClient : ApiDtoClientJSon<IProductClient, MProductClient>, I
             query.Add(nameof(request.Data), request.Data);
         return GetQueryAsync<ProductTableKeySearchDtoResponse>(relativePath, query);
     }
+    public Task<ProductFindRangeDtoResponse> GetAll()
+    {
+        var relativePath = Controller.GetApiPath(nameof(IProductActionName.GetAll));
+        return GetQueryAsync<ProductFindRangeDtoResponse>(relativePath, null);
+    }
 }

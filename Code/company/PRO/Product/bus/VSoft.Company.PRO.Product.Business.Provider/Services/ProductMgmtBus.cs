@@ -360,4 +360,16 @@ public class ProductMgmtBus : BusinessRepositoryService<ProductDto, IProductRepo
         };
         return response;
     }
+    public async Task<ProductFindRangeDtoResponse> GetAll()
+    {
+        var rsRespo = Repository?.GetAll()?.ToList();
+        var response = new ProductFindRangeDtoResponse();
+        if (rsRespo != null)
+        {
+            response.Data = rsRespo.GetDto().ToArray();
+            response.Total = rsRespo.Count;
+            response.IsSuccess = true;
+        };
+        return response;
+    }
 }

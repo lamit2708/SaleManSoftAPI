@@ -26,6 +26,5 @@ public interface IProductClient: IApiDtoClientJSon<IProductClient>
 
     Task<ProductSaveRangeDtoResponse> SaveRangeAsync(ProductSaveRangeDtoRequest request);
     Task<ProductTableKeySearchDtoResponse> GetTableByKeyword(ProductTableKeySearchDtoRequest request);
-
-
+    Task<ProductFindRangeDtoResponse> GetAll();
 }
