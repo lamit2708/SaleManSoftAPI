@@ -63,7 +63,7 @@
 		  <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-back\Repository\VegunSoft.Framework.Repository.Id.Efc.Provider.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.UCU.UserCustomer.Data.Db">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\data\VSoft.Company.UCU.UserCustomer.Data.Db.dll</HintPath>
+		  <HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\data\VSoft.Company.UCU.UserCustomer.Data.Db.dll</HintPath>
 		</Reference>
 		<Reference Include="VSoft.Company.UCU.UserCustomer.Data.Entity">
 			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\data\VSoft.Company.UCU.UserCustomer.Data.Entity.dll</HintPath>
@@ -71,6 +71,7 @@
 		<Reference Include="VSoft.Company.UCU.UserCustomer.Repository">
 			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\repository\VSoft.Company.UCU.UserCustomer.Repository.dll</HintPath>
 		</Reference>
+
 		<Reference Include="VSoft.Company.UCU.UserCustomer.Repository.Efc">
 			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\UCU\UserCustomer\repository\VSoft.Company.UCU.UserCustomer.Repository.Efc.dll</HintPath>
 		</Reference>
