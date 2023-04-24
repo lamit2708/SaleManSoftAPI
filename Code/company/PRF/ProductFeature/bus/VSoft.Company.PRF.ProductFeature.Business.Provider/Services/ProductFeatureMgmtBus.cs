@@ -21,7 +21,7 @@ namespace VSoft.Company.PRF.ProductFeature.Business.Provider.Services;
 
 public class ProductFeatureMgmtBus : BusinessRepositoryService<ProductFeatureDto, IProductFeatureRepository>, IProductFeatureMgmtBus
 {
-    protected override string? ContextName { get; set; } = "khách hàng";
+    protected override string? ContextName { get; set; } = nameof(ProductFeatureDto);
 
     protected override List<string>? KeyRequiredFields { get; set; } = new List<string>()
     {

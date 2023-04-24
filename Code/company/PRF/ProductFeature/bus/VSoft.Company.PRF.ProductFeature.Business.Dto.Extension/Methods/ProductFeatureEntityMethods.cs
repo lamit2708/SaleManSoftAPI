@@ -12,6 +12,8 @@ public static class ProductFeatureEntityMethods
             Id = src.Id,
             Name = src.Name,
             Description = src.Description,
+            ProductId = src.ProductId,
+            Price = src.Price,
         };
     }
 

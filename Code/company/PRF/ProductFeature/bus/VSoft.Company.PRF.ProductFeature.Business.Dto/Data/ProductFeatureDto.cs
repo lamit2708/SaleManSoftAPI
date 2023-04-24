@@ -7,6 +7,8 @@
         public string Name { get; set; } = null!;
 
         public string Description { get; set; } = null!;
+        public int ProductId { get; set; }
+        public double Price { get; set; }
 
         public override string ToString()
         {

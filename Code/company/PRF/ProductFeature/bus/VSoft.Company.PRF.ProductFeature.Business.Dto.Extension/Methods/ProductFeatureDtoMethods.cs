@@ -12,6 +12,8 @@ public static class ProductFeatureDtoMethods
             Id = src.Id,
             Name = src.Name,
             Description = src.Description,
+            Price = src.Price,
+            ProductId = src.ProductId,
         };
     }
 }
