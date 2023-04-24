@@ -52,7 +52,7 @@ namespace VSoft.Company.PRF.ProductFeature.Business.UnitTest.Test.Tests
         }
 
         [TestMethod]
-        [DataRow(2, "Quản lý hàng tồn kho 1", "Giúp phân tích tồn kho, và tình hình kinh doanh theo thời gian (ERP)", 40000000, 1)]
+        [DataRow(2, "Quản lý hàng tồn kho", "Giúp phân tích tồn kho, và tình hình kinh doanh theo thời gian (ERP)", 40000000, 1)]
         [DataRow(3, "Báo cáo tồn kho", "Tự động phản ánh tăng giảm hàng hóa trong bán hàng, mua hàng, sản xuất và lưu kho", 30000000, 1)]
         [DataRow(4, "Quản lý sản phẩm", "Giúp phân tích mối quan hệ giữa khách hàng và sản phẩm ví dụ dòng sản phẩm nào bán chạy, khách hàng có độ tuổi nào, khu vực nào, giới tính nào, trình độ học vấn ra sao(CRM)", 20000000, 2)]
         [DataRow(5, "Quản lý sản phẩm", "Quản lý sản phẩm có mô hình giá, Tax, ship (EComerce)", 50000000, 3)]

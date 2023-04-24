@@ -16,12 +16,13 @@ using VegunSoft.Framework.Business.Dto.Response;
 using VegunSoft.Framework.Paging.Provider.Response;
 using VegunSoft.Framework.Paging.Provider.Request;
 using VSoft.Company.PRF.ProductFeature.Business.entity.Extension.Methods;
+using VSoft.Company.PRF.ProductFeature.Data.Db.Contexts;
 
 namespace VSoft.Company.PRF.ProductFeature.Business.Provider.Services;
 
 public class ProductFeatureMgmtBus : BusinessRepositoryService<ProductFeatureDto, IProductFeatureRepository>, IProductFeatureMgmtBus
 {
-    protected override string? ContextName { get; set; } = nameof(ProductFeatureDto);
+    protected override string? ContextName { get; set; } = nameof(ProductFeatureDbContext);
 
     protected override List<string>? KeyRequiredFields { get; set; } = new List<string>()
     {

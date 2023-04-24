@@ -1,5 +1,7 @@
-﻿using VegunSoft.Framework.Business.Dto.Request;
+﻿using System.Diagnostics;
+using VegunSoft.Framework.Business.Dto.Request;
 using VSoft.Company.PRF.ProductFeature.Api.UnitTest.Client.Bases;
+using VSoft.Company.PRF.ProductFeature.Business.Dto.Data;
 using VSoft.Company.PRF.ProductFeature.Business.Dto.Request;
 using VSoft.Company.PRF.ProductFeature.Client.UnitTest.Real.Values.GroupA;
 
@@ -33,13 +35,24 @@ public class MgmtTest : TestMgmtClient
     }
 
     [TestMethod]
-    [DataRow("Đặng Thế Nhân", "Ghi chú X1")]
-    [DataRow("Lê Vũ Lâm", "Ghi chú X2")]
-    [DataRow("Nguyễn Tấn Phát", "Ghi chú X3")]
-    public async Task CreateAsync(string name, string desc)
+    [DataRow("Quản lý hàng tồn kho 123", "Giúp phân tích tồn kho, và tình hình kinh doanh theo thời gian (ERP)", 40000000, 1)]
+    //[DataRow("Báo cáo tồn kho", "Tự động phản ánh tăng giảm hàng hóa trong bán hàng, mua hàng, sản xuất và lưu kho", 30000000, 1)]
+    //[DataRow("Quản lý sản phẩm", "Giúp phân tích mối quan hệ giữa khách hàng và sản phẩm ví dụ dòng sản phẩm nào bán chạy, khách hàng có độ tuổi nào, khu vực nào, giới tính nào, trình độ học vấn ra sao(CRM)", 20000000, 2)]
+    //[DataRow("Quản lý sản phẩm", "Quản lý sản phẩm có mô hình giá, Tax, ship (EComerce)", 50000000, 3)]
+    //[DataRow("Tính tiền", "Giúp nhân viên tính tiền, in hóa đơn", 10000000, 1)]
+
+    public async Task CreateAsync(string name, string description, double price, int productId)
     {
-        var dto = new A01().GetCreateDto();
+        //var dto = new A01().GetCreateDto();
         //dto.FullName = name;
+        var dto = new ProductFeatureDto() {
+            Name = name,
+            Description = description,
+            Price = price,
+            ProductId = productId
+        };
+        
+       
 
         await TestCreateAsync(new ProductFeatureInsertDtoRequest()
         {
@@ -62,12 +75,21 @@ public class MgmtTest : TestMgmtClient
     }
 
     [TestMethod]
-    [DataRow(1, "Diễn giải 111", "Ghi chú 11")]
-    [DataRow(2, "Diễn giải 212", "Ghi chú 22")]
-    [DataRow(3, "Diễn giải 313", "Ghi chú 33")]
-    public async Task UpdateAsync(int id, string note, string description)
+    [DataRow(2, "Quản lý hàng tồn kho", "Giúp phân tích tồn kho, và tình hình kinh doanh theo thời gian (ERP)", 40000000, 1)]
+    //[DataRow(3, "Báo cáo tồn kho", "Tự động phản ánh tăng giảm hàng hóa trong bán hàng, mua hàng, sản xuất và lưu kho", 30000000, 1)]
+    //[DataRow(4, "Quản lý sản phẩm", "Giúp phân tích mối quan hệ giữa khách hàng và sản phẩm ví dụ dòng sản phẩm nào bán chạy, khách hàng có độ tuổi nào, khu vực nào, giới tính nào, trình độ học vấn ra sao(CRM)", 20000000, 2)]
+    //[DataRow(5, "Quản lý sản phẩm", "Quản lý sản phẩm có mô hình giá, Tax, ship (EComerce)", 50000000, 3)]
+    public async Task UpdateAsync(int id, string name, string description, double price, int productId)
     {
-        var dto = new A01().GetUpdateDto(id, note, description);
+        //var dto = new A01().GetUpdateDto(id, note, description);
+        var dto = new ProductFeatureDto()
+        {
+            Id = id,
+            Name = name,
+            ProductId = productId,
+            Description = description,
+            Price = price,
+        };
         await TestUpdateAsync(new ProductFeatureUpdateDtoRequest()
         {
             Data = dto
