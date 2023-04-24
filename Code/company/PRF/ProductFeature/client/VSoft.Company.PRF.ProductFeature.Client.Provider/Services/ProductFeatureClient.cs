@@ -109,9 +109,14 @@ public class ProductFeatureClient : ApiDtoClientJSon<IProductFeatureClient, MPro
         return PostAsync<ProductFeatureSaveRangeDtoRequest, ProductFeatureSaveRangeDtoResponse>(relativePath, request);
     }
 
-    public Task<ProductFeatureKeyValueResponse> GetAll()
+    public Task<ProductFeatureKeyValueResponse> GetAllKeyValue()
     {
         var relativePath = Controller.GetApiPath(nameof(IProductFeatureActionName.GetAll));
         return GetQueryAsync<ProductFeatureKeyValueResponse>(relativePath, null);
+    }
+    public Task<ProductFeatureFindRangeDtoResponse> GetAll()
+    {
+        var relativePath = Controller.GetApiPath(nameof(IProductFeatureActionName.GetAll));
+        return GetQueryAsync<ProductFeatureFindRangeDtoResponse>(relativePath, null);
     }
 }

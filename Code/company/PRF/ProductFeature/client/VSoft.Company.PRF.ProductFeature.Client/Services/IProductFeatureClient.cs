@@ -27,7 +27,8 @@ public interface IProductFeatureClient : IApiDtoClientJSon<IProductFeatureClient
 
     Task<ProductFeatureSaveRangeDtoResponse> SaveRangeAsync(ProductFeatureSaveRangeDtoRequest request);
 
-    Task<ProductFeatureKeyValueResponse> GetAll();
+    Task<ProductFeatureKeyValueResponse> GetAllKeyValue();
+    Task<ProductFeatureFindRangeDtoResponse> GetAll();
 
 
 }
