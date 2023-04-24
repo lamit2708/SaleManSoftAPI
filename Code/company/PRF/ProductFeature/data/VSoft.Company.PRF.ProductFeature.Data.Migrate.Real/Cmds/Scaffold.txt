@@ -1,2 +1,2 @@
 ﻿Scaffold-DbContext 'Data Source=localhost;Initial Catalog=crmdb;USER ID=root;Password=123456' MySql.EntityFrameworkCore -Tables ProductFeature
-Scaffold-DbContext 'Data Source=103.15.50.87;Initial Catalog=crmdb;USER ID=root;Password=PtKHDjkgJDRn8BAb' MySql.EntityFrameworkCore -Tables ProductFeature
+Scaffold-DbContext 'Data Source=103.15.50.87;Initial Catalog=crmdb;USER ID=root;Password=' MySql.EntityFrameworkCore -Tables ProductFeature

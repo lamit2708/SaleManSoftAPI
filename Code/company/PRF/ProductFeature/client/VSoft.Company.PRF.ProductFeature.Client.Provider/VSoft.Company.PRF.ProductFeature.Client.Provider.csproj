@@ -17,6 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\api\VSoft.Company.PRF.ProductFeature.Api.Cfg\VSoft.Company.PRF.ProductFeature.Api.Cfg.csproj" />
 		<ProjectReference Include="..\VSoft.Company.PRF.ProductFeature.Client\VSoft.Company.PRF.ProductFeature.Client.csproj" />
 	</ItemGroup>
 

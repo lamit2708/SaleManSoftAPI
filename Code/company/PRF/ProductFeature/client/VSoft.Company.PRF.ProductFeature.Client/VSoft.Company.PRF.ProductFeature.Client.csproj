@@ -13,6 +13,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\bus\VSoft.Company.PRF.ProductFeature.Business.Dto\VSoft.Company.PRF.ProductFeature.Business.Dto.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Reference Include="VegunSoft.Framework.Business.Dto">
 			<HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet-common\Business\VegunSoft.Framework.Business.Dto.dll</HintPath>
 		</Reference>
@@ -24,9 +28,6 @@
 		</Reference>
 		<Reference Include="VegunSoft.Framework.Paging.Provider">
 		  <HintPath>..\..\..\..\..\..\..\..\Library\DNet\Product\vgsoft-library-dnet\Paging\VegunSoft.Framework.Paging.Provider.dll</HintPath>
-		</Reference>
-		<Reference Include="VSoft.Company.PRF.OrderItemHistory.Business.Dto">
-			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRF\ProductFeature\bus\VSoft.Company.PRF.ProductFeature.Business.Dto.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
