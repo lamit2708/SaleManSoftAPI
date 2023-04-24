@@ -148,4 +148,16 @@ public class MgmtTest : TestMgmtClient
             DeleteIds = new[] { id1, id2 },
         });
     }
+    [TestMethod]
+    
+    public async Task GetAll()
+    {
+        await TestGetAll(new MDtoRequestFindByInt()
+        {
+            
+            ShowExMessage = true,
+            ShowExContent = true,
+            LangCode = "VN",
+        });
+    }
 }

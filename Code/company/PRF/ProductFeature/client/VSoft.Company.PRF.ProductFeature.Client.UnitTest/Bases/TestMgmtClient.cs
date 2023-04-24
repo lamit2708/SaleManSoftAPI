@@ -130,5 +130,16 @@ namespace VSoft.Company.PRF.ProductFeature.Api.UnitTest.Client.Bases
             });
 
         }
+        protected async Task TestGetAll(MDtoRequestFindByInt request)
+        {
+            await RunTest("TestGetAll", async (log) =>
+            {
+                log($"Input Id: {request.Id}");
+                var client = GetService<IProductFeatureClient>();
+                var res = await Client.GetAll();
+                LogResponse(res, log);
+            });
+
+        }
     }
 }
