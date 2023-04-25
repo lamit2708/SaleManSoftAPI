@@ -11,8 +11,8 @@ public static class UserCustomerDtoMethods
         {
             Id = src.Id,
             CustomerId = src.CustomerId,
-            UserId = src.UserId,
-            TeamId = src.TeamId,
+            UserId = src.UserId == 0 ? null : src.UserId,
+            TeamId = src.TeamId == 0? null: src.TeamId,
             CreatedDateTeam = src.CreatedDateTeam,
             CreatedDateUser = src.CreatedDateUser,
 

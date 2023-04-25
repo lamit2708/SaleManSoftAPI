@@ -48,6 +48,16 @@ public class UserCustomerClient : ApiDtoClientJSon<IUserCustomerClient, MUserCus
         return GetAsync<MDtoRequestFindByString, UserCustomerFindDtoResponse>(relativePath, request);
     }
 
+    public Task<UserCustomerFindDtoResponse> FindAsync(MDtoRequestFindByInt request)
+    {
+        var relativePath = Controller.GetApiPath(nameof(IUserCustomerActionName.FindOne));
+        var query = new Dictionary<string, string>()
+        {
+            [nameof(request.Id)] = request.Id.ToString(),
+        };
+        return GetQueryAsync<UserCustomerFindDtoResponse>(relativePath, query);
+    }
+
     public Task<UserCustomerFindRangeDtoResponse> FindRangeAsync(MDtoRequestFindRangeByStrings request)
     {
         var relativePath = Controller.GetApiPath(nameof(IUserCustomerActionName.FindRange));

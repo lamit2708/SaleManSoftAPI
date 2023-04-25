@@ -6,7 +6,8 @@ using VSoft.Company.UCU.UserCustomer.Business.Dto.Response;
 namespace VSoft.Company.UCU.UserCustomer.Client.Services;
 
 public interface IUserCustomerClient: IApiDtoClientJSon<IUserCustomerClient>
-{  
+{
+    Task<UserCustomerFindDtoResponse> FindAsync(MDtoRequestFindByInt request);
 
     Task<UserCustomerFindDtoResponse> FindAsync(MDtoRequestFindByString request);
 
