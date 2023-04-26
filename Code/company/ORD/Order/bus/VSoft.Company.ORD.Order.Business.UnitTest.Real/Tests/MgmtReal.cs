@@ -59,7 +59,7 @@ namespace VSoft.Company.ORD.Order.Business.UnitTest.Test.Tests
 
         [TestMethod]
         [DataRow(1)]
-        public async Task DeleteAsync(long id)
+        public async Task DeleteAsync(int id)
         {
             await TestDeleteAsync(new OrderDeleteDtoRequest()
             {

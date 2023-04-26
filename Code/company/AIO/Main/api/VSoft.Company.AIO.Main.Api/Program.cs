@@ -10,6 +10,7 @@ using VSoft.Company.UCU.UserCustomer.Api.Base.Methods;
 using VSoft.Company.USR.User.Api.Base.Methods;
 using VSoft.Company.VDT.VDealTag.Api.Base.Methods;
 using VSoft.Company.PRF.ProductFeature.Api.Base.Methods;
+using VSoft.Company.ORD.Order.Api.Base.Methods;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.RegisterTestApi((services, configuration) =>
@@ -25,4 +26,5 @@ builder.RegisterTestApi((services, configuration) =>
     services.RegisterVDealTagServices(configuration);
     services.RegisterUserCustomerServices(configuration);
     services.RegisterProductFeatureServices(configuration);
+    services.RegisterOrderServices(configuration);
 });

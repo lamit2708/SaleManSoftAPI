@@ -130,6 +130,14 @@
 		<Reference Include="VSoft.Company.PRF.ProductFeature.Api.Controller">
 			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\PRF\ProductFeature\api\VSoft.Company.PRF.ProductFeature.Api.Controller.dll</HintPath>
 		</Reference>
+
+
+		<Reference Include="VSoft.Company.ORD.Order.Api.Base">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ORD\Order\api\VSoft.Company.ORD.Order.Api.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="VSoft.Company.ORD.Order.Api.Controller">
+			<HintPath>..\..\..\..\..\..\..\SaleManSoftAPILib\dotnet\company\ORD\Order\api\VSoft.Company.ORD.Order.Api.Controller.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 
 </Project>

@@ -201,7 +201,7 @@ public class OrderMgmtBus : BusinessRepositoryService<OrderDto, IOrderRepository
 
     public OrderDeleteDtoResponse Delete(OrderDeleteDtoRequest request)
     {
-        return Delete<OrderDeleteDtoRequest, OrderDeleteDtoResponse, long>
+        return Delete<OrderDeleteDtoRequest, OrderDeleteDtoResponse, int>
         (
              request,
              (id) =>
@@ -215,7 +215,7 @@ public class OrderMgmtBus : BusinessRepositoryService<OrderDto, IOrderRepository
 
     public async Task<OrderDeleteDtoResponse> DeleteAsync(OrderDeleteDtoRequest request)
     {
-        return await DeleteAsync<OrderDeleteDtoRequest, OrderDeleteDtoResponse, long>
+        return await DeleteAsync<OrderDeleteDtoRequest, OrderDeleteDtoResponse, int>
         (
              request,
              async (id) =>

@@ -3,7 +3,7 @@ using VegunSoft.Framework.Business.Dto.Request;
 
 namespace VSoft.Company.ORD.Order.Business.Dto.Request
 {
-    public class OrderDeleteDtoRequest : MDtoRequestDelete<long>
+    public class OrderDeleteDtoRequest : MDtoRequestDelete<int>
     {
        
        
