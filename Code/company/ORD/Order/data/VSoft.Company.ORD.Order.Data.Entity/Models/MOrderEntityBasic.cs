@@ -10,6 +10,14 @@ namespace VSoft.Company.ORD.Order.Data.Entity.Models
 
         public int UserId { get; set; }
 
+        public long? DealId { get; set; }
+
+        public bool? IsDraft { get; set; }
+
         public DateTime? CreatedDate { get; set; }
+
+        public int? EditedUserId { get; set; }
+
+        public DateTime? EditedDate { get; set; }
     }
 }

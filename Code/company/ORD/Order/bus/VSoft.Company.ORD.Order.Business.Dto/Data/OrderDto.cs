@@ -13,8 +13,10 @@ namespace VSoft.Company.ORD.Order.Business.Dto.Data
         public long CustomerId { get; set; }
 
         public int UserId { get; set; }
+        public long DealId { get; set; }
 
         public DateTime? CreatedDate { get; set; }
+        public bool IsDraft { get; set; }
 
         public override string ToString()
         {

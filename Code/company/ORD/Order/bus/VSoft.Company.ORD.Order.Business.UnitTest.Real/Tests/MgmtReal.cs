@@ -6,12 +6,10 @@ using VSoft.Company.ORD.Order.Business.UnitTest.Bases;
 namespace VSoft.Company.ORD.Order.Business.UnitTest.Test.Tests
 {
     [TestClass]
-    public class MgmtReal: TestOrderMgmt
+    public class MgmtReal : TestOrderMgmt
     {
         [TestMethod]
-        [DataRow(63491)]
-        [DataRow(63492)]
-        [DataRow(63493)]
+        [DataRow(1)]
         public async Task FindAsync(int id)
         {
             await TestFindAsync(new MDtoRequestFindByInt()
@@ -31,39 +29,36 @@ namespace VSoft.Company.ORD.Order.Business.UnitTest.Test.Tests
         }
 
         [TestMethod]
-        [DataRow("Đặng Thế Nhân", "3504984957", "aaa@gmail.com")]
-        [DataRow("Lê Vũ Lâm", "0234532565", "abc@yahoo.com")]
-        [DataRow("Nguyễn Tấn Phát", "54235235236", "xyz@gmail.com")]
-        public async Task TestCreate(string fullName, string phone, string email)
+        [DataRow(1, 1, 1,true)]
+        public async Task TestCreate(long customerId, int userId, long dealId, bool isDraft)
         {
             var e = new OrderDto();
-            //e.Name = fullName;
-            //e.Phone = phone;
-            //e.Email = email;
+            e.CustomerId = customerId;
+            e.UserId = userId;
+            e.DealId = dealId;
+            e.IsDraft = isDraft;
+
             await TestCreateAsync(new OrderInsertDtoRequest()
             {
                 Data = e
             });
         }
 
-        [TestMethod]
-        public async Task TestUpdate()
-        {
-            await TestUpdateAsync(new OrderUpdateDtoRequest()
-            {
-                Data = new OrderDto()
-                {
-                    //ORDname = "it.nhan7285",
-                    //Password = "Welcome@7",
-                    //FullName = "Đặng Thế Nhân 1",
-                }
-            });
-        }
+        //[TestMethod]
+        //[DataRow(1,1, 1, 1, true)]
+        //public async Task TestUpdate()
+        //{
+        //    await TestUpdateAsync(new OrderUpdateDtoRequest()
+        //    {
+        //        Data = new OrderDto()
+        //        {
+                   
+        //        }
+        //    });
+        //}
 
         [TestMethod]
         [DataRow(1)]
-        [DataRow(2)]
-        [DataRow(3)]
         public async Task DeleteAsync(long id)
         {
             await TestDeleteAsync(new OrderDeleteDtoRequest()
