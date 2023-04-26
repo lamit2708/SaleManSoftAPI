@@ -10,7 +10,7 @@ namespace VSoft.Company.UCU.UserCustomer.Data.Entity.Models
 
         public int? UserId { get; set; }
 
-        public int TeamId { get; set; }
+        public int? TeamId { get; set; }
 
         public DateTime CreatedDateTeam { get; set; }
 
